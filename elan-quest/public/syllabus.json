@@ -1,0 +1,134 @@
+{
+  "CLASS VI": {
+    "Physics": [
+      "motion",
+      "light",
+      "electricity",
+      "magnetism",
+      "measurements"
+    ],
+    "Chemistry": [
+      "intro to chemistry",
+      "matter and its properties",
+      "water and its resources",
+      "air",
+      "elements compounds and mixtures"
+    ],
+    "Mathematics": [
+      "number system",
+      "intro to algebra",
+      "ratio and proportion",
+      "geometry",
+      "mensuration",
+      "data handling"
+    ]
+  },
+  "CLASS VII": {
+    "Physics": [
+      "heat",
+      "wind storms and cyclones",
+      "motion and time",
+      "electric current and its effects",
+      "light"
+    ],
+    "Chemistry": [
+      "acids bases and salts",
+      "physical and chemical changes",
+      "water",
+      "heat",
+      "transportation in plants and animals"
+    ],
+    "Mathematics": [
+      "number system",
+      "algebra",
+      "ratio and proportion",
+      "geometry",
+      "mensuration",
+      "data handling"
+    ]
+  },
+  "CLASS VIII": {
+    "Physics": [
+      "force and pressure",
+      "friction",
+      "sound",
+      "light",
+      "some natural phenomena",
+      "stars and solar system",
+      "chemical effects of electric current"
+    ],
+    "Chemistry": [
+      "synthetic",
+      "fibres and plastics",
+      "materials",
+      "metals and non metals",
+      "coal and petroleum",
+      "combustion and flame",
+      "pollution of air and water"
+    ],
+    "Mathematics": [
+      "rational numbers",
+      "linear equations in one variable",
+      "understanding quadrilaterals",
+      "square and square roots",
+      "cube and cube roots",
+      "comparing quantities",
+      "algebraic expressions",
+      "exponents and powers",
+      "factorisation",
+      "intro to graphs",
+      "mensuration",
+      "direct and inverse proportions"
+    ]
+  },
+  "CLASS IX": {
+    "Physics": [
+      "motion",
+      "force and laws of motion",
+      "gravitation",
+      "work and energy",
+      "sound"
+    ],
+    "Chemistry": [
+      "matter in our surroundings",
+      "is matter around us pure",
+      "atoms and molecules",
+      "structure of atom"
+    ],
+    "Mathematics": [
+      "number systems",
+      "algebra",
+      "coordinate geometry",
+      "geometry",
+      "mensuration",
+      "statistics"
+    ]
+  },
+  "CLASS X": {
+    "Physics": [
+      "light-reflection and refraction",
+      "human eye and colourful world",
+      "electricity",
+      "magnetic effects of electric current",
+      "sources of energy",
+      "our environment",
+      "management of natural resources"
+    ],
+    "Chemistry": [
+      "chemical reactions and equations",
+      "acids bases and salts",
+      "metals and non metals",
+      "carbon and its compounds",
+      "periodic classification of elements"
+    ],
+    "Mathematics": [
+      "number systems",
+      "algebra",
+      "coordinate geometry",
+      "geometry",
+      "trigonometry",
+      "mensuration",
+      "statistics and probability"
+    ]
+  }
+}
