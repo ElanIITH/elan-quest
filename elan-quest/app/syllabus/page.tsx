@@ -1,4 +1,6 @@
 "use client";
+
+
 import React, { useState, useEffect } from 'react';
 import { Press_Start_2P } from 'next/font/google';
 
@@ -6,6 +8,7 @@ const pressStart2P = Press_Start_2P({
   subsets: ['latin'],
   weight: '400',
 });
+
 
 interface SubjectTopics {
   [subject: string]: string[];
@@ -17,16 +20,21 @@ interface ClassSyllabus {
 
 export default function SyllabusPage() {
   const [syllabusData, setSyllabusData] = useState<ClassSyllabus | null>(null);
+
+
   const [selectedClass, setSelectedClass] = useState<string>('CLASS VI');
 
   useEffect(() => {
     async function fetchSyllabus() {
       const response = await fetch('/syllabus.json');
+
       const data = await response.json();
       setSyllabusData(data);
     }
     fetchSyllabus();
   }, []);
+
+
 
   const currentClassSyllabus = syllabusData ? syllabusData[selectedClass] : null;
   const subjects = currentClassSyllabus ? Object.keys(currentClassSyllabus) : [];
@@ -82,6 +90,7 @@ export default function SyllabusPage() {
   {selectedClass.replace('CLASS ', 'Class ')}
 </h2>
 
+
   {subjects.length > 0 && currentClassSyllabus ? (
   subjects.map((subject) => {
     const subjectKey = subject.toLowerCase();
@@ -96,6 +105,7 @@ export default function SyllabusPage() {
         : subjectKey === 'mathematics'
         ? 'bg-black/40'
         : 'bg-black/50';
+
 
     return (
       <div key={subject} className={`mb-4 p-4 rounded-lg ${bgOpacityClass}`}>
@@ -117,3 +127,4 @@ export default function SyllabusPage() {
     </div>
   );
 }
+

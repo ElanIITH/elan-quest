@@ -1,31 +1,30 @@
 @import "tailwindcss";
 
-/* Import Google Fonts */
-/* @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway:wght@400;700&display=swap'); */
-
 :root {
   --background: #252525;
   --foreground: #e8e8c6;
+
+  --font-body: var(--font-raleway);
+  --font-heading: var(--font-press-start);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Press Start 2P', cursive;
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #e8e8c6;
+    --foreground: #252525;
+  }
+} */
+
+.body-font {
+  font-family: var(--font-body), sans-serif;
+}
+
+.heading-font {
+  font-family: var(--font-heading), sans-serif;
 }
