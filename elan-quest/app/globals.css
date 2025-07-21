@@ -8,12 +8,12 @@
   --font-heading: var(--font-press-start);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #e8e8c6;
     --foreground: #252525;
   }
-}
+} */
 
 .body-font {
   font-family: var(--font-body), sans-serif;
