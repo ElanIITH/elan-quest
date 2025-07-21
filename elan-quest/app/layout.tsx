@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./colours.css"; // css variables for colours
 import { Press_Start_2P, Raleway } from "next/font/google";
 
 const pressStart2P = Press_Start_2P({ subsets: ["latin"], weight: "400" });
@@ -16,7 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${pressStart2P.className} ${raleway.className}`}>
+    <html
+      lang="en"
+      className={`${pressStart2P.className} ${raleway.className}`}
+    >
       <body className="antialiased">{children}</body>
     </html>
   );
