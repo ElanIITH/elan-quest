@@ -8,6 +8,7 @@ import Corner1 from "../components/menu/Corner1";
 import Corner2 from "../components/menu/Corner2";
 import Menu from "../components/menu/Menu";
 import Pointer from "../components/menu/ArrowPointer";
+import ComingSoon from "../components/menu/ComingSoon";
 
 export default function MenuPage() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
@@ -15,15 +16,15 @@ export default function MenuPage() {
   const router = useRouter();
 
   const menuList = [
-    { id: 1, title: "Home", href: "/" },
-    { id: 2, title: "About Us", href: "/about-us" },
-    { id: 3, title: "Exam Details", href: "/exam-details" },
-    { id: 4, title: "Syllabus", href: "/syllabus" },
-    { id: 5, title: "Results", href: "/results" },
-    { id: 6, title: "Leaderboards", href: "/leaderboards" },
-    { id: 7, title: "Blog", href: "/blog" },
-    { id: 8, title: "FAQ's", href: "/faqs" },
-    { id: 9, title: "Terms & Conditions", href: "/terms" },
+    { id: 1, title: "Home", href: "/", comingSoon: false },
+    { id: 2, title: "About Us", href: "/about-us", comingSoon: false },
+    { id: 3, title: "Exam Details", href: "/exam-details", comingSoon: false },
+    { id: 4, title: "Syllabus", href: "/syllabus", comingSoon: false },
+    { id: 5, title: "Results", href: "/results", comingSoon: false },
+    { id: 6, title: "Leaderboards", href: "/leaderboards", comingSoon: true },
+    { id: 7, title: "Blog", href: "/blog", comingSoon: true },
+    { id: 8, title: "FAQ's", href: "/faqs", comingSoon: true },
+    { id: 9, title: "Terms & Conditions", href: "/terms", comingSoon: false },
   ];
 
   useEffect(() => {
@@ -63,7 +64,7 @@ export default function MenuPage() {
       <h1 className="pl-8 pt-10">
         <Menu />
       </h1>
-      <div className="body-font mt-10 ml-15 text-5xl w-[500px]">
+      <div className="body-font mt-10 ml-15 text-5xl w-[650px]">
         <ul className="flex flex-col gap-3">
           {menuList.map((item) => (
             <div
@@ -92,6 +93,9 @@ export default function MenuPage() {
               <Link href={item.href} className="flex items-center">
                 <li>{item.title}</li>
               </Link>
+
+              {/* coming soon */}
+              {item.comingSoon ? <ComingSoon /> : null}
             </div>
           ))}
         </ul>
