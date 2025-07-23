@@ -104,7 +104,7 @@ export default function MenuPage() {
                   <img
                     src="/menu/pointer.svg"
                     alt="pointer"
-                    className="w-5 h-5"
+                    className="w-[20px] h-auto"
                   />
                 </div>
                 <Link
