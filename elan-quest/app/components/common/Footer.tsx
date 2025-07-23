@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="min-w-screen">
+    <footer className="max-w-screen">
       <div className="relative h-[250px] p-8 box-border body-font bg-[var(--foreground)] text-[var(--background)] flex gap-3">
         {/* corners */}
         <div className="absolute top-0 left-0">
