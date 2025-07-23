@@ -1,11 +1,12 @@
 export default function Syllabus9() {
   return (
     <svg
-      width="1900"
-      height="947"
+      // width="1900"
+      // height="947"
       viewBox="0 0 1900 947"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="w-[1200px] h-auto"
     >
       <rect y="221" width="1900" height="130" fill="#E8E8C6" />
       <rect opacity="0.3" y="556" width="1900" height="130" fill="#E8E8C6" />
