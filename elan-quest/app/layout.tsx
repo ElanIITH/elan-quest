@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Press_Start_2P, Raleway } from "next/font/google";
+import Footer from "./components/common/Footer";
+import "@/app/lib/fontawesome";
 
 const pressStart2P = Press_Start_2P({
   subsets: ["latin"],
@@ -28,8 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${pressStart2P.variable} ${raleway.variable}`}>
-      <body className="antialiased bg-[var(--background)] text-[var(--foreground)]">
-        {children}
+      <body className="antialiased bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col">
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );
