@@ -114,11 +114,11 @@ export default function MenuPage() {
                   <li
                     className={`${
                       hoveredId === item.id && selectedId === item.id
-                        ? "heading-font text-xl"
+                        ? "font-semibold"
                         : hoveredId && hoveredId !== selectedId
                         ? ""
                         : selectedId === item.id
-                        ? "heading-font text-xl"
+                        ? "font-semibold"
                         : ""
                     }`}
                   >

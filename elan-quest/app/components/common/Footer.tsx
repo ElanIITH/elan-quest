@@ -1,5 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 
 export default function Footer() {
@@ -26,27 +30,31 @@ export default function Footer() {
         <div className="w-[500px] flex flex-col justify-between">
           {/* logos */}
           <div className="flex gap-7">
-            <img
-              src="/footer/elan.svg"
-              alt="Elan Logo"
-              className="w-[190px] h-auto"
-            />
-            <img
-              src="/footer/quest.svg"
-              alt="Quest Logo"
-              className="w-[170px] h-auto"
-            />
+            <a href={"#"}>
+              <img
+                src="/footer/elan.svg"
+                alt="Elan Logo"
+                className="w-[190px] h-auto transform hover:scale-108 transition-transform duration-300 ease"
+              />
+            </a>
+            <a href={"#"}>
+              <img
+                src="/footer/quest.svg"
+                alt="Quest Logo"
+                className="w-[170px] h-auto transform hover:scale-108 transition-transform duration-300 ease"
+              />
+            </a>
           </div>
 
           {/* contact us */}
           <div className="">
-            <Link href={"#"}>
+            <a href={"#"}>
               <img
                 src="/footer/contact-us.svg"
                 alt="contact us"
-                className="w-[500px] h-auto transform hover:scale-103 transition-transform duration-300 ease"
+                className="w-[500px] h-auto"
               />
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -75,18 +83,31 @@ export default function Footer() {
 
           {/* socials */}
           <div className="h-[50px] w-full flex justify-around items-center px-1">
+            <img
+              src="/footer/quest-socials.svg"
+              alt="quest logo"
+              className="w-[20px] h-auto"
+            />
             <a href="#">
-              <img
-                src="/footer/quest-ig.svg"
-                alt="quest instagram"
-                className="w-[65px] h-auto transform hover:scale-110 transition-transform duration-300 ease"
+              <FontAwesomeIcon
+                icon={faInstagram as any}
+                className="text-2xl transform hover:scale-118 transition-transform duration-300 ease"
               />
             </a>
+            <img
+              src="/footer/dot-separator.svg"
+              alt="separator"
+              className="w-[7px] h-auto"
+            />
+            <img
+              src="/footer/elan-socials.svg"
+              alt="elan logo"
+              className="w-[25px] h-auto"
+            />
             <a href="#">
-              <img
-                src="/footer/quest-ig.svg"
-                alt="quest instagram"
-                className="w-[65px] h-auto transform hover:scale-110 transition-transform duration-300 ease"
+              <FontAwesomeIcon
+                icon={faInstagram as any}
+                className="text-2xl transform hover:scale-118 transition-transform duration-300 ease"
               />
             </a>
             <a
@@ -96,7 +117,7 @@ export default function Footer() {
             >
               <FontAwesomeIcon
                 icon={faFacebook as any}
-                className="w-6 h-6 text-3xl text-[var(--background)] transform hover:scale-115 transition-transform duration-300 ease"
+                className="w-6 h-6 text-3xl text-[var(--background)] transform hover:scale-118 transition-transform duration-300 ease"
               />
             </a>
             <a
@@ -106,7 +127,7 @@ export default function Footer() {
             >
               <FontAwesomeIcon
                 icon={faLinkedin as any}
-                className="w-6 h-6 text-3xl text-[var(--background)] transform hover:scale-115 transition-transform duration-300 ease"
+                className="w-6 h-6 text-3xl text-[var(--background)] transform hover:scale-118 transition-transform duration-300 ease"
               />
             </a>
           </div>
