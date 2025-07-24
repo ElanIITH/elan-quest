@@ -17,7 +17,7 @@ export default function MenuPage() {
     { id: 5, title: "Results", href: "/results", comingSoon: false },
     { id: 6, title: "Leaderboards", href: "/leaderboards", comingSoon: true },
     { id: 7, title: "Blog", href: "/blog", comingSoon: true },
-    { id: 8, title: "FAQ's", href: "/faqs", comingSoon: true },
+    { id: 8, title: "FAQs", href: "/faqs", comingSoon: true },
     { id: 9, title: "Terms & Conditions", href: "/terms", comingSoon: false },
   ];
 
