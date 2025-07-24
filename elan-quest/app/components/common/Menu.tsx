@@ -3,8 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { X } from "lucide-react";
 
-export default function MenuPage() {
+interface Props {
+  closeMenu: () => void;
+}
+
+export default function Menu({ closeMenu }: Props) {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [selectedId, setSelectedId] = useState<number>(1);
   const router = useRouter();
@@ -15,9 +20,9 @@ export default function MenuPage() {
     { id: 3, title: "Exam Details", href: "/exam-details", comingSoon: false },
     { id: 4, title: "Syllabus", href: "/syllabus", comingSoon: false },
     { id: 5, title: "Results", href: "/results", comingSoon: false },
-    { id: 6, title: "Leaderboards", href: "/leaderboards", comingSoon: true },
-    { id: 7, title: "Blog", href: "/blog", comingSoon: true },
-    { id: 8, title: "FAQs", href: "/faqs", comingSoon: true },
+    { id: 6, title: "Leaderboards", href: "", comingSoon: true },
+    { id: 7, title: "Blog", href: "", comingSoon: true },
+    { id: 8, title: "FAQs", href: "", comingSoon: true },
     { id: 9, title: "Terms & Conditions", href: "/terms", comingSoon: false },
   ];
 
@@ -50,7 +55,16 @@ export default function MenuPage() {
   }, [selectedId]);
 
   return (
-    <div className="relative min-h-screen px-10 py-10 bg-[var(--foreground)] text-[var(--background)] flex flex-col">
+    <div className="relative z-100 right-0 w-[480px] min-h-screen px-10 py-10 bg-[var(--foreground)] text-[var(--background)] flex flex-col">
+      {/* Close Button */}
+      <button
+        onClick={closeMenu}
+        className="absolute top-3 right-3 text-[var(--background)] z-50 cursor-pointer"
+        aria-label="Close menu"
+      >
+        <X size={28} />
+      </button>
+
       {/* Top left corner */}
       <div className="absolute top-0 left-0">
         <img src="/menu/corner.svg" alt="corner" className="w-[30px] h-auto" />
@@ -66,24 +80,24 @@ export default function MenuPage() {
       </div>
 
       {/* Right: Bulb */}
-      <div className="absolute top-0 right-65">
-        <img src="/menu/bulb.svg" alt="bulb" className="w-[150px] h-auto" />
+      <div className="absolute top-0 right-5">
+        <img src="/menu/bulb.svg" alt="bulb" className="w-[160px] h-auto" />
       </div>
 
       {/* Content area */}
-      <div className="ml-10 flex flex-1 gap-20">
+      <div className=" flex flex-1 gap-20">
         {/* Left: Menu */}
-        <div className="flex flex-col text-2xl w-[450px]">
+        <div className="flex flex-col text-lg w-[315px]">
           <img
             src="/menu/menu.svg"
             alt="menu"
-            className="w-[300px] h-auto mb-4"
+            className="w-[190px] h-auto mb-4"
           />
           <ul className="flex flex-col gap-3">
             {menuList.map((item) => (
               <div
                 key={item.id}
-                className="h-[45px] flex gap-5 items-center"
+                className="h-[20px] flex gap-3 items-center"
                 onMouseEnter={() => {
                   setHoveredId(item.id);
                   setSelectedId(item.id);
@@ -104,21 +118,22 @@ export default function MenuPage() {
                   <img
                     src="/menu/pointer.svg"
                     alt="pointer"
-                    className="w-[20px] h-auto"
+                    className="w-[15px] h-auto"
                   />
                 </div>
                 <Link
                   href={item.href}
                   className="flex body-font items-center gap-2"
+                  onClick={closeMenu}
                 >
                   <li
-                    className={`${
+                    className={`transition-shadow duration-200 ${
                       hoveredId === item.id && selectedId === item.id
-                        ? "font-semibold"
+                        ? "text-shadow-[0_6px_3px_rgba(0,0,0,0.3)]"
                         : hoveredId && hoveredId !== selectedId
                         ? ""
                         : selectedId === item.id
-                        ? "font-semibold"
+                        ? "text-shadow-[0_6px_3px_rgba(0,0,0,0.3)]"
                         : ""
                     }`}
                   >
