@@ -94,12 +94,12 @@ export default function ResultsPage() {
         <img
           src="/results/results.svg"
           alt="results"
-          className="w-[500px] h-auto mb-5"
+          className="w-[500px] h-auto mb-[16px]"
         />
         {/* Process Section */}
         <div className="w-[70vw] flex flex-col mr-auto">
           {/* header */}
-          <div className="flex justify-start">
+          <div className="flex justify-start mb-[11px]">
             <img
               src="/results/process.svg"
               alt="process"
@@ -110,7 +110,7 @@ export default function ResultsPage() {
           {/* content */}
           <ul className="text-justify">
             {processItems.map((item) => (
-              <li key={item.id} className="p-3 flex gap-3 items-start">
+              <li key={item.id} className="py-3 flex gap-3 items-start">
                 <img
                   src="/results/pointer.svg"
                   alt="pointer"
@@ -124,21 +124,21 @@ export default function ResultsPage() {
 
         {/* Awards Section */}
         <div className="w-[75vw] flex flex-col ml-auto">
-          <div className="flex justify-start">
+          <div className="flex justify-start mb-[11px]">
             <img
               src="/results/awards.svg"
               alt="awards"
               className="w-[300px] h-auto"
             />
           </div>
-          <p className="text-justify p-2">
+          <p className="text-justify py-2 mb-[11px]">
             The participating students stand to gain many prizes and goodies, as
             well as invaluable experience by participating in the Nexus QUEST
             examination:
           </p>
           <ul className="text-justify">
             {awardsList.map((item) => (
-              <li key={item.id} className="p-3 flex gap-3 items-start">
+              <li key={item.id} className="py-3 flex gap-3 items-start">
                 <img
                   src="/results/pointer.svg"
                   alt="pointer"
