@@ -9,7 +9,6 @@ import Rocket from "../components/ExamDetails/Rocket";
 import Microscope from "../components/ExamDetails/Microscope";
 import ArrowPointer from "../components/ExamDetails/ArrowPointer";
 import { Raleway } from "next/font/google";
-
 const raleway = Raleway({ subsets: ["latin"], weight: ["400", "600"] });
 
 export default function ExamDetailsPage() {
@@ -24,31 +23,11 @@ export default function ExamDetailsPage() {
       {/* Eligibility Section */}
       <div className="w-full max-w-4xl h-auto py-10">
         <Eligibility />
-        <ul className="text-[17px] max-w-5xl mt-4 space-y-3">
-          <li className="flex items-start gap-2">
-            <div className = "w-[16px]">
-            <ArrowPointer />
-            </div>
-            <span>Students currently enrolled in Classes 6th to 10th from any recognized school are eligible to participate in Nexus QUEST.</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <div className = "w-[16px]">
-            <ArrowPointer />
-            </div>
-            <span>Participants must be actively studying in their respective academic year during the examination period.</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <div className = "w-[16px]">
-            <ArrowPointer />
-            </div>
-            <span>Age-appropriate question sets will be provided based on the student’s current class level to ensure fair assessment.</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <div className = "w-[16px]">
-            <ArrowPointer />
-            </div>
-            <span>Students from all educational boards (CBSE, ICSE, State boards) within the specified grade range can apply for the examination.</span>
-          </li>
+        <ul className="text-[17px] max-w-5xl mt-4">
+          <li className="flex gap-2 py-2"><ArrowPointer /> Students currently enrolled in Classes 6th to 10th from any recognized school are eligible to participate in Nexus QUEST.</li>
+          <li className="flex gap-2 py-2"><ArrowPointer /> Participants must be actively studying in their respective academic year during the examination period.</li>
+          <li className="flex gap-2 py-2"><ArrowPointer /> Age-appropriate question sets will be provided based on the student’s current class level to ensure fair assessment.</li>
+          <li className="flex gap-2 py-2"><ArrowPointer /> Students from all educational boards (CBSE, ICSE, State boards) within the specified grade range can apply for the examination.</li>
         </ul>
       </div>
 
@@ -86,19 +65,9 @@ export default function ExamDetailsPage() {
       {/* Marking Scheme Section */}
       <div className="py-12 w-[1100px]">
         <MarkingScheme />
-        <ul className="text-[16px] max-w-4xl mt-2 space-y-3">
-          <li className="flex items-start gap-2">
-            <div className = "w-[16px]">
-            <ArrowPointer />
-            </div>
-            <span>+1 mark for correct answers</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <div className = "w-[16px]">
-            <ArrowPointer />
-            </div>
-            <span>0 marks for incorrect responses</span>
-          </li>
+        <ul className="text-[16px] max-w-4xl mt-2">
+          <li className="flex gap-2 py-2"><ArrowPointer /> +1 mark for correct answers</li>
+          <li className="flex gap-2 py-2"><ArrowPointer /> 0 marks for incorrect responses</li>
         </ul>
         <p className="mt-2 text-[16px]">There will be no negative marking.</p>
       </div>
@@ -112,31 +81,11 @@ export default function ExamDetailsPage() {
           <p className="text-[16px] max-w-4xl mt-2">
             50 multiple-choice questions with single correct answers, promoting accuracy and efficient time management.
           </p>
-          <ul className="text-[16px] max-w-4xl mt-4 space-y-3">
-            <li className="flex items-start gap-2">
-              <div className = "w-[16px]">
-            <ArrowPointer />
-            </div>
-              <span>Logical Reasoning - 20</span>
-            </li>
-            <li className="flex items-start gap-2">
-             <div className = "w-[16px]">
-            <ArrowPointer />
-            </div>
-              <span>Mathematics - 10</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className = "w-[16px]">
-            <ArrowPointer />
-            </div>
-              <span>Physics - 10</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className = "w-[16px]">
-            <ArrowPointer />
-            </div>
-              <span>Chemistry - 10</span>
-            </li>
+          <ul className="text-[16px] max-w-4xl mt-4">
+            <li className="flex gap-2 py-1"><ArrowPointer /> Logical Reasoning - 20</li>
+            <li className="flex gap-2 py-1"><ArrowPointer /> Mathematics - 10</li>
+            <li className="flex gap-2 py-1"><ArrowPointer /> Physics - 10</li>
+            <li className="flex gap-2 py-1"><ArrowPointer /> Chemistry - 10</li>
           </ul>
         </div>
 
