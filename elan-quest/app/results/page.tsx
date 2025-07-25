@@ -1,11 +1,3 @@
-import Pointer from "../components/results/ArrowPointer";
-import Awards from "../components/results/Awards";
-import Num1 from "../components/results/Num1";
-import Num2 from "../components/results/Num2";
-import Process from "../components/results/Process";
-import Results from "../components/results/Results";
-import Trophy from "../components/results/Trophy";
-
 export default function ResultsPage() {
   const processItems = [
     {
@@ -79,58 +71,85 @@ export default function ResultsPage() {
   ];
 
   return (
-    <div className="px-5 py-10 min-h-screen bg-[var(--background)] text-[var(--foreground)]">
-      {/* top half */}
-      <div className="">
-        <h1 className="pb-10">
-          <Results />
-        </h1>
-        <h2 className="pb-3">
-          <Process />
-        </h2>
-        <div className="body-font w-[870px] text-justify">
-          <ul>
-            {processItems.map((item) => {
-              return (
-                <li key={item.id} className="p-4 flex gap-3">
-                  <div>
-                    <Pointer />
-                  </div>
-                  <div>{item.content}</div>
-                </li>
-              );
-            })}
+    <div className="relative min-h-screen px-5 py-10 body-font bg-[var(--background)] text-[var(--foreground)]">
+      {/* Absolutely Positioned Decorative SVGs */}
+      <img
+        src="/results/first.svg"
+        alt="first"
+        className="absolute top-0 right-0 w-[330px] h-auto"
+      />
+      <img
+        src="/results/second.svg"
+        alt="second"
+        className="absolute top-[490px] right-0 w-[130px] h-auto"
+      />
+      <img
+        src="/results/trophy.svg"
+        alt="trophy"
+        className="absolute bottom-0 left-0 w-[180px] h-auto"
+      />
+
+      {/* Main Content Container */}
+      <div className="flex flex-col justify-center gap-10">
+        <img
+          src="/results/results.svg"
+          alt="results"
+          className="w-[500px] h-auto mb-[16px]"
+        />
+        {/* Process Section */}
+        <div className="w-[70vw] flex flex-col mr-auto">
+          {/* header */}
+          <div className="flex justify-start mb-[11px]">
+            <img
+              src="/results/process.svg"
+              alt="process"
+              className="w-[300px] h-auto"
+            />
+          </div>
+
+          {/* content */}
+          <ul className="text-justify">
+            {processItems.map((item) => (
+              <li key={item.id} className="py-3 flex gap-3 items-start">
+                <img
+                  src="/results/pointer.svg"
+                  alt="pointer"
+                  className="w-[20px] h-auto"
+                />
+                <div className="">{item.content}</div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Awards Section */}
+        <div className="w-[75vw] flex flex-col ml-auto">
+          <div className="flex justify-start mb-[11px]">
+            <img
+              src="/results/awards.svg"
+              alt="awards"
+              className="w-[300px] h-auto"
+            />
+          </div>
+          <p className="text-justify py-2 mb-[11px]">
+            The participating students stand to gain many prizes and goodies, as
+            well as invaluable experience by participating in the Nexus QUEST
+            examination:
+          </p>
+          <ul className="text-justify">
+            {awardsList.map((item) => (
+              <li key={item.id} className="py-3 flex gap-3 items-start">
+                <img
+                  src="/results/pointer.svg"
+                  alt="pointer"
+                  className="w-[20px] h-auto"
+                />
+                <div>{item.content}</div>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
-      <Num1 />
-      <Num2 />
-      {/* bottom half */}
-      <div className="my-10 pl-50 relative">
-        <h2 className="pb-3">
-          <Awards />
-        </h2>
-        <div className="body-font w-[1000px] text-justify">
-          The participating students stand to gain many prizes and goodies, as
-          well as invaluable experience by participating in the Nexus QUEST
-          examination:
-        </div>
-        <div className="body-font w-[1000px] text-justify">
-          <ul>
-            {awardsList.map((item) => {
-              return (
-                <li key={item.id} className="p-4 flex gap-3">
-                  <div>
-                    <Pointer />
-                  </div>
-                  <div>{item.content}</div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </div>
-      <Trophy />
     </div>
   );
 }
