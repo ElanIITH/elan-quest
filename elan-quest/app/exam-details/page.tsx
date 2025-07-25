@@ -1,107 +1,99 @@
 "use client";
-import Image from "next/image";
-import { Press_Start_2P } from "next/font/google";
-import rocket from "@/public/rocket.png";
-import microscope from "@/public/microscope.png";
-
-const pressStart2P = Press_Start_2P({ subsets: ["latin"], weight: "400" });
+import ExamDetails from "../components/ExamDetails/ExamDetails";
+import Eligibility from "../components/ExamDetails/Eligibility";
+import Dates from "../components/ExamDetails/Dates";
+import Duration from "../components/ExamDetails/Duration";
+import MarkingScheme from "../components/ExamDetails/MarkingScheme";
+import Format from "../components/ExamDetails/Format";
+import Rocket from "../components/ExamDetails/Rocket";
+import Microscope from "../components/ExamDetails/Microscope";
+import Pointer from "../components/results/ArrowPointer";
+import { Raleway } from "next/font/google";
+const raleway = Raleway({ subsets: ["latin"], weight: ["400", "600"] });
 
 export default function ExamDetailsPage() {
   return (
-    <div className="w-full min-h-screen bg-neutral-900 text-[#E8E8C6] px-6 sm:px-10 py-12">
-      {/* Heading */}
-      <h1 className={`text-4xl sm:text-7xl mb-10 ${pressStart2P.className}`}>EXAM DETAILS</h1>
+    <div className={`${raleway.className} px-5 py-10 min-h-screen bg-[#252525] text-[#E8E8C6] relative overflow-hidden`}>
+      
+      {/* Exam Details */}
+      <div className="w-full max-w-7xl h-auto py-10">
+        <ExamDetails />
+      </div>
 
-      {/* Eligibility */}
-      <h2 className={`text-2xl sm:text-5xl mb-4 ${pressStart2P.className}`}>ELIGIBILITY</h2>
-      <ul className="space-y-3 text-lg font-['Raleway']">
-        <li className="flex gap-2 items-start">
-          <Image src="/arrow.svg" alt=">" width={16} height={16} className="mt-1" />
-          <span>Students currently enrolled in Classes 6th to 10th from any recognized school are eligible to participate in Nexus QUEST.</span>
-        </li>
-        <li className="flex gap-2 items-start">
-          <Image src="/arrow.svg" alt=">" width={16} height={16} className="mt-1" />
-          <span>Participants must be actively studying in their respective academic year during the examination period.</span>
-        </li>
-        <li className="flex gap-2 items-start">
-          <Image src="/arrow.svg" alt=">" width={16} height={16} className="mt-1" />
-          <span>Age-appropriate question sets will be provided based on the student's current class level to ensure fair assessment.</span>
-        </li>
-        <li className="flex gap-2 items-start">
-          <Image src="/arrow.svg" alt=">" width={16} height={16} className="mt-1" />
-          <span>Students from all educational boards (CBSE, ICSE, State boards) within the specified grade range can apply for the examination.</span>
-        </li>
-      </ul>
+      {/* Eligibility Section */}
+      <div className="w-full max-w-4xl h-auto py-10">
+        <Eligibility />
+        <ul className="text-[17px] max-w-5xl mt-4">
+          <li className="flex gap-2 py-2"><Pointer /> Students currently enrolled in Classes 6th to 10th from any recognized school are eligible to participate in Nexus QUEST.</li>
+          <li className="flex gap-2 py-2"><Pointer /> Participants must be actively studying in their respective academic year during the examination period.</li>
+          <li className="flex gap-2 py-2"><Pointer /> Age-appropriate question sets will be provided based on the student’s current class level to ensure fair assessment.</li>
+          <li className="flex gap-2 py-2"><Pointer /> Students from all educational boards (CBSE, ICSE, State boards) within the specified grade range can apply for the examination.</li>
+        </ul>
+      </div>
 
-      {/* Dates */}
-      <h2 className={`text-2xl sm:text-5xl mt-12 mb-4 ${pressStart2P.className}`}>DATES</h2>
-      <div className="flex flex-row gap-6 items-start">
-        <div className="w-[120px]">
-          <Image src={rocket} alt="rocket" width={120} height={300} className="object-contain" />
+      {/* Dates Section */}
+      <div className="py-10">
+        <div className="w-[400px] h-[100px]">
+          <Dates />
         </div>
-        <div className="flex flex-col justify-between py-2 gap-1 font-['Raleway']">
-          {Array(4).fill(0).map((_, i) => (
-            <div key={i}>
-              <p className="text-xl">MONTH 00, 2025</p>
-              <p className="text-sm">Registrations Open</p>
-            </div>
-          ))}
+
+        <div className="relative flex mt-6">
+          <div className="w-[160px]">
+            <Rocket />
+          </div>
+          <div className="flex flex-col justify-between ml-4 py-2 h-[300px] body-font">
+            {["MONTH 00, 2025", "MONTH 00, 2025", "MONTH 00, 2025", "MONTH 00, 2025"].map((month, idx) => (
+              <div key={idx} className="mb-2">
+                <div className="text-lg font-semibold">{month}</div>
+                <div className="text-sm">Registrations Open</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Duration */}
-      <h2 className={`text-2xl sm:text-5xl mt-12 mb-2 ${pressStart2P.className}`}>DURATION</h2>
-      <p className="text-lg font-['Raleway']">
-        Participants will have a total of 90 minutes to complete the test. Make sure to manage your time wisely to attempt all sections.
-      </p>
+      {/* Duration Section */}
+      <div className="py-12">
+        <div className="w-[650px] h-[100px]">
+          <Duration />
+        </div>
+        <p className="text-[16px] max-w-4xl">
+          Participants will have a total of 90 minutes to complete the test. Make sure to manage your time wisely to attempt all sections.
+        </p>
+      </div>
 
-      {/* Marking Scheme */}
-      <h2 className={`text-2xl sm:text-5xl mt-12 mb-2 ${pressStart2P.className}`}>MARKING SCHEME</h2>
-      <ul className="space-y-2 text-lg font-['Raleway']">
-        <li className="flex gap-2 items-start">
-          <Image src="/arrow.svg" alt=">" width={16} height={16} className="mt-1" />
-          <span>+1 mark for correct answers</span>
-        </li>
-        <li className="flex gap-2 items-start">
-          <Image src="/arrow.svg" alt=">" width={16} height={16} className="mt-1" />
-          <span>0 marks for incorrect responses</span>
-        </li>
-      </ul>
-      <p className="mt-2 text-lg font-['Raleway']">There will be no negative marking.</p>
+      {/* Marking Scheme Section */}
+      <div className="py-12 w-[1100px]">
+        <MarkingScheme />
+        <ul className="text-[16px] max-w-4xl mt-2">
+          <li className="flex gap-2 py-2"><Pointer /> +1 mark for correct answers</li>
+          <li className="flex gap-2 py-2"><Pointer /> 0 marks for incorrect responses</li>
+        </ul>
+        <p className="mt-2 text-[16px]">There will be no negative marking.</p>
+      </div>
 
-      {/* FORMAT Section with Microscope */}
-<div className="relative min-h-[160px] mt-12">
-  <h2 className={`text-2xl sm:text-3xl mb-2 ${pressStart2P.className}`}>FORMAT</h2>
-  <p className="text-lg font-['Raleway'] mb-4">
-    50 multiple-choice questions with single correct answers, promoting accuracy and efficient time management.
-  </p>
+      {/* Format Section */}
+      <div className="relative flex justify-between py-12 items-start">
+        <div className="w-[calc(100%-420px)]">
+          <div className="w-[500px] h-[100px]">
+            <Format />
+          </div>
+          <p className="text-[16px] max-w-4xl mt-2">
+            50 multiple-choice questions with single correct answers, promoting accuracy and efficient time management.
+          </p>
+          <ul className="text-[16px] max-w-4xl mt-4">
+            <li className="flex gap-2 py-1"><Pointer /> Logical Reasoning - 20</li>
+            <li className="flex gap-2 py-1"><Pointer /> Mathematics - 10</li>
+            <li className="flex gap-2 py-1"><Pointer /> Physics - 10</li>
+            <li className="flex gap-2 py-1"><Pointer /> Chemistry - 10</li>
+          </ul>
+        </div>
 
-  <ul className="space-y-2 text-lg font-['Raleway'] max-w-3xl">
-    <li className="flex gap-2 items-start">
-      <Image src="/arrow.svg" alt=">" width={16} height={16} className="mt-1" />
-      <span>Logical Reasoning - 20</span>
-    </li>
-    <li className="flex gap-2 items-start">
-      <Image src="/arrow.svg" alt=">" width={16} height={16} className="mt-1" />
-      <span>Mathematics - 10</span>
-    </li>
-    <li className="flex gap-2 items-start">
-      <Image src="/arrow.svg" alt=">" width={16} height={16} className="mt-1" />
-      <span>Physics - 10</span>
-    </li>
-    <li className="flex gap-2 items-start">
-      <Image src="/arrow.svg" alt=">" width={16} height={16} className="mt-1" />
-      <span>
-        Chemistry - 10. Questions based on basic principles and application-focused logic from daily life and classroom.
-      </span>
-    </li>
-  </ul>
-
-  {/* Microscope Image beside Chemistry */}
-  <div className="absolute bottom-0 right-0">
-    <Image src={microscope} alt="Microscope" width={300} height={400} />
-  </div>
-</div>
+        {/* Microscope aligned to bottom */}
+        <div className="w-[380px] absolute bottom-12 right-0">
+          <Microscope />
+        </div>
+      </div>
     </div>
   );
 }
