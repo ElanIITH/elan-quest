@@ -63,7 +63,7 @@ export default function ExamDetailsPage() {
       </div>
 
       {/* Marking Scheme Section */}
-      <div className="py-12 w-[1100px]">
+      <div className="py-12 w-[1100px] ">
         <MarkingScheme />
         <ul className="text-[16px] max-w-4xl mt-2">
           <li className="flex gap-2 py-2"><ArrowPointer /> +1 mark for correct answers</li>
@@ -72,7 +72,7 @@ export default function ExamDetailsPage() {
         <p className="mt-2 text-[16px]">There will be no negative marking.</p>
       </div>
 
-      {/* Format Section */}
+           {/* Format Section */}
       <div className="relative flex justify-between py-12 items-start">
         <div className="w-[calc(100%-420px)]">
           <div className="w-[500px] h-[100px]">
@@ -88,9 +88,11 @@ export default function ExamDetailsPage() {
             <li className="flex gap-2 py-1"><ArrowPointer /> Chemistry - 10</li>
           </ul>
         </div>
+      </div>
 
-        {/* Microscope aligned to bottom */}
-        <div className="w-[380px] absolute bottom-12 right-0">
+      {/* Microscope Footer Section */}
+      <div className="flex justify-end w-full mt-16">
+        <div className="w-[380px]">
           <Microscope />
         </div>
       </div>

@@ -24,7 +24,7 @@ export default function ExamDetailsPage() {
       {/* Eligibility Section */}
       <div className="w-full max-w-4xl h-auto py-10">
         <Eligibility />
-        <ul className="text-[17px] max-w-5xl mt-4 space-y-3">
+        <ul className="text-[18px] max-w-5xl mt-4 space-y-3">
           <li className="flex items-start gap-2">
             <div className = "w-[16px]">
             <ArrowPointer />
@@ -59,14 +59,14 @@ export default function ExamDetailsPage() {
         </div>
 
         <div className="relative flex mt-6">
-          <div className="w-[160px]">
+          <div className="w-[190px]">
             <Rocket />
           </div>
-          <div className="flex flex-col justify-between ml-4 py-2 h-[300px] body-font">
+          <div className="flex flex-col justify-between ml-4 py-2 h-[40px] body-font">
             {["MONTH 00, 2025", "MONTH 00, 2025", "MONTH 00, 2025", "MONTH 00, 2025"].map((month, idx) => (
               <div key={idx} className="mb-2">
-                <div className="text-lg font-semibold">{month}</div>
-                <div className="text-sm">Registrations Open</div>
+                <div className="text-[34px] font-semibold">{month}</div>
+                <div className="text-[18px]">Registrations Open</div>
               </div>
             ))}
           </div>
@@ -104,7 +104,7 @@ export default function ExamDetailsPage() {
       </div>
 
       {/* Format Section */}
-      <div className="relative flex justify-between py-12 items-start">
+      <div className="relative flex justify-between py-12 items-start absolute bottom-0 right-0 z-0">
         <div className="w-[calc(100%-420px)]">
           <div className="w-[500px] h-[100px]">
             <Format />
@@ -141,7 +141,7 @@ export default function ExamDetailsPage() {
         </div>
 
         {/* Microscope aligned to bottom */}
-        <div className="w-[380px] absolute bottom-12 right-0">
+        <div className="w-[380px] absolute bottom-0 right-0 z-0">
           <Microscope />
         </div>
       </div>
