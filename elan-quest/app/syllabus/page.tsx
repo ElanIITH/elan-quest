@@ -29,7 +29,7 @@ export default function SyllabusPage() {
         <img
           src="/syllabus/syllabus.svg"
           alt="syllabus"
-          className="md:relative md:top-10 w-[62vw] h-auto"
+          className="md:relative md:top-10 lg:relative lg:top-0 w-[62vw] h-auto"
         />
 
         {/* Description Text */}
