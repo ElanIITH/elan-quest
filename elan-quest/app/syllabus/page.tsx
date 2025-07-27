@@ -55,7 +55,6 @@ export default function SyllabusPage() {
             alt={`navbar s${activeNav + 5}`}
             className="w-full"
           />
-          {/* Clickable zones over each class tab (divide 600px width into 5 segments) */}
           {[0, 1, 2, 3, 4].map((i) => (
             <div
               key={i}
@@ -71,16 +70,16 @@ export default function SyllabusPage() {
         </div>
 
         {/* Class SVG Display */}
-        <div className="">
+        <div>
           <img
             src={`/syllabus/class${activeNav + 5}.svg`}
             alt={`class${activeNav + 5}`}
-            className="w-[450px] h-auto"
+            className="w-auto h-[70px]"
           />
         </div>
 
-        {/* Syllabus table */}
-        <div className="grid grid-rows-5 relative bg-[var(--foreground)] text-[var(--background)] w-full">
+        {/* Syllabus Table */}
+        <div className="grid grid-rows-5 relative text-[var(--background)] w-full">
           {/* Corner SVGs */}
           {["", "rotate-90", "-rotate-90", "rotate-180"].map(
             (rotation, idx) => (
@@ -101,7 +100,7 @@ export default function SyllabusPage() {
             )
           )}
 
-          {/* content */}
+          {/* Syllabus Rows */}
           {(activeNav === 1
             ? syllabus6
             : activeNav === 2
@@ -115,22 +114,18 @@ export default function SyllabusPage() {
             : []
           ).map((item, rowIdx) => {
             const baseColor = "232, 232, 198";
-            let opacity = 1;
-            let color = "var(--background)";
-
-            if (rowIdx === 1) opacity = 0.4;
-            if (rowIdx > 0) {
-              opacity = Math.max(0, 0.4 - 0.1 * (rowIdx - 1));
-              color = "var(--background)";
-            }
+            const bgOpacity =
+              rowIdx === 0 ? 1 : Math.max(0, 0.5 - 0.1 * rowIdx); // 1, 0.4, 0.3, 0.2, 0.1
+            const fontColor =
+              rowIdx != 0 ? "var(--foreground)" : "var(--background)";
 
             return (
               <div
                 key={rowIdx}
-                className="grid grid-cols-[1fr_30px_3fr] items-center px-10 py-2 gap-10 border border-black w-full"
+                className="grid grid-cols-[1fr_30px_3fr] items-center px-10 py-2 gap-10 w-full"
                 style={{
-                  backgroundColor: `rgba(${baseColor}, ${opacity})`,
-                  color: `${color}`,
+                  background: `rgba(${baseColor}, ${bgOpacity})`,
+                  color: `${fontColor}`,
                 }}
               >
                 <div className="text-left text-lg leading-relaxed">

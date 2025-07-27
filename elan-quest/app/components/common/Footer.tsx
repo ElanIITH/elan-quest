@@ -59,13 +59,11 @@ export default function Footer({ menuOpen, setMenuOpen }: Props) {
 
             {/* contact us */}
             <div className="">
-              <a href={"#"}>
-                <img
-                  src="/footer/contact-us.svg"
-                  alt="contact us"
-                  className="w-[500px] h-auto"
-                />
-              </a>
+              <img
+                src="/footer/contact-us.svg"
+                alt="contact us"
+                className="w-[500px] h-auto"
+              />
             </div>
           </div>
 
