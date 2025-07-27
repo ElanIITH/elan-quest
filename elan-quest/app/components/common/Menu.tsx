@@ -6,10 +6,11 @@ import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 
 interface Props {
+  menuOpen: boolean;
   closeMenu: () => void;
 }
 
-export default function Menu({ closeMenu }: Props) {
+export default function Menu({ closeMenu, menuOpen }: Props) {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [selectedId, setSelectedId] = useState<number>(1);
   const router = useRouter();
@@ -25,6 +26,14 @@ export default function Menu({ closeMenu }: Props) {
     { id: 8, title: "FAQs", href: "", comingSoon: true },
     { id: 9, title: "Terms & Conditions", href: "/terms", comingSoon: false },
   ];
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [menuOpen]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -55,7 +64,7 @@ export default function Menu({ closeMenu }: Props) {
   }, [selectedId]);
 
   return (
-    <div className="relative z-100 right-0 w-screen lg:w-[480px] min-h-screen px-10 py-10 bg-[var(--foreground)] text-[var(--background)] flex flex-col">
+    <div className="relative z-100 right-0 w-full lg:w-[480px] h-screen px-6 sm:px-8 lg:px-10 py-10 bg-[var(--foreground)] text-[var(--background)] flex flex-col">
       {/* Close Button */}
       <button
         onClick={closeMenu}
@@ -80,11 +89,11 @@ export default function Menu({ closeMenu }: Props) {
       </div>
 
       {/* Right: Bulb */}
-      <div className="absolute top-0 right-15 lg:top-0 lg:right-5">
+      <div className="absolute top-0 right-10 lg:top-0 lg:right-5">
         <img
           src="/menu/bulb.svg"
           alt="bulb"
-          className="w-[260px] lg:w-[160px] h-auto"
+          className="w-[200px] md:w-[160px] lg:w-[160px] h-auto"
         />
       </div>
 
@@ -148,7 +157,7 @@ export default function Menu({ closeMenu }: Props) {
                   <img
                     src="/menu/coming-soon.svg"
                     alt="coming soon"
-                    className="w-[100px] h-auto body-font ml-auto"
+                    className="w-[70px] h-auto body-font ml-auto"
                   />
                 ) : null}
               </div>
