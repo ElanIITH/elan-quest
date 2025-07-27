@@ -19,21 +19,21 @@ export default function SyllabusPage() {
         <img
           src="/syllabus/books.svg"
           alt="books"
-          className="w-[350px] h-auto"
+          className="w-[350px] md:w-[200px] lg:w-[290px] h-auto"
         />
       </div>
 
       {/* Top Section */}
-      <div className="flex flex-col gap-7 w-[67vw]">
+      <div className="flex flex-col gap-7 w-full">
         {/* Title Image */}
         <img
           src="/syllabus/syllabus.svg"
           alt="syllabus"
-          className="w-[62vw] h-auto"
+          className="md:relative md:top-10 w-[62vw] h-auto"
         />
 
         {/* Description Text */}
-        <div className="text-justify text-lg leading-relaxed text-[var(--foreground)]">
+        <div className="text-justify text-lg leading-relaxed text-[var(--foreground)] md:pt-17 md:w-full lg:pt-0 lg:w-[67vw]">
           Nexus QUEST spans four key academic areas -{" "}
           <span className="font-semibold">Logical Reasoning</span>,{" "}
           <span className="font-semibold">Mathematics</span>,{" "}

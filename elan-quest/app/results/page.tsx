@@ -71,78 +71,85 @@ export default function ResultsPage() {
   ];
 
   return (
-    <div className="relative min-h-screen px-5 py-10 body-font bg-[var(--background)] text-[var(--foreground)]">
-      {/* Absolutely Positioned Decorative SVGs */}
+    <div className="relative min-h-screen px-4 sm:px-5 py-8 sm:py-10 body-font bg-[var(--background)] text-[var(--foreground)]">
+      {/* Decorative SVGs - Hide on small screens */}
       <img
         src="/results/first.svg"
         alt="first"
-        className="absolute top-0 right-0 w-[330px] h-auto"
+        className="absolute top-30 sm:top-30 right-0 w-[210px] sm:w-[310px] md:top-0 md:w-[140px] lg:w-[320px] h-auto md:block"
       />
       <img
         src="/results/second.svg"
         alt="second"
-        className="absolute top-[490px] right-0 w-[130px] h-auto"
+        className="absolute top-150 sm:top-150 right-0 w-[130px] sm:w-[150px] md:w-[70px] md:top-120 lg:top-115 lg:w-[150px] h-auto md:block"
       />
       <img
         src="/results/trophy.svg"
         alt="trophy"
-        className="absolute bottom-0 left-0 w-[180px] h-auto"
+        className="absolute bottom-0 left-0 w-[200px] sm:w-[250px] md:w-[170px] lg:w-[220px] h-auto md:block"
       />
 
       {/* Main Content Container */}
-      <div className="flex flex-col justify-center gap-10">
+      <div className="flex flex-col items-start gap-6 sm:gap-10 max-w-7xl mx-auto">
         <img
           src="/results/results.svg"
           alt="results"
-          className="w-[500px] h-auto mb-[16px]"
+          className="w-full max-w-[300px] sm:max-w-[500px] h-auto mb-4 sm:mb-[16px]"
         />
+
         {/* Process Section */}
-        <div className="w-[70vw] flex flex-col mr-auto">
+        <div className="w-[50vw] md:w-[85vw] lg:w-[70vw] flex flex-col">
           {/* header */}
-          <div className="flex justify-start mb-[11px]">
+          <div className="flex justify-start mb-4 sm:mb-[11px]">
             <img
               src="/results/process.svg"
               alt="process"
-              className="w-[300px] h-auto"
+              className="w-[200px] sm:w-[300px] h-auto"
             />
           </div>
 
           {/* content */}
-          <ul className="text-justify">
+          <ul className="text-justify text-sm sm:text-base">
             {processItems.map((item) => (
-              <li key={item.id} className="py-3 flex gap-3 items-start">
+              <li
+                key={item.id}
+                className="py-2 sm:py-3 flex gap-2 sm:gap-3 items-start"
+              >
                 <img
                   src="/results/pointer.svg"
                   alt="pointer"
-                  className="w-[20px] h-auto"
+                  className="w-[15px] sm:w-[20px] h-auto flex-shrink-0 mt-1"
                 />
-                <div className="">{item.content}</div>
+                <div>{item.content}</div>
               </li>
             ))}
           </ul>
         </div>
 
         {/* Awards Section */}
-        <div className="w-[75vw] flex flex-col ml-auto">
-          <div className="flex justify-start mb-[11px]">
+        <div className="w-[50vw] md:w-[75vw] p-2 flex flex-col ml-auto">
+          <div className="flex justify-start mb-4 sm:mb-[11px]">
             <img
               src="/results/awards.svg"
               alt="awards"
-              className="w-[300px] h-auto"
+              className="w-[200px] sm:w-[300px] h-auto"
             />
           </div>
-          <p className="text-justify py-2 mb-[11px]">
+          <p className="text-justify py-2 mb-4 sm:mb-[11px] text-sm sm:text-base">
             The participating students stand to gain many prizes and goodies, as
             well as invaluable experience by participating in the Nexus QUEST
             examination:
           </p>
-          <ul className="text-justify">
+          <ul className="text-justify text-sm sm:text-base">
             {awardsList.map((item) => (
-              <li key={item.id} className="py-3 flex gap-3 items-start">
+              <li
+                key={item.id}
+                className="py-2 sm:py-3 flex gap-2 sm:gap-3 items-start"
+              >
                 <img
                   src="/results/pointer.svg"
                   alt="pointer"
-                  className="w-[20px] h-auto"
+                  className="w-[15px] sm:w-[20px] h-auto flex-shrink-0 mt-1"
                 />
                 <div>{item.content}</div>
               </li>

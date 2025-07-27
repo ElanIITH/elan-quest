@@ -27,6 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <html lang="en" className={`${pressStart2P.variable} ${raleway.variable}`}>
       <head>
@@ -34,7 +35,7 @@ export default function RootLayout({
         <meta name="description" content="Created by Nathan Alvares" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className="antialiased bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col">
+      <body className="antialiased bg-[var(--background)] text-[var(--foreground)] w-screen min-h-screen flex flex-col">
         <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <div
           className={`flex-grow + ${
@@ -43,9 +44,9 @@ export default function RootLayout({
               : "transition duration-300 ease"
           }`}
         >
-          <main className="">{children}</main>
+          <main className="w-full">{children}</main>
         </div>
-        <Footer menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Footer menuOpen={menuOpen} />
       </body>
     </html>
   );
