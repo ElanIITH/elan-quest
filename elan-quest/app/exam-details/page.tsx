@@ -14,9 +14,10 @@ const raleway = Raleway({ subsets: ["latin"], weight: ["400", "600"] });
 
 export default function ExamDetailsPage() {
   return (
-    <div className={`${raleway.className} px-5 py-10 min-h-screen bg-[#252525] text-[#E8E8C6] relative overflow-hidden`}>
-      
-      {/* Exam Details */}
+    <div className={`${raleway.className} bg-[#252525] text-[#E8E8C6] px-4 py-8`}>
+      {/* Desktop Version */}
+      <div className="hidden md:block">
+        {/* Exam Details */}
       <div className="w-full max-w-7xl h-auto py-10">
         <ExamDetails />
       </div>
@@ -143,6 +144,103 @@ export default function ExamDetailsPage() {
         {/* Microscope aligned to bottom */}
         <div className="w-[380px] absolute bottom-0 right-0 z-0">
           <Microscope />
+        </div>
+      </div>
+      </div>
+
+      {/* Mobile Version */}
+      <div className="block md:hidden">
+        <div className="space-y-10">
+          {/* Mobile: Simpler headers, no side-by-side layouts, stacked content */}
+          <div className="w-[450px]">
+            <ExamDetails />
+          </div>
+
+          <div>
+            <Eligibility />
+            <ul className="text-[14px] space-y-2 mt-2">
+  <li className="flex items-start gap-2">
+    <div className="w-[30px]"><ArrowPointer /></div>
+    <span>Students currently enrolled in Classes 6th to 10th from any recognized school are eligible to participate in Nexus QUEST.</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <div className="w-[25px]"><ArrowPointer /></div>
+    <span>Participants must be actively studying in their respective academic year during the examination period.</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <div className="w-[17px]"><ArrowPointer /></div>
+    <span>Class-specific question sets will be provided to ensure fair assessment.</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <div className="w-[18px]"><ArrowPointer /></div>
+    <span>Students from all boards (CBSE, ICSE, State) within the grade range can apply.</span>
+  </li>
+</ul>
+         <div className="py-10 space-y-6">
+  {/* Dates Title SVG */}
+  <div className="w-[200px] h-[20px] ">
+    <Dates />
+  </div>
+
+  {/* Rocket and Dates side by side */}
+  <div className="flex flex-col md:flex-row md:items-start md:space-x-6">
+    
+    {/* Rocket Icon */}
+    <div className="w-[140px] ">
+      <Rocket />
+    </div>
+
+    {/* Dates Text List */}
+    <div className="mt-4 md:mt-0 flex flex-col justify-between space-y-4">
+      {["MONTH 00, 2025", "MONTH 00, 2025", "MONTH 00, 2025", "MONTH 00, 2025"].map((month, idx) => (
+        <div key={idx}>
+          <div className="text-[24px] md:text-[34px] font-semibold">{month}</div>
+          <div className="text-[16px] md:text-[18px]">Registrations Open</div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</div>
+          
+            <div className="w-[500px]">
+            <MarkingScheme />
+            </div>
+            <ul className="text-[14px] mt-2 space-y-1">
+              <li className="flex items-start gap-2">
+                <div className="w-[16px]"><ArrowPointer /></div>
+                
+                +1 mark per correct answer
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-[16px]"><ArrowPointer /></div>
+                
+                No negative marking
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="w-[200px]">
+              <Format />
+            </div>
+            
+            <ul className="text-[14px] mt-2 space-y-1">
+              {["Logical Reasoning - 20", "Maths - 10", "Physics - 10", "Chemistry - 10"].map(
+                (text, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <div className="w-[16px]">  <ArrowPointer /></div>
+                   
+                    {text}
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+
+          <div className="absolute bottom-0 right-0 w-[100px]">
+            <Microscope />
+          </div>
         </div>
       </div>
     </div>
