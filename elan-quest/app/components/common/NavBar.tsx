@@ -40,47 +40,90 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
             : "transition duration-300 ease"
         }
       >
-        <nav className="w-full px-4 py-3 shadow-md flex justify-between items-center bg-[var(--foreground)] relative z-10">
-          <div className="text-xl font-bold text-[var(--background)] flex items-center">
+
+        <nav className="h-[80px] w-full px-4 py-2 shadow-md flex justify-between items-center bg-[var(--foreground)] relative z-10">
+          <div className="text-xl font-bold text-[var(--background)]">
             <Link href={"/"}>
               <img
                 src="/footer/quest.svg"
                 alt="logo"
-                className="w-[40px] h-auto sm:w-[50px]"
+                className="w-[100px] h-auto"
               />
             </Link>
           </div>
-          {/* Desktop menu */}
-          <div className="flex gap-6 items-center">
-            <div className="hidden md:flex gap-6 items-center">
-              <Link
-                href="/"
-                className="text-[var(--background)] hover:underline"
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="text-[var(--background)] hover:underline"
-              >
-                About
-              </Link>
-              <Link
-                href="/contact"
-                className="text-[var(--background)] hover:underline"
-              >
-                Contact
-              </Link>
-            </div>
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-[var(--background)] cursor-pointer z-20"
-              aria-label="Toggle menu"
-            >
-              <MenuIcon size={28} />
-            </button>
+          <div className="flex-1">
+            <ul className="flex flex-row px-10 justify-end gap-10">
+              <li className="flex items-center">
+                <div className="flex justify-center items-center relative group">
+                  <img
+                    src="/subtract.svg"
+                    alt="logo"
+                    className="w-[170px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-12 pt-1"
+                  />
+                  <Link
+                    href="/exam-details"
+                    className="absolute flex items-center"
+                  >
+                    <p className="body-font group-hover:text-[var(--foreground)] transition-text duration-300 text-[var(--background)] font-semibold text-xl z-13">
+                      EXAM DETAILS
+                    </p>
+                  </Link>
+                </div>
+              </li>
+              <li className="flex items-center">
+                <div className="flex justify-center items-center relative group">
+                  <img
+                    src="/subtract.svg"
+                    alt="logo"
+                    className="w-[170px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-12 pt-1"
+                  />
+                  <Link href="/syllabus" className="absolute flex items-center">
+                    <p className="body-font group-hover:text-[var(--foreground)] transition-text duration-300 text-[var(--background)] font-semibold text-xl z-13">
+                      SYLLABUS
+                    </p>
+                  </Link>
+                </div>
+              </li>
+              <li className="flex items-center">
+                <div className="flex justify-center items-center relative group">
+                  <img
+                    src="/subtract.svg"
+                    alt="logo"
+                    className="w-[170px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-12 pt-1"
+                  />
+                  <Link href="/results" className="absolute flex items-center">
+                    <p className="body-font group-hover:text-[var(--foreground)] transition-text duration-300 text-[var(--background)] font-semibold text-xl z-13">
+                      RESULTS
+                    </p>
+                  </Link>
+                </div>
+              </li>
+              <li className="flex items-center">
+                <Link href="/register-now">
+                  <div className="relative pt-2 group">
+                    <img
+                      src="/menu/register-bg.svg"
+                      className="w-[260px] h-auto group-hover:opacity-0 transition-opacity duration-500"
+                    />
+                    <img
+                      src="/union.svg"
+                      className="w-[260px] h-auto absolute flex inset-0 mt-2 transform scale-97 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    />
+                    <p className="absolute inset-0 flex items-center justify-center text-xl text-[var(--foreground)] font-extrabold group-hover:text-[var(--background)] transition-text duration-500">
+                      REGISTER NOW
+                    </p>
+                  </div>
+                </Link>
+              </li>
+            </ul>
           </div>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-[var(--background)] cursor-pointer z-20"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? null : <MenuIcon size={30} />}
+          </button>
         </nav>
       </div>
 
