@@ -61,7 +61,7 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
                     className="w-[170px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-12 pt-1"
                   />
                   <Link
-                    href="/exam-details"
+                    href="/ExamDetails"
                     className="absolute flex items-center"
                   >
                     <p className="body-font group-hover:text-[var(--foreground)] transition-text duration-300 text-[var(--background)] font-semibold text-xl z-13">
