@@ -36,10 +36,11 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
       <div
         className={
           menuOpen
-            ? "blur-[3px] transition duration-300 ease select-none"
+            ? "blur-[3px] w-screen transition duration-300 ease select-none"
             : "transition duration-300 ease"
         }
       >
+
         <nav className="h-[80px] w-full px-4 py-2 shadow-md flex justify-between items-center bg-[var(--foreground)] relative z-10">
           <div className="text-xl font-bold text-[var(--background)]">
             <Link href={"/"}>
@@ -126,14 +127,14 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
         </nav>
       </div>
 
-      {/* Menu slides in when open */}
+      {/* Mobile menu slides in when open */}
       <div
         ref={menuRef}
-        className={`fixed top-0 right-0 transition-transform duration-300 z-40 ${
+        className={`fixed flex justify-end w-screen top-0 right-0 transition-transform duration-800 ease-in-out z-40 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <Menu closeMenu={() => setMenuOpen(false)} />
+        <Menu menuOpen={menuOpen} closeMenu={() => setMenuOpen(false)} />
       </div>
     </>
   );

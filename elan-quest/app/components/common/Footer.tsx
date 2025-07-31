@@ -7,10 +7,9 @@ import {
 
 interface Props {
   menuOpen: boolean;
-  setMenuOpen: (val: boolean) => void;
 }
 
-export default function Footer({ menuOpen, setMenuOpen }: Props) {
+export default function Footer({ menuOpen }: Props) {
   return (
     <div
       className={
@@ -19,14 +18,14 @@ export default function Footer({ menuOpen, setMenuOpen }: Props) {
           : "transition duration-300 ease"
       }
     >
-      <footer className="max-w-screen">
-        <div className="relative h-[250px] p-8 box-border body-font bg-[var(--foreground)] text-[var(--background)] flex gap-3">
+      <footer className="w-full">
+        <div className="relative min-h-[250px] p-4 md:p-8 box-border body-font bg-[var(--foreground)] text-[var(--background)] flex flex-col md:flex-row gap-6 md:gap-3">
           {/* corners */}
           <div className="absolute top-0 left-0">
             <img
               src="/footer/corner.svg"
               alt="corner"
-              className="w-[30px] h-auto"
+              className="w-[20px] md:w-[30px] h-auto"
             />
           </div>
           <div className="absolute rotate-90 top-0 right-0">
@@ -59,13 +58,11 @@ export default function Footer({ menuOpen, setMenuOpen }: Props) {
 
             {/* contact us */}
             <div className="">
-              <a href={"#"}>
-                <img
-                  src="/footer/contact-us.svg"
-                  alt="contact us"
-                  className="w-[500px] h-auto"
-                />
-              </a>
+              <img
+                src="/footer/contact-us.svg"
+                alt="contact us"
+                className="w-[500px] h-auto"
+              />
             </div>
           </div>
 
