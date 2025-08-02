@@ -82,9 +82,9 @@ export default function ResultsPage() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="relative min-h-screen bg-[var(--background)] text-[var(--foreground)] overflow-x-hidden"
+      className="relative min-h-screen bg-[var(--background)] text-[var(--foreground)] overflow-x-hidden box-border"
     >
-      <div className="relative min-h-screen px-4 sm:px-5 py-8 sm:py-10 bg-[var(--background)] text-[var(--foreground)] overflow-x-hidden pb-20">
+      <div className="relative min-h-screen px-4 sm:px-5 py-8 sm:py-10 bg-[var(--background)] text-[var(--foreground)] overflow-x-hidden pb-20 box-border">
         {/* Decorative SVGs */}
         <img
           src="/results/first.svg"
@@ -103,7 +103,7 @@ export default function ResultsPage() {
         />
 
         {/* Main Container */}
-        <div className="flex flex-col items-start gap-6 sm:gap-10 max-w-7xl mx-auto">
+        <div className="flex flex-col items-start gap-6 sm:gap-10 max-w-7xl mx-auto box-border">
           {/* Results Image */}
           <img
             src="/results/results.svg"
@@ -112,7 +112,7 @@ export default function ResultsPage() {
           />
 
           {/* Process Section */}
-          <div className="w-full md:w-[90%] lg:w-[75%] flex flex-col mb-5">
+          <div className="w-full md:w-[90%] lg:w-[75%] flex flex-col mb-5 box-border">
             <div className="flex justify-start mb-4 sm:mb-[11px]">
               <img
                 src="/results/process.svg"
@@ -142,7 +142,7 @@ export default function ResultsPage() {
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 },
                   }}
-                  className="py-2 sm:py-3 flex gap-2 sm:gap-3 items-start"
+                  className="py-2 sm:py-3 flex gap-2 sm:gap-3 items-start box-border"
                 >
                   <img
                     src="/results/pointer.svg"
@@ -156,7 +156,7 @@ export default function ResultsPage() {
           </div>
 
           {/* Awards Section */}
-          <div className="w-full md:w-[75%] lg:w-[75%] p-2 flex flex-col ml-auto">
+          <div className="w-full md:w-[75%] lg:w-[75%] p-2 flex flex-col ml-auto box-border">
             <div className="flex justify-start mb-4 sm:mb-[11px]">
               <img
                 src="/results/awards.svg"
@@ -190,7 +190,7 @@ export default function ResultsPage() {
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 },
                   }}
-                  className="py-2 sm:py-3 flex gap-2 sm:gap-3 items-start"
+                  className="py-2 sm:py-3 flex gap-2 sm:gap-3 items-start box-border"
                 >
                   <img
                     src="/results/pointer.svg"
