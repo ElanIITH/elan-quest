@@ -89,21 +89,21 @@ export default function ResultsPage() {
         <img
           src="/results/first.svg"
           alt="first"
-          className="absolute top-[7rem] right-0 w-[210px] sm:w-[310px] md:top-0 md:w-[140px] lg:w-[320px] h-auto hidden md:block"
+          className="absolute top-[7rem] right-0 w-[210px] sm:w-[310px] md:top-0 md:w-[140px] lg:w-[300px] xl:w-[370px] h-auto hidden md:block"
         />
         <img
           src="/results/second.svg"
           alt="second"
-          className="absolute top-[40rem] right-0 w-[130px] sm:w-[150px] md:w-[70px] md:top-[30rem] lg:top-[28rem] lg:w-[150px] h-auto hidden md:block"
+          className="absolute top-[40rem] right-0 w-[130px] sm:w-[150px] md:w-[70px] md:top-[30rem] lg:top-[28rem] lg:w-[150px] xl:top-[35rem] h-auto hidden md:block"
         />
         <img
           src="/results/trophy.svg"
           alt="trophy"
-          className="absolute bottom-0 left-0 w-[200px] sm:w-[250px] md:w-[170px] lg:w-[220px] h-auto hidden md:block"
+          className="absolute bottom-0 left-0 w-[200px] sm:w-[250px] md:w-[170px] lg:w-[220px] xl:w-[300px] h-auto hidden md:block"
         />
 
         {/* Main Container */}
-        <div className="flex flex-col items-start gap-6 sm:gap-10 max-w-7xl mx-auto box-border">
+        <div className="flex flex-col items-center md:items-start gap-6 sm:gap-10 max-w-7xl mx-auto box-border">
           {/* Results Image */}
           <img
             src="/results/results.svg"
@@ -113,7 +113,7 @@ export default function ResultsPage() {
 
           {/* Process Section */}
           <div className="w-full md:w-[90%] lg:w-[75%] flex flex-col mb-5 box-border">
-            <div className="flex justify-start mb-4 sm:mb-[11px]">
+            <div className="flex md:justify-start justify-center mb-4 sm:mb-[11px]">
               <img
                 src="/results/process.svg"
                 alt="process"
@@ -142,7 +142,7 @@ export default function ResultsPage() {
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 },
                   }}
-                  className="py-2 sm:py-3 flex gap-2 sm:gap-3 items-start box-border"
+                  className="py-2 sm:py-3 flex gap-5 sm:gap-3 items-start box-border"
                 >
                   <img
                     src="/results/pointer.svg"
@@ -156,15 +156,15 @@ export default function ResultsPage() {
           </div>
 
           {/* Awards Section */}
-          <div className="w-full md:w-[75%] lg:w-[75%] p-2 flex flex-col ml-auto box-border">
-            <div className="flex justify-start mb-4 sm:mb-[11px]">
+          <div className="w-full md:w-[75%] lg:w-[75%] flex flex-col xl:ml-65 md:ml-auto box-border">
+            <div className="flex md:justify-start justify-center mb-4 sm:mb-[11px]">
               <img
                 src="/results/awards.svg"
                 alt="awards"
                 className="w-[200px] sm:w-[300px] h-auto"
               />
             </div>
-            <p className="text-justify py-2 mb-4 sm:mb-[11px] text-sm sm:text-base">
+            <p className="md:text-justify text-center py-2 mb-4 sm:mb-[11px] text-sm sm:text-base">
               The participating students stand to gain many prizes and goodies,
               as well as invaluable experience by participating in the Nexus
               QUEST examination:
@@ -190,7 +190,7 @@ export default function ResultsPage() {
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 },
                   }}
-                  className="py-2 sm:py-3 flex gap-2 sm:gap-3 items-start box-border"
+                  className="py-2 sm:py-3 flex gap-5 sm:gap-3 items-start box-border"
                 >
                   <img
                     src="/results/pointer.svg"

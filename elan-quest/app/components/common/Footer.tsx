@@ -20,7 +20,7 @@ export default function Footer({ menuOpen }: Props) {
       }
     >
       <footer className="w-full box-border">
-        <div className="relative box-border body-font bg-[var(--foreground)] text-[var(--background)] flex flex-col md:flex-row gap-8 p-4 md:p-8 min-h-[250px]">
+        <div className="relative box-border body-font bg-[var(--foreground)] text-[var(--background)] flex flex-col md:flex-row gap-1 p-4 md:p-8 min-h-[250px]">
           {/* corners */}
           <div className="absolute top-0 left-0">
             <img
@@ -68,17 +68,17 @@ export default function Footer({ menuOpen }: Props) {
           </div>
 
           {/* center - emails */}
-          <div className="w-full md:w-[30%] flex flex-col items-start md:items-end justify-end gap-1 box-border text-sm md:text-base">
+          <div className="px-4 w-full md:w-[40%] flex flex-col items-start md:items-end justify-end gap-1 box-border text-sm md:text-base">
             <div>elan.nvision@sa.iith.ac.in</div>
             <div>elan.nvision.outreach@sa.iith.ac.in</div>
           </div>
 
           {/* right block */}
-          <div className="w-full md:w-[30%] flex flex-col items-end justify-between gap-6 box-border">
+          <div className="w-full md:w-[20%] flex flex-col items-end justify-between gap-6 box-border">
             {/* heads */}
             <div className="w-full max-w-[210px] flex flex-col text-right">
-              <div className="text-lg font-semibold">PR & Outreach Heads</div>
-              <div className="mt-2">
+              <div className="text-xl text-left">PR & Outreach Heads</div>
+              <div className="mt-2 text-left">
                 <div className="mb-2">
                   <div>Saket Kashyap</div>
                   <div className="text-sm">+91 92341 68717</div>

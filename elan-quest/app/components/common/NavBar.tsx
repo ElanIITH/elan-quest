@@ -40,7 +40,6 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
             : "transition duration-300 ease"
         }
       >
-
         <nav className="h-[80px] w-full px-4 py-2 shadow-md flex justify-between items-center bg-[var(--foreground)] relative z-10">
           <div className="text-xl font-bold text-[var(--background)]">
             <Link href={"/"}>
