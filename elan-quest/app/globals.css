@@ -6,6 +6,10 @@
 
   --font-body: var(--font-raleway);
   --font-heading: var(--font-press-start);
+
+  :root {
+    --vh: 1vh;
+  }
 }
 
 html,
