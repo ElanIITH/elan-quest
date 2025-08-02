@@ -75,7 +75,7 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
   }, [selectedId]);
 
   return (
-    <div className="relative z-100 right-0 w-full lg:w-[480px] h-screen px-6 sm:px-8 lg:px-10 py-10 bg-[var(--foreground)] text-[var(--background)] flex flex-col box-border">
+    <div className="relative z-100 right-0 w-full lg:w-[480px] h-full px-6 sm:px-8 lg:px-10 py-10 bg-[var(--foreground)] text-[var(--background)] flex flex-col box-border">
       {/* Close Button */}
       <button
         onClick={closeMenu}
@@ -91,7 +91,7 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
       </div>
 
       {/* Bottom left corner rotated */}
-      <div className="absolute bottom-0 left-0 box-border">
+      <div className="absolute md:block hidden bottom-0 left-0 box-border">
         <img
           src="/menu/corner.svg"
           alt="corner"
@@ -111,17 +111,17 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
       {/* Content area */}
       <div className="flex flex-1 gap-20 box-border">
         {/* Left: Menu */}
-        <div className="flex flex-col text-lg lg:w-[315px] box-border">
+        <div className="flex flex-col text-lg lg:w-[315px] w-[250px] box-border">
           <img
             src="/menu/menu.svg"
             alt="menu"
-            className="w-[200px] h-auto lg:w-[190px] lg:h-auto mb-4"
+            className="w-[200px] md:w-[350px] h-auto lg:w-[190px] lg:h-auto mb-4"
           />
           <ul className="flex flex-col gap-0 md:gap-3 lg:gap-3 box-border">
             {menuList.map((item) => (
               <div
                 key={item.id}
-                className="body-font h-[40px] lg:h-[20px] flex gap-3 items-center box-border"
+                className="body-font h-[35px] lg:h-[20px] flex gap-3 items-center box-border"
                 onMouseEnter={() => {
                   setHoveredId(item.id);
                   setSelectedId(item.id);
@@ -142,12 +142,12 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
                   <img
                     src="/menu/pointer.svg"
                     alt="pointer"
-                    className="w-[25px] hidden md:block lg:w-[15px] h-auto"
+                    className="w-[25px] hidden lg:block lg:w-[15px] h-auto"
                   />
                 </div>
                 <Link
                   href={item.href}
-                  className="flex body-font lg:text-xl text-sm transition-all duration-300 ease-in-out active:text-md items-center gap-2 box-border"
+                  className="flex body-font md:text-2xl lg:text-xl text-lg transition-all duration-300 ease-in-out active:text-md items-center gap-2 box-border"
                   onClick={closeMenu}
                 >
                   <li

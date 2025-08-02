@@ -20,7 +20,7 @@ export default function Footer({ menuOpen }: Props) {
       }
     >
       <footer className="w-full box-border">
-        <div className="relative box-border body-font bg-[var(--foreground)] text-[var(--background)] flex flex-col md:flex-row gap-8 p-4 md:p-8 min-h-[250px]">
+        <div className="relative box-border body-font bg-[var(--foreground)] text-[var(--background)] flex flex-col lg:items-end items-center lg:flex-row lg:gap-1 gap-7 p-4 md:p-8 min-h-[250px]">
           {/* corners */}
           <div className="absolute top-0 left-0">
             <img
@@ -33,14 +33,14 @@ export default function Footer({ menuOpen }: Props) {
             <img
               src="/footer/corner.svg"
               alt="corner"
-              className="w-[30px] h-auto"
+              className="w-[20px] md:w-[30px] h-auto"
             />
           </div>
 
           {/* left block */}
-          <div className="w-full md:w-[40%] flex flex-col justify-between gap-6 box-border">
+          <div className="w-auto lg:w-[40%] flex flex-col gap-10 lg:gap-27 xl:gap-17 box-border">
             {/* logos */}
-            <div className="flex flex-wrap gap-6 md:gap-7">
+            <div className="flex gap-6 md:gap-7 lg:justify-start justify-center">
               <a href="#">
                 <img
                   src="/footer/elan.svg"
@@ -58,7 +58,7 @@ export default function Footer({ menuOpen }: Props) {
             </div>
 
             {/* contact us image */}
-            <div>
+            <div className="">
               <img
                 src="/footer/contact-us.svg"
                 alt="contact us"
@@ -68,17 +68,19 @@ export default function Footer({ menuOpen }: Props) {
           </div>
 
           {/* center - emails */}
-          <div className="w-full md:w-[30%] flex flex-col items-start md:items-end justify-end gap-1 box-border text-sm md:text-base">
+          <div className="px-4 w-full md:w-[40%] flex flex-col items-center lg:items-start justify-end gap-1 box-border text-sm md:text-base">
             <div>elan.nvision@sa.iith.ac.in</div>
             <div>elan.nvision.outreach@sa.iith.ac.in</div>
           </div>
 
           {/* right block */}
-          <div className="w-full md:w-[30%] flex flex-col items-end justify-between gap-6 box-border">
+          <div className="w-full lg:w-[20%] flex flex-col items-center lg:items-end justify-between gap-6 box-border">
             {/* heads */}
-            <div className="w-full max-w-[210px] flex flex-col text-right">
-              <div className="text-lg font-semibold">PR & Outreach Heads</div>
-              <div className="mt-2">
+            <div className="w-full max-w-[210px] flex flex-col">
+              <div className="text-xl lg:text-left text-center">
+                PR & Outreach Heads
+              </div>
+              <div className="mt-2 lg:text-left text-center">
                 <div className="mb-2">
                   <div>Saket Kashyap</div>
                   <div className="text-sm">+91 92341 68717</div>

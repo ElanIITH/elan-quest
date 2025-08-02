@@ -18,30 +18,29 @@ export default function SyllabusPage() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="relative flex flex-col gap-15 w-full items-start body-font bg-[var(--background)] min-h-screen px-0 pt-1 box-border" // ✅ Ensure no overflow from padding
+      className="relative flex flex-col gap-15 w-full items-start body-font bg-[var(--background)] min-h-screen px-0 pt-1 box-border"
     >
       <div className="flex flex-col gap-15 items-start body-font bg-[var(--background)] min-h-screen px-5 pt-10 pb-20 box-border">
         {" "}
-        {/* ✅ Wrapper with padding */}
         {/* Books Illustration */}
         <div className="absolute top-0 right-0">
           <img
             src="/syllabus/books.svg"
             alt="books"
-            className="w-[150px] md:w-[200px] lg:w-[270px] h-auto max-w-[45vw] box-border" // ✅ Constrain and prevent overflow
+            className="hidden md:w-[200px] md:block lg:w-[270px] xl:w-[350px] h-auto max-w-[45vw] box-border"
           />
         </div>
         {/* Top Section */}
-        <div className="flex flex-col gap-7 w-full box-border">
+        <div className="flex flex-col items-center md:items-start gap-7 w-full box-border">
           {/* Title Image */}
           <img
             src="/syllabus/syllabus.svg"
             alt="syllabus"
-            className="md:relative md:top-10 lg:relative lg:top-0 w-[62vw] max-w-full h-auto box-border"
+            className="md:relative md:top-7 lg:relative lg:top-0 w-[82vw] md:w-[62vw] max-w-full h-auto box-border"
           />
 
           {/* Description Text */}
-          <div className="text-justify text-lg leading-relaxed text-[var(--foreground)] md:pt-17 md:w-full lg:pt-0 lg:w-[67vw] box-border">
+          <div className="md:text-justify text-center text-lg leading-relaxed text-[var(--foreground)] md:pt-17 md:w-full lg:pt-0 lg:w-[67vw] box-border">
             Nexus QUEST spans four key academic areas -{" "}
             <span className="font-semibold">Logical Reasoning</span>,{" "}
             <span className="font-semibold">Mathematics</span>,{" "}
@@ -56,7 +55,7 @@ export default function SyllabusPage() {
         {/* Main Content */}
         <div className="flex flex-col gap-10 w-full box-border">
           {/* NavBar SVG with clickable zones */}
-          <div className="relative w-full h-auto box-border">
+          <div className="relative md:w-full w-[90vw] h-auto xl:mt-10 box-border">
             <img
               src={`/syllabus/s${activeNav + 5}.svg`}
               alt={`navbar s${activeNav + 5}`}
@@ -80,16 +79,16 @@ export default function SyllabusPage() {
           </div>
 
           {/* Class SVG Display */}
-          <div className="box-border">
+          <div className="box-border xl:mt-5">
             <img
               src={`/syllabus/class${activeNav + 5}.svg`}
               alt={`class${activeNav + 5}`}
-              className="w-auto h-[70px] box-border"
+              className="md:w-auto md:h-[70px] w-full h-[30px] mx-auto md:mx-0 box-border"
             />
           </div>
 
           {/* Syllabus Table */}
-          <div className="grid grid-rows-5 relative text-[var(--background)] w-full box-border">
+          <div className="grid auto-rows-max md:grid-rows-5 xl:mt-5 relative text-[var(--background)] w-full box-border">
             {/* Corner SVGs */}
             {["", "rotate-90", "-rotate-90", "rotate-180"].map(
               (rotation, idx) => (
@@ -132,13 +131,13 @@ export default function SyllabusPage() {
               return (
                 <div
                   key={rowIdx}
-                  className="grid grid-cols-[1fr_30px_3fr] items-center px-4 sm:px-10 py-2 gap-4 w-full box-border" // ✅ Reduced padding for small screens
+                  className="grid grid-cols-[1fr_20px_1fr] md:grid-cols-[1fr_30px_3fr] md:h-auto h-fit items-center md:px-6 px-5 py-6 gap-4 w-full box-border"
                   style={{
                     background: `rgba(${baseColor}, ${bgOpacity})`,
                     color: `${fontColor}`,
                   }}
                 >
-                  <div className="text-left text-lg leading-relaxed box-border">
+                  <div className="text-center md:text-left md:text-lg text-xl md:font-normal font-semibold leading-relaxed box-border">
                     {item.col1}
                   </div>
                   <div className="flex justify-center box-border">
@@ -148,7 +147,7 @@ export default function SyllabusPage() {
                       className="w-[10px] h-auto box-border"
                     />
                   </div>
-                  <div className="text-justify text-lg leading-relaxed box-border">
+                  <div className="text-center md:text-left md:text-lg text-lg leading-relaxed box-border">
                     {item.col2}
                   </div>
                 </div>
