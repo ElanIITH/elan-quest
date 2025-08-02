@@ -89,7 +89,7 @@ export default function ResultsPage() {
         <img
           src="/results/first.svg"
           alt="first"
-          className="absolute top-[7rem] right-0 w-[210px] sm:w-[310px] md:top-0 md:w-[140px] lg:w-[300px] xl:w-[370px] h-auto hidden md:block"
+          className="absolute top-[7rem] right-0 w-[210px] sm:w-[310px] md:top-0 md:w-[140px] lg:w-[300px] xl:w-[340px] h-auto hidden md:block"
         />
         <img
           src="/results/second.svg"
@@ -99,7 +99,7 @@ export default function ResultsPage() {
         <img
           src="/results/trophy.svg"
           alt="trophy"
-          className="absolute bottom-0 left-0 w-[200px] sm:w-[250px] md:w-[170px] lg:w-[220px] xl:w-[300px] h-auto hidden md:block"
+          className="absolute bottom-0 left-0 w-[200px] md:w-[170px] lg:w-[220px] xl:w-[200px] h-auto hidden md:block"
         />
 
         {/* Main Container */}
@@ -120,7 +120,6 @@ export default function ResultsPage() {
                 className="w-[200px] sm:w-[300px] h-auto"
               />
             </div>
-
             <MotionUl
               className="text-justify text-sm sm:text-base"
               initial="hidden"
@@ -156,7 +155,7 @@ export default function ResultsPage() {
           </div>
 
           {/* Awards Section */}
-          <div className="w-full md:w-[75%] lg:w-[75%] flex flex-col xl:ml-65 md:ml-auto box-border">
+          <div className="w-full md:w-[75%] lg:w-[75%] flex flex-col xl:ml-55 md:ml-auto box-border">
             <div className="flex md:justify-start justify-center mb-4 sm:mb-[11px]">
               <img
                 src="/results/awards.svg"
