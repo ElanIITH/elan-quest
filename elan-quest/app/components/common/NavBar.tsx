@@ -45,7 +45,7 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
         <nav className="fixed top-0 w-full px-4 py-3 shadow-md flex justify-between items-center bg-[var(--foreground)] md:relative z-10">
           <div className="text-xl font-bold text-[var(--background)] flex items-center">
             <Link href={"/"}>
-             <img
+              <img
                 src="/footer/quest.svg"
                 alt="logo"
                 className="w-[100px] h-auto hover:content-[url('/NexusQuestAsh.svg')]"

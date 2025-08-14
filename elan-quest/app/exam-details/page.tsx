@@ -1,5 +1,5 @@
 "use client";
-import { motion,Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import ExamDetails from "../components/exam-details/ExamDetails";
 import Eligibility from "../components/exam-details/Eligibility";
 import Dates from "../components/exam-details/Dates";
@@ -9,12 +9,9 @@ import Format from "../components/exam-details/Format";
 import Rocket from "../components/exam-details/Rocket";
 import Microscope from "../components/exam-details/Microscope";
 import ArrowPointer from "../components/exam-details/ArrowPointer";
-import { Raleway } from "next/font/google";
-
-const raleway = Raleway({ subsets: ["latin"], weight: ["400", "600"] });
 
 // fadeInUp animation
-const fadeInUp:Variants = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: (custom: number) => ({
     opacity: 1,
@@ -26,7 +23,7 @@ const fadeInUp:Variants = {
 export default function ExamDetailsPage() {
   return (
     <div
-      className={`${raleway.className} relative bg-[#252525] text-[#E8E8C6] px-4 py-8`}
+      className={`overflow-x-hidden body-font relative bg-[#252525] text-[#E8E8C6] px-4 py-8`}
     >
       {/* Microscope aligned to bottom */}
       <motion.div
@@ -99,11 +96,11 @@ export default function ExamDetailsPage() {
             </div>
             <div className="flex flex-col justify-between ml-4 py-2 h-[40px] body-font">
               {[
-      { date: "August 7, 2025", label: "Registrations Open" },
-      { date: "October 11, 2025", label: "Registrations Close" },
-      { date: "October 12, 2025", label: "Quest Olympiad" },
-      { date: "Febraury, 2026", label: "Prize Distribution" },
-    ].map((item, idx) => (
+                { date: "August 7, 2025", label: "Registrations Open" },
+                { date: "October 11, 2025", label: "Registrations Close" },
+                { date: "October 12, 2025", label: "Quest Olympiad" },
+                { date: "Febraury, 2026", label: "Prize Distribution" },
+              ].map((item, idx) => (
                 <div key={idx} className="mb-2">
                   <div className="text-[34px] font-semibold">{item.date}</div>
                   <div className="text-[18px]">{item.label}</div>
@@ -136,9 +133,9 @@ export default function ExamDetailsPage() {
           animate="visible"
           variants={fadeInUp}
           custom={5}
-          className="py-12 w-[1100px]"
+          className="py-10 w-fit"
         >
-          <div className="w-[1150px] h-[100px]">
+          <div className="w-auto md:w-[1150px] h-[100px]">
             <MarkingScheme />
           </div>
 
@@ -258,16 +255,17 @@ export default function ExamDetailsPage() {
               <div className="flex flex-col md:flex-row md:items-start md:space-x-6">
                 <div className="mt-4 md:mt-0 flex flex-col justify-between space-y-4">
                   {[
-      { date: "August 7, 2025", label: "Registrations Open" },
-      { date: "October 11, 2025", label: "Registrations Close" },
-      { date: "October 12, 2025", label: "Quest Olympiad" },
-      { date: "Febraury, 2026", label: "Prize Distribution" },
-    ].map((item, idx) => (
-                <div key={idx} className="mb-2">
-                  <div className="text-[30px] font-semibold">{item.date}</div>
-                  <div className="text-[15px]">{item.label}</div>
-                </div>
-                    
+                    { date: "August 7, 2025", label: "Registrations Open" },
+                    { date: "October 11, 2025", label: "Registrations Close" },
+                    { date: "October 12, 2025", label: "Quest Olympiad" },
+                    { date: "Febraury, 2026", label: "Prize Distribution" },
+                  ].map((item, idx) => (
+                    <div key={idx} className="mb-2">
+                      <div className="text-[30px] font-semibold">
+                        {item.date}
+                      </div>
+                      <div className="text-[15px]">{item.label}</div>
+                    </div>
                   ))}
                 </div>
               </div>

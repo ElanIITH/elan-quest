@@ -1,11 +1,10 @@
 export default function Results() {
   return (
     <svg
-      // width="1650"
-      // height="125"
       viewBox="0 0 1650 125"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="w-[340px] md:w-[1100px] h-auto"
     >
       <path d="M975 100H1000V125H975V100Z" fill="#E8E8C6" />
       <path d="M975 75H1000V100H975V75Z" fill="#E8E8C6" />

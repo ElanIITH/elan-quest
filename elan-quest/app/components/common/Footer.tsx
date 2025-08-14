@@ -13,7 +13,6 @@ interface Props {
 export default function Footer({ menuOpen }: Props) {
   return (
     <div
-      style={{ height: "calc(var(--vh) * 100)" }}
       className={
         menuOpen
           ? "blur-[3px] transition duration-300 ease select-none"
@@ -42,14 +41,18 @@ export default function Footer({ menuOpen }: Props) {
           <div className="w-auto lg:w-[40%] flex flex-col gap-10 lg:gap-27 xl:gap-17 box-border">
             {/* logos */}
             <div className="flex gap-6 md:gap-7 lg:justify-start justify-center">
-              <a href="#">
+              <a
+                href="https://www.elan.org.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src="/footer/elan.svg"
                   alt="Elan Logo"
                   className="w-[150px] md:w-[190px] h-auto transform hover:scale-105 transition-transform duration-300 ease"
                 />
               </a>
-              <a href="#">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/footer/quest.svg"
                   alt="Quest Logo"
@@ -100,7 +103,11 @@ export default function Footer({ menuOpen }: Props) {
                 alt="quest"
                 className="md:w-[20px] w-[25px] h-auto"
               />
-              <a href="#">
+              <a
+                href="https://www.instagram.com/elan_nvision.competitions?igsh=MTkybTI1ZzBwb25oNg=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon
                   icon={faInstagram as any}
                   className="text-3xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
@@ -116,14 +123,18 @@ export default function Footer({ menuOpen }: Props) {
                 alt="elan"
                 className="md:w-[20px] w-[25px] h-auto"
               />
-              <a href="#">
+              <a
+                href="https://www.instagram.com/elan_nvision.iith?igsh=bXUxeTE2OXVkM3lz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon
                   icon={faInstagram as any}
                   className="text-3xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://m.facebook.com/elannvision.iithyderabad/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -133,7 +144,7 @@ export default function Footer({ menuOpen }: Props) {
                 />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://in.linkedin.com/company/elan-nvision-iith"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -142,7 +153,11 @@ export default function Footer({ menuOpen }: Props) {
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://x.com/elan_nvision?t=iGkK7K9yfQB3t4nw4LGU1g&s=08"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon
                   icon={faXTwitter as any}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"

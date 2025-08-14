@@ -9,9 +9,40 @@ import {
   syllabus10,
 } from "../components/syllabus/content";
 import { motion, Variants } from "framer-motion";
+import RegisterPopUp from "../components/common/RegisterPopUp";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function SyllabusPage() {
   const [activeNav, setActiveNav] = useState<number>(1);
+  const [showPopup, setShowPopup] = useState(false);
+  const [openDropdowns, setOpenDropdowns] = useState<Set<number>>(new Set());
+
+  const toggleDropdown = (classNum: number) => {
+    const newOpenDropdowns = new Set(openDropdowns);
+    if (newOpenDropdowns.has(classNum)) {
+      newOpenDropdowns.delete(classNum);
+    } else {
+      newOpenDropdowns.add(classNum);
+    }
+    setOpenDropdowns(newOpenDropdowns);
+  };
+
+  const getSyllabusData = (classNum: number) => {
+    switch (classNum) {
+      case 6:
+        return syllabus6;
+      case 7:
+        return syllabus7;
+      case 8:
+        return syllabus8;
+      case 9:
+        return syllabus9;
+      case 10:
+        return syllabus10;
+      default:
+        return [];
+    }
+  };
 
   // Framer Motion variants for staggered sections
   const containerVariants: Variants = {
@@ -94,7 +125,7 @@ export default function SyllabusPage() {
         {/* NavBar */}
         <motion.div
           variants={sectionVariants}
-          className="relative md:w-full w-[90vw] h-auto xl:mt-10 box-border"
+          className="relative md:block hidden md:w-full w-[90vw] h-auto xl:mt-10 box-border"
         >
           <img
             src={`/syllabus/s${activeNav + 5}.svg`}
@@ -123,14 +154,170 @@ export default function SyllabusPage() {
           <img
             src={`/syllabus/class${activeNav + 5}.svg`}
             alt={`class${activeNav + 5}`}
-            className="md:w-auto md:h-[70px] w-full h-[30px] mx-auto md:mx-0 box-border"
+            className="md:block hidden md:w-auto md:h-[70px] w-full h-[30px] mx-auto md:mx-0 box-border"
           />
         </motion.div>
+
+        {/* Class Dropdowns */}
+        <motion.div
+          variants={sectionVariants}
+          className="w-full max-w-4xl mx-auto space-y-4"
+        >
+          {[
+            {
+              classNum: 6,
+              link: "https://unstop.com/p/nexus-quest-for-grade-6-iit-hyderabad-1530540",
+              img: "/popup/c6.svg",
+            },
+            {
+              classNum: 7,
+              link: "https://unstop.com/p/nexus-quest-for-grade-7-iit-hyderabad-1540529",
+              img: "/popup/c7.svg",
+            },
+            {
+              classNum: 8,
+              link: "https://unstop.com/p/nexus-quest-for-grade-8-iit-hyderabad-1540532",
+              img: "/popup/c8.svg",
+            },
+            {
+              classNum: 9,
+              link: "https://unstop.com/p/nexus-quest-for-grade-9-iit-hyderabad-1541230",
+              img: "/popup/c9.svg",
+            },
+            {
+              classNum: 10,
+              link: "https://unstop.com/p/nexus-quest-for-grade-10-iit-hyderabad-1541233",
+              img: "/popup/c10.svg",
+            },
+          ].map((classItem) => (
+            <div
+              key={classItem.classNum}
+              className="md:hidden block bg-[var(--foreground)] rounded-lg shadow-lg overflow-hidden"
+            >
+              {/* Dropdown Header */}
+              <div
+                className="flex items-center justify-between p-4 cursor-pointer hover:bg-opacity-90 transition-colors"
+                onClick={() => toggleDropdown(classItem.classNum)}
+              >
+                <div className="flex items-center gap-4">
+                  <img
+                    src={classItem.img}
+                    alt={`class ${classItem.classNum}`}
+                    className="w-auto h-[50px]"
+                  />
+                </div>
+                <div className="text-[var(--background)]">
+                  {openDropdowns.has(classItem.classNum) ? (
+                    <ChevronUp className="w-6 h-6" />
+                  ) : (
+                    <ChevronDown className="w-6 h-6" />
+                  )}
+                </div>
+              </div>
+
+              {/* Dropdown Content - Syllabus Table */}
+              {/* Dropdown Content - Syllabus Table */}
+              {openDropdowns.has(classItem.classNum) && (
+                <motion.div
+                  variants={sectionVariants}
+                  className="grid auto-rows-max xl:mt-5 relative text-[var(--background)] w-full box-border md:hidden"
+                >
+                  {["", "rotate-90", "-rotate-90", "rotate-180"].map(
+                    (rotation, idx) => (
+                      <img
+                        key={idx}
+                        src="/syllabus/corner.svg"
+                        alt="corner"
+                        className={`absolute w-6 h-6 box-border ${
+                          idx === 0
+                            ? "top-0 left-0"
+                            : idx === 1
+                            ? "top-0 right-0"
+                            : idx === 2
+                            ? "bottom-0 left-0"
+                            : "bottom-0 right-0"
+                        } ${rotation}`}
+                      />
+                    )
+                  )}
+
+                  {getSyllabusData(classItem.classNum).map((item, rowIdx) => {
+                    const baseColor = "232, 232, 198";
+                    const bgOpacity =
+                      rowIdx === 0 ? 1 : Math.max(0, 0.5 - 0.1 * rowIdx);
+                    const fontColor =
+                      rowIdx !== 0 ? "var(--background)" : "var(--foreground)";
+
+                    return (
+                      <div
+                        key={rowIdx}
+                        className="grid grid-cols-[1fr_20px_1fr] h-fit items-center px-5 py-6 gap-4 w-full box-border"
+                        style={{
+                          background: `rgba(${baseColor}, ${bgOpacity})`,
+                          color: `${fontColor}`,
+                        }}
+                      >
+                        <div
+                          className={`text-left text-xl leading-relaxed box-border ${
+                            rowIdx === 0 ? "font-bold" : ""
+                          }`}
+                        >
+                          {item.col1}
+                        </div>
+                        <div className="flex justify-center box-border">
+                          <img
+                            src="/syllabus/dot-separator.svg"
+                            alt="separator"
+                            className="w-[10px] h-auto box-border"
+                          />
+                        </div>
+                        <div
+                          className={`text-left text-lg leading-relaxed box-border ${
+                            rowIdx === 0 ? "font-bold" : ""
+                          }`}
+                        >
+                          {item.col2}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </motion.div>
+              )}
+            </div>
+          ))}
+        </motion.div>
+
+        <style jsx>{`
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+          @keyframes scaleIn {
+            from {
+              opacity: 0;
+              transform: scale(0.95);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+          .animate-fadeIn {
+            animation: fadeIn 0.3s ease-out forwards;
+          }
+          .animate-scaleIn {
+            animation: scaleIn 0.3s ease-out forwards;
+          }
+        `}</style>
 
         {/* Syllabus Table */}
         <motion.div
           variants={sectionVariants}
-          className="grid auto-rows-max md:grid-rows-5 xl:mt-5 relative text-[var(--background)] w-full box-border"
+          className=" md:grid hidden auto-rows-max md:grid-rows-5 xl:mt-5 relative text-[var(--background)] w-full box-border"
         >
           {["", "rotate-90", "-rotate-90", "rotate-180"].map(
             (rotation, idx) => (
