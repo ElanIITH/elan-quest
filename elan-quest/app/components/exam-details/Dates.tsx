@@ -4,7 +4,7 @@ export default function Dates() {
       viewBox="0 0 484 84"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-[130px] md:w-[1100px] h-auto"
+      className="w-[130px] md:w-[450px] h-auto"
     >
       <path d="M0 66.6667H16.6667V83.3333H0V66.6667Z" fill="#E8E8C6" />
       <path d="M0 0H16.6667V16.6667H0V0Z" fill="#E8E8C6" />

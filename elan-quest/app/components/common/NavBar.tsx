@@ -57,7 +57,7 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
               <li className="flex items-center">
                 <div className="flex justify-center items-center relative group">
                   <img
-                    src="/subtract.svg"
+                    src="/Subtract.svg"
                     alt="logo"
                     className="w-[170px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-12 pt-1"
                   />
@@ -74,7 +74,7 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
               <li className="flex items-center">
                 <div className="flex justify-center items-center relative group">
                   <img
-                    src="/subtract.svg"
+                    src="/Subtract.svg"
                     alt="logo"
                     className="w-[170px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-12 pt-1"
                   />
@@ -88,7 +88,7 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
               <li className="flex items-center">
                 <div className="flex justify-center items-center relative group">
                   <img
-                    src="/subtract.svg"
+                    src="/Subtract.svg"
                     alt="logo"
                     className="w-[170px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-12 pt-1"
                   />
