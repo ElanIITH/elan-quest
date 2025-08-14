@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu as MenuIcon } from "lucide-react";
 import Link from "next/link";
 import Menu from "./Menu"; // Adjust path as needed
+import RegisterPopUp from "./RegisterPopUp";
 
 interface Props {
   menuOpen: boolean;
@@ -12,6 +13,7 @@ interface Props {
 
 export default function NavBar({ menuOpen, setMenuOpen }: Props) {
   const menuRef = useRef<HTMLDivElement>(null);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -40,17 +42,17 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
             : "transition duration-300 ease"
         }
       >
-        <nav className="w-full px-4 py-3 shadow-md flex justify-between items-center bg-[var(--foreground)] relative z-10">
+        <nav className="fixed top-0 w-full px-4 py-3 shadow-md flex justify-between items-center bg-[var(--foreground)] md:relative z-10">
           <div className="text-xl font-bold text-[var(--background)] flex items-center">
             <Link href={"/"}>
               <img
                 src="/footer/quest.svg"
                 alt="logo"
-                className="w-[100px] h-auto"
+                className="w-[80px] md:w-[100px] h-auto"
               />
             </Link>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 hidden md:block">
             <ul className="flex flex-row px-10 justify-end gap-10">
               <li className="flex items-center">
                 <div className="flex justify-center items-center relative group">
@@ -98,21 +100,24 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
                 </div>
               </li>
               <li className="flex items-center">
-                <Link href="/register-now">
-                  <div className="relative pt-2 group">
-                    <img
-                      src="/menu/register-bg.svg"
-                      className="w-[260px] h-auto group-hover:opacity-0 transition-opacity duration-500"
-                    />
-                    <img
-                      src="/union.svg"
-                      className="w-[260px] h-auto absolute flex inset-0 mt-2 transform scale-97 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                    />
-                    <p className="absolute inset-0 flex items-center justify-center text-xl text-[var(--foreground)] font-extrabold group-hover:text-[var(--background)] transition-text duration-500">
-                      REGISTER NOW
-                    </p>
-                  </div>
-                </Link>
+                <div
+                  className="relative pt-2 group cursor-pointer"
+                  onClick={() => setShowPopup(true)}
+                >
+                  <img
+                    src="/menu/register-bg.svg"
+                    className="w-[260px] h-auto group-hover:opacity-0 transition-opacity duration-500"
+                  />
+                  <img
+                    src="/union.svg"
+                    className="w-[260px] h-auto absolute flex inset-0 mt-2 transform scale-97 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
+                  <p className="absolute inset-0 flex items-center justify-center text-xl text-[var(--foreground)] font-extrabold group-hover:text-[var(--background)] transition-text duration-500">
+                    REGISTER NOW
+                  </p>
+                </div>
+
+                {showPopup && <RegisterPopUp setShowPopup={setShowPopup} />}
               </li>
             </ul>
           </div>

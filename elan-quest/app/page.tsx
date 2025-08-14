@@ -1,10 +1,27 @@
+
+
+
+"use client";
 import Link from "next/link";
+import { useState } from "react";
+import RegisterPopUp from "./components/common/RegisterPopUp";
+
 
 export default function HomePage() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleClick = () => {
+    setShowPopup(true);
+  };
+
   return (
     <>
       <div>
-        {/* Top section */}
+
+        {/* Popup */}
+        {showPopup && <RegisterPopUp setShowPopup={setShowPopup} />}
+
+
         <div className="h-[calc(100vh-80px)] flex flex-row gap-10 px-25 py-10">
           <div className="flex flex-col justify-center gap-10 w-[1000px]">
             <div>
@@ -14,6 +31,7 @@ export default function HomePage() {
                 className="w-[500px] h-auto"
               />
             </div>
+
             <div>
               <p className="text-3xl body-font">October 12, 2025</p>
               <p className="text-2xl body-font">Quest Olympiad</p>
@@ -39,6 +57,27 @@ export default function HomePage() {
 </div>
             <p className="text-2xl pl-15 text-justify body-font">
               A national-level Olympiad for school students, organized by Elan&nVision, the annual techno-cultural fest of IIT Hyderabad.
+
+            <div className="text-center">
+              <p className="text-3xl body-font">MONTH 00, 2025</p>
+              <p className="text-2xl body-font">Date of Exam</p>
+            </div>
+          </div>
+          <div className="flex flex-col justify-center gap-10">
+            <div
+              className="cursor-pointer transform hover:scale-103 transition-all duration-400 ease-in-out"
+              onClick={handleClick}
+            >
+              <img
+                src="/registerNow.svg"
+                alt="Register Now"
+                className="w-auto h-[60px]"
+              />
+            </div>
+            <p className="text-2xl text-justify body-font">
+              A national-level Olympiad for school students, organized by Elan &
+              nVision, the annual techno-cultural fest of IIT Hyderabad.
+
             </p>
           </div>
         </div>
@@ -115,6 +154,7 @@ The Nexus Quest Olympiad is designed to challenge intellect, precision, and prob
           </Link>
         </div>
         <div className="h-[50px]">
+
 
         </div>
       </div>

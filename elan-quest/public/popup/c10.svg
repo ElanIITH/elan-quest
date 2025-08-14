@@ -1,0 +1,23 @@
+<svg width="324" height="71" viewBox="0 0 324 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="324" height="71" fill="#252525"/>
+
+  <!-- Corner cutouts -->
+  <rect x="0" y="0" width="14" height="14" fill="#E8E8C6"/>
+  <rect x="310" y="0" width="14" height="14" fill="#E8E8C6"/>
+  <rect x="0" y="57" width="14" height="14" fill="#E8E8C6"/>
+  <rect x="310" y="57" width="14" height="14" fill="#E8E8C6"/>
+
+  <!-- Centered Text -->
+  <text 
+    x="162" 
+    y="35.5" 
+    fill="#E8E8C6" 
+    font-size="36" 
+    font-family="Arial, sans-serif"
+    text-anchor="middle"
+    alignment-baseline="middle"
+  >
+    Class X
+  </text>
+</svg>

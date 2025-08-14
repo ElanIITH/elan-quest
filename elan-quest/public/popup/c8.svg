@@ -1,0 +1,23 @@
+<svg width="324" height="71" viewBox="0 0 324 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="324" height="71" fill="#252525"/>
+
+  <!-- Corner squares -->
+  <rect x="0" y="0" width="12" height="12" fill="#E8E8C6"/>
+  <rect x="312" y="0" width="12" height="12" fill="#E8E8C6"/>
+  <rect x="0" y="59" width="12" height="12" fill="#E8E8C6"/>
+  <rect x="312" y="59" width="12" height="12" fill="#E8E8C6"/>
+
+  <!-- Centered Text -->
+  <text 
+    x="50%" 
+    y="50%" 
+    dominant-baseline="middle" 
+    text-anchor="middle" 
+    fill="#E8E8C6" 
+    font-size="36" 
+    font-family="Arial, sans-serif"
+  >
+    Class VIII
+  </text>
+</svg>

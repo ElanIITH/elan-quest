@@ -1,7 +1,7 @@
 const syllabus6 = [
   {
-    col1: "Subjects",
-    col2: "Topics",
+    col1: "SUBJECTS",
+    col2: "TOPICS",
   },
   {
     col1: "Logical Reasoning",
@@ -23,8 +23,8 @@ const syllabus6 = [
 
 const syllabus7 = [
   {
-    col1: "Subjects",
-    col2: "Topics",
+    col1: "SUBJECTS",
+    col2: "TOPICS",
   },
   {
     col1: "Logical Reasoning",
@@ -46,8 +46,8 @@ const syllabus7 = [
 
 const syllabus8 = [
   {
-    col1: "Subjects",
-    col2: "Topics",
+    col1: "SUBJECTS",
+    col2: "TOPICS",
   },
   {
     col1: "Logical Reasoning",
@@ -69,8 +69,8 @@ const syllabus8 = [
 
 const syllabus9 = [
   {
-    col1: "Subjects",
-    col2: "Topics",
+    col1: "SUBJECTS",
+    col2: "TOPICS",
   },
   {
     col1: "Logical Reasoning",
@@ -92,8 +92,8 @@ const syllabus9 = [
 
 const syllabus10 = [
   {
-    col1: "Subjects",
-    col2: "Topics",
+    col1: "SUBJECTS",
+    col2: "TOPICS",
   },
   {
     col1: "Logical Reasoning",
