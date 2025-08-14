@@ -258,19 +258,16 @@ export default function ExamDetailsPage() {
               <div className="flex flex-col md:flex-row md:items-start md:space-x-6">
                 <div className="mt-4 md:mt-0 flex flex-col justify-between space-y-4">
                   {[
-                    "MONTH 00, 2025",
-                    "MONTH 00, 2025",
-                    "MONTH 00, 2025",
-                    "MONTH 00, 2025",
-                  ].map((month, idx) => (
-                    <div key={idx}>
-                      <div className="text-[24px] md:text-[34px] font-semibold">
-                        {month}
-                      </div>
-                      <div className="text-[16px] md:text-[18px]">
-                        Registrations Open
-                      </div>
-                    </div>
+      { date: "August 7, 2025", label: "Registrations Open" },
+      { date: "October 11, 2025", label: "Registrations Close" },
+      { date: "October 12, 2025", label: "Quest Olympiad" },
+      { date: "Febraury, 2026", label: "Prize Distribution" },
+    ].map((item, idx) => (
+                <div key={idx} className="mb-2">
+                  <div className="text-[30px] font-semibold">{item.date}</div>
+                  <div className="text-[15px]">{item.label}</div>
+                </div>
+                    
                   ))}
                 </div>
               </div>
