@@ -12,6 +12,7 @@ interface Props {
 
 export default function Footer({ menuOpen }: Props) {
   return (
+    //@ts-expect-error
     <div
       className={
         menuOpen

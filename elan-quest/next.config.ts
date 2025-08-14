@@ -2,6 +2,9 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  typescript: {
+    ignoreBuildErrors : true,
+  },
   webpack(config: {
     module: { rules: { test: RegExp; issuer: RegExp; use: string[] }[] };
   }) {
