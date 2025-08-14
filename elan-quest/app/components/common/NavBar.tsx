@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Menu as MenuIcon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Menu from "./Menu"; // Adjust path as needed
 import RegisterPopUp from "./RegisterPopUp";
 
@@ -109,7 +110,7 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
                     className="w-[260px] h-auto group-hover:opacity-0 transition-opacity duration-500"
                   />
                   <img
-                    src="/union.svg"
+                    src="/Union.svg"
                     className="w-[260px] h-auto absolute flex inset-0 mt-2 transform scale-97 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   />
                   <p className="absolute inset-0 flex items-center justify-center text-xl text-[var(--foreground)] font-extrabold group-hover:text-[var(--background)] transition-text duration-500">
