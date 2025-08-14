@@ -28,6 +28,17 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
   ];
 
   useEffect(() => {
+    const setVh = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+
+    setVh();
+    window.addEventListener("resize", setVh);
+    return () => window.removeEventListener("resize", setVh);
+  }, []);
+
+  useEffect(() => {
     if (menuOpen) {
       document.body.classList.add("overflow-hidden");
     } else {
@@ -64,7 +75,7 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
   }, [selectedId]);
 
   return (
-    <div className="relative z-100 right-0 w-full lg:w-[480px] h-screen px-6 sm:px-8 lg:px-10 py-10 bg-[var(--foreground)] text-[var(--background)] flex flex-col">
+    <div className="relative z-100 right-0 w-full lg:w-[480px] h-full px-6 sm:px-8 lg:px-10 py-10 bg-[var(--foreground)] text-[var(--background)] flex flex-col box-border">
       {/* Close Button */}
       <button
         onClick={closeMenu}
@@ -75,12 +86,12 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
       </button>
 
       {/* Top left corner */}
-      <div className="absolute top-0 left-0">
+      <div className="absolute top-0 left-0 box-border">
         <img src="/menu/corner.svg" alt="corner" className="w-[30px] h-auto" />
       </div>
 
       {/* Bottom left corner rotated */}
-      <div className="absolute bottom-0 left-0">
+      <div className="absolute md:block hidden bottom-0 left-0 box-border">
         <img
           src="/menu/corner.svg"
           alt="corner"
@@ -89,28 +100,28 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
       </div>
 
       {/* Right: Bulb */}
-      <div className="absolute top-0 right-10 lg:top-0 lg:right-5">
+      <div className="absolute top-0 right-2 md:right-5 lg:right-5 box-border">
         <img
           src="/menu/bulb.svg"
           alt="bulb"
-          className="w-[200px] md:w-[160px] lg:w-[160px] h-auto"
+          className="w-[170px] md:w-[160px] lg:w-[160px] h-auto"
         />
       </div>
 
       {/* Content area */}
-      <div className="flex flex-1 gap-20">
+      <div className="flex flex-1 gap-20 box-border">
         {/* Left: Menu */}
-        <div className="flex flex-col text-lg lg:w-[315px]">
+        <div className="flex flex-col text-lg lg:w-[315px] w-[250px] box-border">
           <img
             src="/menu/menu.svg"
             alt="menu"
-            className="w-[300px] h-auto lg:w-[190px] lg:h-auto mb-4"
+            className="w-[200px] md:w-[350px] h-auto lg:w-[190px] lg:h-auto mb-4"
           />
-          <ul className="flex flex-col gap-3">
+          <ul className="flex flex-col gap-0 md:gap-3 lg:gap-3 box-border">
             {menuList.map((item) => (
               <div
                 key={item.id}
-                className="body-font h-[40px] lg:h-[20px] flex gap-3 items-center"
+                className="body-font h-[35px] lg:h-[20px] flex gap-3 items-center box-border"
                 onMouseEnter={() => {
                   setHoveredId(item.id);
                   setSelectedId(item.id);
@@ -118,7 +129,7 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
                 onMouseLeave={() => setHoveredId(null)}
               >
                 <div
-                  className={`transition-opacity duration-200 ${
+                  className={`transition-opacity duration-200 box-border ${
                     hoveredId === item.id && selectedId === item.id
                       ? "opacity-100 visible"
                       : hoveredId && hoveredId !== selectedId
@@ -131,16 +142,16 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
                   <img
                     src="/menu/pointer.svg"
                     alt="pointer"
-                    className="w-[25px] hidden md:block lg:w-[15px] h-auto"
+                    className="w-[25px] hidden lg:block lg:w-[15px] h-auto"
                   />
                 </div>
                 <Link
                   href={item.href}
-                  className="flex body-font lg:text-xl items-center gap-2"
+                  className="flex body-font md:text-2xl lg:text-xl text-lg transition-all duration-300 ease-in-out active:text-md items-center gap-2 box-border"
                   onClick={closeMenu}
                 >
                   <li
-                    className={`transition-shadow duration-200 ${
+                    className={`transition-shadow duration-200 box-border ${
                       hoveredId === item.id && selectedId === item.id
                         ? "text-shadow-[0_6px_3px_rgba(0,0,0,0.3)]"
                         : hoveredId && hoveredId !== selectedId
@@ -157,7 +168,7 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
                   <img
                     src="/menu/coming-soon.svg"
                     alt="coming soon"
-                    className="w-[70px] h-auto body-font ml-auto"
+                    className="w-[70px] h-auto body-font ml-auto box-border"
                   />
                 ) : null}
               </div>

@@ -1,115 +1,115 @@
 const syllabus6 = [
   {
-    col1: "SUBJECTS",
-    col2: "TOPICS",
+    col1: "Subjects",
+    col2: "Topics",
   },
   {
     col1: "Logical Reasoning",
-    col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number ranking and Time sequence test, Coding-Decoding, Dot situations and paper cutting-folding, Time and Work, Direction Sense test, Syllogism, Clocks, Ratio-Proportion and Variation.",
+    col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number Ranking and Time Sequence Test, Coding-Decoding, Dot Situations and Paper Cutting-Folding, Time and Work, Direction Sense Test, Syllogism, Clocks, Ratio-Proportion and Variation.",
   },
   {
     col1: "Physics",
-    col2: "motion, light, electricity, magnetism, measurements",
+    col2: "Motion, Light, Electricity, Magnetism, Measurements.",
   },
   {
     col1: "Chemistry",
-    col2: "intro to chemistry, matter and its properties, water and its resources, air, elements compounds and mixtures",
+    col2: "Introduction to Chemistry, Matter and Its Properties, Water and Its Resources, Air, Elements, Compounds and Mixtures.",
   },
   {
     col1: "Mathematics",
-    col2: "number system, intro to algebra, ratio and proportion, geometry, mensuration, data handling",
+    col2: "Number System, Introduction to Algebra, Ratio and Proportion, Geometry, Mensuration, Data Handling.",
   },
 ];
 
 const syllabus7 = [
   {
-    col1: "SUBJECTS",
-    col2: "TOPICS",
+    col1: "Subjects",
+    col2: "Topics",
   },
   {
     col1: "Logical Reasoning",
-    col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number ranking and Time sequence test, Coding-Decoding, Dot situations and paper cutting-folding, Time and Work, Direction Sense test, Syllogism, Clocks, Ratio-Proportion and Variation.",
+    col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number Ranking and Time Sequence Test, Coding-Decoding, Dot Situations and Paper Cutting-Folding, Time and Work, Direction Sense Test, Syllogism, Clocks, Ratio-Proportion and Variation.",
   },
   {
     col1: "Physics",
-    col2: "heat, wind storms and cyclones, motion and time, electric current and its effects, light",
+    col2: "Heat, Wind Storms and Cyclones, Motion and Time, Electric Current and Its Effects, Light.",
   },
   {
     col1: "Chemistry",
-    col2: "acids bases and salts, physical and chemical changes, water, heat, transportation in plants and animals",
+    col2: "Acids, Bases and Salts, Physical and Chemical Changes, Water, Heat, Transportation in Plants and Animals.",
   },
   {
     col1: "Mathematics",
-    col2: "number system, algebra, ratio and proportion, geometry, mensuration, data handling",
+    col2: "Number System, Algebra, Ratio and Proportion, Geometry, Mensuration, Data Handling.",
   },
 ];
 
 const syllabus8 = [
   {
-    col1: "SUBJECTS",
-    col2: "TOPICS",
+    col1: "Subjects",
+    col2: "Topics",
   },
   {
     col1: "Logical Reasoning",
-    col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number ranking and Time sequence test, Coding-Decoding, Dot situations and paper cutting-folding, Time and Work, Direction Sense test, Syllogism, Clocks, Ratio-Proportion and Variation.",
+    col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number Ranking and Time Sequence Test, Coding-Decoding, Dot Situations and Paper Cutting-Folding, Time and Work, Direction Sense Test, Syllogism, Clocks, Ratio-Proportion and Variation.",
   },
   {
     col1: "Physics",
-    col2: "force and pressure, friction, sound, light, some natural phenomena, stars and solar system, chemical effects of electric current",
+    col2: "Force and Pressure, Friction, Sound, Light, Some Natural Phenomena, Stars and Solar System, Chemical Effects of Electric Current.",
   },
   {
     col1: "Chemistry",
-    col2: "synthetic fibres and plastics, materials: metals and non metals, coal and petroleum, combustion and flame, pollution of air and water",
+    col2: "Synthetic Fibres and Plastics, Materials: Metals and Non-Metals, Coal and Petroleum, Combustion and Flame, Pollution of Air and Water.",
   },
   {
     col1: "Mathematics",
-    col2: "rational numbers, linear equations in one variable, understanding quadrilaterals, squares and square roots, cube and cube roots, comparing quantities, algebraic expressions, exponents and powers, factorisation, intro to graphs, mensuration, direct and inverse proportions",
+    col2: "Rational Numbers, Linear Equations in One Variable, Understanding Quadrilaterals, Squares and Square Roots, Cubes and Cube Roots, Comparing Quantities, Algebraic Expressions, Exponents and Powers, Factorisation, Introduction to Graphs, Mensuration, Direct and Inverse Proportions.",
   },
 ];
 
 const syllabus9 = [
   {
-    col1: "SUBJECTS",
-    col2: "TOPICS",
+    col1: "Subjects",
+    col2: "Topics",
   },
   {
     col1: "Logical Reasoning",
-    col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number ranking and Time sequence test, Coding-Decoding, Dot situations and paper cutting-folding, Time and Work, Direction Sense test, Syllogism, Clocks, Ratio-Proportion and Variation.",
+    col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number Ranking and Time Sequence Test, Coding-Decoding, Dot Situations and Paper Cutting-Folding, Time and Work, Direction Sense Test, Syllogism, Clocks, Ratio-Proportion and Variation.",
   },
   {
     col1: "Physics",
-    col2: "motion, force and laws of motion, gravitation, work and energy, sound",
+    col2: "Motion, Force and Laws of Motion, Gravitation, Work and Energy, Sound.",
   },
   {
     col1: "Chemistry",
-    col2: "matter in our surroundings, is matter around us pure?, atoms and molecules, structure of atom",
+    col2: "Matter in Our Surroundings, Is Matter Around Us Pure?, Atoms and Molecules, Structure of Atom.",
   },
   {
     col1: "Mathematics",
-    col2: "number systems, algebra, coordinate geometry, geometry, mensuration, statistics",
+    col2: "Number Systems, Algebra, Coordinate Geometry, Geometry, Mensuration, Statistics.",
   },
 ];
 
 const syllabus10 = [
   {
-    col1: "SUBJECTS",
-    col2: "TOPICS",
+    col1: "Subjects",
+    col2: "Topics",
   },
   {
     col1: "Logical Reasoning",
-    col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number ranking and Time sequence test, Coding-Decoding, Dot situations and paper cutting-folding, Time and Work, Direction Sense test, Syllogism, Clocks, Ratio-Proportion and Variation.",
+    col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number Ranking and Time Sequence Test, Coding-Decoding, Dot Situations and Paper Cutting-Folding, Time and Work, Direction Sense Test, Syllogism, Clocks, Ratio-Proportion and Variation.",
   },
   {
     col1: "Physics",
-    col2: "light-reflection and refraction, human eye and colourful world, electricity, magnetic effects of electric current, sources of energy, our environment, management of natural resources",
+    col2: "Light: Reflection and Refraction, The Human Eye and the Colourful World, Electricity, Magnetic Effects of Electric Current, Sources of Energy, Our Environment, Management of Natural Resources.",
   },
   {
     col1: "Chemistry",
-    col2: "chemical reactions and equations, acids bases and salts, metals and non metals, carbon and its compounds, periodic classification of elements",
+    col2: "Chemical Reactions and Equations, Acids, Bases and Salts, Metals and Non-Metals, Carbon and Its Compounds, Periodic Classification of Elements.",
   },
   {
     col1: "Mathematics",
-    col2: "number systems, algebra, coordinate geometry, geometry, trigonometry, mensuration, statistics and probability",
+    col2: "Number Systems, Algebra, Coordinate Geometry, Geometry, Trigonometry, Mensuration, Statistics and Probability.",
   },
 ];
 
