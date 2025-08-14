@@ -202,8 +202,8 @@ export default function TermsPage() {
               Participation is voluntary and at the participant&apos;s own risk.
             </li>
             <li>
-              Elan &amp; nVision&apos;s liability is limited to the extent permitted
-              by applicable law.
+              Elan &amp; nVision&apos;s liability is limited to the extent
+              permitted by applicable law.
             </li>
             <li>
               Prize distribution will be conducted during Elan &amp; nVision at

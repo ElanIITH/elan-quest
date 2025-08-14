@@ -6,7 +6,6 @@ export default function Format() {
       xmlns="http://www.w3.org/2000/svg"
       className="w-[150px] md:w-[1100px] h-auto"
     >
-      className="w-[300px] md:w-[1100px] h-auto"
       <path d="M0 66.6667H16.6667V83.3333H0V66.6667Z" fill="#E8E8C6" />
       <path d="M0 0H16.6667V16.6667H0V0Z" fill="#E8E8C6" />
       <path d="M0 50H16.6667V66.6667H0V50Z" fill="#E8E8C6" />
