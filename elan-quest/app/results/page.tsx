@@ -102,6 +102,23 @@ export default function ResultsPage() {
           className="absolute bottom-0 left-0 w-[200px] md:w-[170px] lg:w-[220px] xl:w-[200px] h-auto hidden md:block"
         />
 
+        {/* Mobile Decorative SVGs */}
+        <img
+          src="/results/first.svg"
+          alt="first"
+          className="absolute top-[7rem] right-0 w-[210px] sm:w-[310px] md:top-0 md:w-[140px] lg:w-[300px] xl:w-[340px] h-auto hidden md:block"
+        />
+        <img
+          src="/results/second.svg"
+          alt="second"
+          className="absolute top-[40rem] right-0 w-[130px] sm:w-[150px] md:w-[70px] md:top-[30rem] lg:top-[28rem] lg:w-[150px] xl:top-[35rem] h-auto hidden md:block"
+        />
+        <img
+          src="/mobile/results/trophy.svg"
+          alt="trophy"
+          className="absolute bottom-0 left-0 w-[200px] md:w-[170px] lg:w-[220px] xl:w-[200px] h-auto block md:hidden"
+        />
+
         {/* Main Container */}
         <div className="flex flex-col items-center md:items-start body-font gap-6 sm:gap-10 max-w-7xl mx-auto box-border">
           {/* Results Image */}

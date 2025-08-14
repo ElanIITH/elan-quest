@@ -41,6 +41,18 @@ export default function SyllabusPage() {
       className="relative flex flex-col gap-15 w-full items-start body-font bg-[var(--background)] min-h-screen px-0 pt-1 box-border"
     >
       <div className="flex flex-col gap-15 items-center md:items-start body-font bg-[var(--background)] min-h-screen px-5 pt-10 pb-20 box-border">
+        {/* Mobile Books Illustration */}
+        <motion.div
+          variants={sectionVariants}
+          className="absolute top-6 mx-auto"
+        >
+          <img
+            src="/mobile/syllabus/books.svg"
+            alt="books"
+            className="md:hidden block md:w-[200px] lg:w-[270px] xl:w-[350px] h-auto max-w-[45vw] box-border"
+          />
+        </motion.div>
+
         {/* Books Illustration */}
         <motion.div
           variants={sectionVariants}
@@ -56,7 +68,7 @@ export default function SyllabusPage() {
         {/* Top Section */}
         <motion.div
           variants={sectionVariants}
-          className="flex flex-col items-center md:items-start gap-7 w-full box-border"
+          className="flex flex-col items-center mt-45 md:mt-0 md:items-start gap-7 w-full box-border"
         >
           <img
             src="/syllabus/syllabus.svg"
@@ -162,7 +174,7 @@ export default function SyllabusPage() {
                 }}
               >
                 <div
-                  className={`text-center md:text-left md:text-lg text-xl leading-relaxed box-border ${
+                  className={`text-left md:text-center md:text-lg text-xl leading-relaxed box-border ${
                     rowIdx == 0 ? "font-bold" : ""
                   }`}
                 >
@@ -176,7 +188,7 @@ export default function SyllabusPage() {
                   />
                 </div>
                 <div
-                  className={`text-center md:text-left md:text-lg text-lg leading-relaxed box-border ${
+                  className={`text-left md:text-center md:text-lg text-lg leading-relaxed box-border ${
                     rowIdx === 0 ? "font-bold" : ""
                   }`}
                 >

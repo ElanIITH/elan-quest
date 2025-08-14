@@ -6,9 +6,9 @@ import AboutIIT from "../components/about-us/AboutIIT";
 import SingleLink from "../components/about-us/singleLink";
 import { Raleway } from "next/font/google";
 import { motion, Variants } from "framer-motion";
+import { div } from "framer-motion/client";
 
 const raleway = Raleway({ subsets: ["latin"], weight: ["400", "600", "700"] });
-
 
 // Typed as Variants so TS knows it's valid
 const fadeInUp: Variants = {
@@ -19,11 +19,9 @@ const fadeInUp: Variants = {
     transition: {
       delay: i * 0.15,
       duration: 0.6,
-
-      ease: [0.4, 0, 0.2, 1] // cubic-bezier for easeOut
-    }
-  })
-
+      ease: [0.4, 0, 0.2, 1], // cubic-bezier for easeOut
+    },
+  }),
 };
 
 export default function AboutPage() {
@@ -79,7 +77,6 @@ export default function AboutPage() {
         </motion.div>
 
         {/* ABOUT ELAN & NVISION */}
-
         <motion.div
           initial="hidden"
           animate="visible"
@@ -100,12 +97,7 @@ export default function AboutPage() {
             future. Over three days, attendees enjoy performances, competitions,
             concerts, and networking with industry professionals and alumni, all
             while experiencing IITH’s vibrant research and entrepreneurial
-            spirit
-
-        <motion.div initial="hidden" animate="visible" variants={fadeInUp} custom={4} className="px-6 md:px-20">
-          <motion.p variants={fadeInUp} custom={5} className="text-[20px] leading-relaxed text-justify">
-            <strong>Elan & nVision</strong> is <strong>IIT Hyderabad</strong>’s annual techno-cultural fest, blending innovation with celebration brings together the best of both worlds – the rich cultural heritage that connects us through stories, music, and shared experiences, alongside the cutting-edge technology and innovation that drives our future. Over three days, attendees enjoy performances, competitions, concerts, and networking with industry professionals and alumni, all while experiencing IITH’s vibrant research and entrepreneurial spirit.
-
+            spirit.
           </motion.p>
 
           {/* Link + Hover Arrows */}
@@ -148,7 +140,7 @@ export default function AboutPage() {
           <motion.p
             variants={fadeInUp}
             custom={9}
-            className="mt-6 text-[20px] leading-relaxed text-justify"
+            className="mt-6 text-[20px] h-[200px] leading-relaxed text-justify"
           >
             <strong>The Indian Institute of Technology Hyderabad</strong> (IITH)
             is a premier institute known for its strong focus on research and
@@ -157,11 +149,6 @@ export default function AboutPage() {
             research, robust industry collaborations, and active support for
             entrepreneurship. This dynamic environment enables students and
             faculty to turn visionary ideas into impactful realities.
-
-          
-          <motion.p variants={fadeInUp} custom={9} className="mt-6 text-[20px] h-[200px] leading-relaxed text-justify">
-            <strong>The Indian Institute of Technology Hyderabad</strong> (IITH) is a premier institute known for its strong focus on research and innovation. It offers a holistic educational ecosystem that promotes interactive learning, flexible academic structures, cutting-edge research, robust industry collaborations, and active support for entrepreneurship. This dynamic environment enables students and faculty to turn visionary ideas into impactful realities.
-
           </motion.p>
         </motion.div>
       </div>

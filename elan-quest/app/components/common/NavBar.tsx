@@ -46,11 +46,11 @@ export default function NavBar({ menuOpen, setMenuOpen }: Props) {
               <img
                 src="/footer/quest.svg"
                 alt="logo"
-                className="w-[100px] h-auto"
+                className="w-[50px] md:w-[100px] h-auto"
               />
             </Link>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 hidden md:block">
             <ul className="flex flex-row px-10 justify-end gap-10">
               <li className="flex items-center">
                 <div className="flex justify-center items-center relative group">
