@@ -111,7 +111,7 @@ export default function SyllabusPage() {
             <span className="font-semibold">Logical Reasoning</span>,{" "}
             <span className="font-semibold">Mathematics</span>,{" "}
             <span className="font-semibold">Physics</span>, and{" "}
-            <span className="font-semibold">Chemistry</span>, testing students'
+            <span className="font-semibold">Chemistry</span>, testing students&#39;
             theoretical knowledge, problem-solving capabilities, and real-world
             application of basic concepts.{" "}
             <span className="md:block hidden">
