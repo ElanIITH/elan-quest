@@ -12,7 +12,6 @@ interface Props {
 
 export default function Footer({ menuOpen }: Props) {
   return (
-    //@ts-expect-error
     <div
       className={
         menuOpen
@@ -110,7 +109,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faInstagram as any}
+                  icon={faInstagram}
                   className="text-3xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
@@ -130,7 +129,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faInstagram as any}
+                  icon={faInstagram}
                   className="text-3xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
@@ -140,7 +139,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faFacebook as any}
+                  icon={faFacebook}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
@@ -150,7 +149,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faLinkedin as any}
+                  icon={faLinkedin}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
@@ -160,7 +159,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faXTwitter as any}
+                  icon={faXTwitter}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
