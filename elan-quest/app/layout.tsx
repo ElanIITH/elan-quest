@@ -35,11 +35,7 @@ export default function RootLayout({
         <meta name="description" content="Created by Nathan Alvares" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body
-        className={`${
-          menuOpen ? "overflow-y-hidden" : ""
-        } antialiased bg-[var(--background)] text-[var(--foreground)] w-full min-h-screen flex flex-col`}
-      >
+      <body className="antialiased bg-[var(--background)] text-[var(--foreground)] w-screen min-h-screen flex flex-col">
         <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <div
           className={`flex-grow + ${
