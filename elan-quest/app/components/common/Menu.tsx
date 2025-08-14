@@ -17,14 +17,14 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
 
   const menuList = [
     { id: 1, title: "Home", href: "/", comingSoon: false },
-    { id: 2, title: "About Us", href: "/AboutUs", comingSoon: false },
+    { id: 2, title: "About Us", href: "/about-us", comingSoon: false },
     { id: 3, title: "Exam Details", href: "/exam-details", comingSoon: false },
     { id: 4, title: "Syllabus", href: "/syllabus", comingSoon: false },
     { id: 5, title: "Results", href: "/results", comingSoon: false },
     { id: 6, title: "Leaderboards", href: "", comingSoon: true },
     { id: 7, title: "Blog", href: "", comingSoon: true },
     { id: 8, title: "FAQs", href: "", comingSoon: true },
-    { id: 9, title: "Terms & Conditions", href: "/terms", comingSoon: false },
+    { id: 9, title: "Terms & Conditions", href: "/terms-conditions", comingSoon: false },
   ];
 
   useEffect(() => {
