@@ -1,7 +1,21 @@
+"use client";
+
+import { useState } from "react";
+import RegisterPopUp from "./components/common/RegisterPopUp";
+
 export default function HomePage() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleClick = () => {
+    setShowPopup(true);
+  };
+
   return (
     <>
       <div>
+        {/* Popup */}
+        {showPopup && <RegisterPopUp setShowPopup={setShowPopup} />}
+
         <div className="h-[calc(100vh-80px)] flex flex-row gap-10 px-25 py-10">
           <div className="flex flex-col justify-center gap-10 w-[1000px]">
             <div>
@@ -11,18 +25,23 @@ export default function HomePage() {
                 className="w-[500px] h-auto"
               />
             </div>
-            <div>
+            <div className="text-center">
               <p className="text-3xl body-font">MONTH 00, 2025</p>
               <p className="text-2xl body-font">Date of Exam</p>
             </div>
           </div>
           <div className="flex flex-col justify-center gap-10">
-            <img
-              src="/registerNow.svg"
-              alt="Register Now"
-              className="w-auto h-[60px]"
-            />
-            <p className="text-2xl pl-15 text-justify body-font">
+            <div
+              className="cursor-pointer transform hover:scale-103 transition-all duration-400 ease-in-out"
+              onClick={handleClick}
+            >
+              <img
+                src="/registerNow.svg"
+                alt="Register Now"
+                className="w-auto h-[60px]"
+              />
+            </div>
+            <p className="text-2xl text-justify body-font">
               A national-level Olympiad for school students, organized by Elan &
               nVision, the annual techno-cultural fest of IIT Hyderabad.
             </p>
@@ -40,11 +59,7 @@ export default function HomePage() {
             </div>
             <p className="text-2xl text-justify body-font">
               Elan & nVision is IIT Hyderabad's annual techno-cultural fest,
-              blending innovation with celebration. This vibrant celebration
-              brings together the best of both worlds - the rich cultural
-              heritage that connects us through stories, music, and shared
-              experiences, alongside the cutting-edge technology and innovation
-              that drives our future.
+              blending innovation with celebration...
             </p>
           </div>
           <div className="flex flex-col gap-5">
@@ -58,9 +73,7 @@ export default function HomePage() {
             </div>
             <p className="text-2xl text-justify body-font">
               Nexus Quest tests students across four core domains: Logical
-              Reasoning, Mathematics, Physics, and Chemistry. The syllabus
-              emphasizes deep conceptual understanding, analytical thinking, and
-              real-world application of fundamental principles.
+              Reasoning, Mathematics, Physics, and Chemistry...
             </p>
           </div>
           <div className="flex flex-col gap-5">
@@ -73,10 +86,7 @@ export default function HomePage() {
               <img src="/blackArrow.svg" alt="Go" className="w-auto h-[40px]" />
             </div>
             <p className="text-2xl text-justify body-font">
-              This section outlines how performance will be evaluated, from
-              score calculation to tie-breakers. It also features details about
-              awards, certificates, and exclusive goodies awaiting top
-              performers."
+              This section outlines how performance will be evaluated...
             </p>
           </div>
         </div>
