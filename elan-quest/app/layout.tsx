@@ -35,8 +35,9 @@ export default function RootLayout({
         <meta name="description" content="Created by Nathan Alvares" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className="antialiased bg-[var(--background)] text-[var(--foreground)] w-screen min-h-screen flex flex-col">
+      <body className="relative antialiased bg-[var(--background)] text-[var(--foreground)] w-screen min-h-screen flex flex-col">
         <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        {/* <div className="w-full h-[400px] px-4 py-3 border">hello</div> */}
         <div
           className={`flex-grow + ${
             menuOpen
