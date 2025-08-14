@@ -1,9 +1,9 @@
 "use client";
 
-import AboutUs from "../components/AboutUs/AboutUs";
-import AboutNexus from "../components/AboutUs/AboutNexus";
-import AboutIIT from "../components/AboutUs/AboutIIT";
-import SingleLink from "../components/AboutUs/singleLink";
+import AboutUs from "../components/about-us/AboutUs";
+import AboutNexus from "../components/about-us/AboutNexus";
+import AboutIIT from "../components/about-us/AboutIIT";
+import SingleLink from "../components/about-us/singleLink";
 import { Raleway } from "next/font/google";
 import { motion } from "framer-motion";
 
