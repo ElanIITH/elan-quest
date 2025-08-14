@@ -98,7 +98,7 @@ export default function HomePage() {
             {
               href: "/exam-details",
               img: "/examDetails.svg",
-              text: `Elan & nVision is IIT Hyderabad's annual techno-cultural fest, blending innovation with celebration. This vibrant celebration brings together the best of both worlds – the rich cultural heritage that connects us through stories, music, and shared experiences, alongside the cutting-edge technology and innovation that drives our future. 
+              text: `Elan & nVision is IIT Hyderabad's annual techno-cultural fest, blending innovation with celebration. This vibrant celebration brings together the best of both worlds - the rich cultural heritage that connects us through stories, music, and shared experiences, alongside the cutting-edge technology and innovation that drives our future. 
 `,
             },
             {

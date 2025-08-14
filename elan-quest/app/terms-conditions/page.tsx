@@ -60,9 +60,9 @@ export default function TermsPage() {
           <p className="font-bold text-2xl">1. Acceptance of Terms</p>
           <p>
             By registering for, participating in, or accessing any part of Nexus
-            QUEST organized by Elan &amp; nVision, you agree to be bound by these
-            Terms and Conditions. If you do not agree to these Terms, you may not
-            participate in the Olympiad.
+            QUEST organized by Elan &amp; nVision, you agree to be bound by
+            these Terms and Conditions. If you do not agree to these Terms, you
+            may not participate in the Olympiad.
           </p>
 
           <p className="font-bold text-2xl">2. Participant Conduct</p>
@@ -73,16 +73,16 @@ export default function TermsPage() {
               online examination.
             </li>
             <li>
-              Any form of cheating, plagiarism, or academic dishonesty will result
-              in immediate disqualification.
+              Any form of cheating, plagiarism, or academic dishonesty will
+              result in immediate disqualification.
             </li>
             <li>
               Use of unauthorized materials, assistance, or communication during
               the online exam is strictly prohibited.
             </li>
             <li>
-              Participants must comply with all online proctoring requirements and
-              examination protocols.
+              Participants must comply with all online proctoring requirements
+              and examination protocols.
             </li>
           </ul>
 
@@ -97,8 +97,8 @@ export default function TermsPage() {
               disqualification.
             </li>
             <li>
-              Participants represent their schools and communities and are expected
-              to uphold these standards.
+              Participants represent their schools and communities and are
+              expected to uphold these standards.
             </li>
             <li>
               Any form of harassment, discrimination, or misconduct will not be
@@ -108,7 +108,9 @@ export default function TermsPage() {
 
           <p className="font-bold text-2xl">3. Participant Responsibilities</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Provide accurate and truthful information during registration.</li>
+            <li>
+              Provide accurate and truthful information during registration.
+            </li>
             <li>Comply with all online examination rules and procedures.</li>
             <li>Maintain confidentiality of examination content.</li>
             <li>
@@ -121,29 +123,29 @@ export default function TermsPage() {
           <p className="font-semibold text-xl">4.1 Examination Content</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              All examination questions, materials, and content are proprietary to
-              Elan &amp; nVision.
+              All examination questions, materials, and content are proprietary
+              to Elan &amp; nVision.
             </li>
             <li>
               Participants may not reproduce, share, or distribute examination
               content in any form.
             </li>
             <li>
-              Violation of intellectual property rights may result in legal action
-              and disqualification.
+              Violation of intellectual property rights may result in legal
+              action and disqualification.
             </li>
           </ul>
 
           <p className="font-semibold text-xl">4.2 Participant Information</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              Participants retain rights to their personal achievements and academic
-              records.
+              Participants retain rights to their personal achievements and
+              academic records.
             </li>
             <li>
               By participating, participants grant limited rights to use their
-              names and achievements for promotional purposes related to Nexus QUEST
-              and Elan &amp; nVision.
+              names and achievements for promotional purposes related to Nexus
+              QUEST and Elan &amp; nVision.
             </li>
           </ul>
 
@@ -151,24 +153,24 @@ export default function TermsPage() {
           <p className="font-semibold text-xl">5.1 Information Collection</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              Personal information is collected only for examination administration
-              and communication.
+              Personal information is collected only for examination
+              administration and communication.
             </li>
             <li>
               Data is protected in accordance with applicable privacy laws and
               institutional policies.
             </li>
             <li>
-              Information may be shared with schools for coordination purposes where
-              applicable.
+              Information may be shared with schools for coordination purposes
+              where applicable.
             </li>
           </ul>
 
           <p className="font-semibold text-xl">5.2 Data Usage</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              Personal information will not be used for commercial purposes without
-              explicit consent.
+              Personal information will not be used for commercial purposes
+              without explicit consent.
             </li>
             <li>
               Participants may request access to or correction of their personal
@@ -181,29 +183,31 @@ export default function TermsPage() {
           <p className="font-semibold text-xl">6.1 Technical Issues</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              Participants are responsible for ensuring stable internet connection
-              and compatible devices for the online examination.
+              Participants are responsible for ensuring stable internet
+              connection and compatible devices for the online examination.
             </li>
             <li>
               Elan &amp; nVision is not liable for technical failures on the
               participant's end.
             </li>
             <li>
-              System-wide technical issues will be addressed fairly with appropriate
-              remedial measures.
+              System-wide technical issues will be addressed fairly with
+              appropriate remedial measures.
             </li>
           </ul>
 
           <p className="font-semibold text-xl">6.2 Limitation of Liability</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Participation is voluntary and at the participant's own risk.</li>
             <li>
-              Elan &amp; nVision's liability is limited to the extent permitted by
-              applicable law.
+              Participation is voluntary and at the participant's own risk.
             </li>
             <li>
-              Prize distribution will be conducted during Elan &amp; nVision at IIT
-              Hyderabad.
+              Elan &amp; nVision's liability is limited to the extent permitted
+              by applicable law.
+            </li>
+            <li>
+              Prize distribution will be conducted during Elan &amp; nVision at
+              IIT Hyderabad.
             </li>
           </ul>
 
@@ -215,11 +219,12 @@ export default function TermsPage() {
               reasonable notice.
             </li>
             <li>
-              Continued participation after notification constitutes acceptance of
-              changes.
+              Continued participation after notification constitutes acceptance
+              of changes.
             </li>
             <li>
-              Significant changes will be communicated through official channels.
+              Significant changes will be communicated through official
+              channels.
             </li>
           </ul>
 
@@ -237,14 +242,15 @@ export default function TermsPage() {
           <p className="font-semibold text-xl">8.3 Disqualification</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              Elan &amp; nVision reserves the right to disqualify participants for
-              violation of these Terms.
+              Elan &amp; nVision reserves the right to disqualify participants
+              for violation of these Terms.
             </li>
             <li>
               Disqualification decisions are final and not subject to appeal.
             </li>
             <li>
-              Disqualified participants forfeit all rights to awards and recognition.
+              Disqualified participants forfeit all rights to awards and
+              recognition.
             </li>
           </ul>
 
@@ -256,8 +262,8 @@ export default function TermsPage() {
               addresses and the official website.
             </li>
             <li>
-              Participants are responsible for monitoring these channels and keeping
-              contact information updated.
+              Participants are responsible for monitoring these channels and
+              keeping contact information updated.
             </li>
             <li>
               Social media channels are supplementary and not primary means of
@@ -275,8 +281,8 @@ export default function TermsPage() {
           <p className="font-semibold text-xl">10.1 Severability</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              If any provision of these Terms is deemed invalid, the remainder shall
-              continue in full force.
+              If any provision of these Terms is deemed invalid, the remainder
+              shall continue in full force.
             </li>
             <li>
               Invalid provisions will be replaced with the closest valid
@@ -287,8 +293,8 @@ export default function TermsPage() {
           <p className="font-semibold text-xl">10.2 Entire Agreement</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              These Terms constitute the complete agreement between participants and
-              Elan &amp; nVision regarding Nexus QUEST.
+              These Terms constitute the complete agreement between participants
+              and Elan & nVision regarding Nexus QUEST.
             </li>
             <li>
               No verbal agreements or representations outside these Terms are
@@ -305,15 +311,13 @@ export default function TermsPage() {
             elan.nvision@sa.iith.ac.in
           </p>
           <p>
-            Nexus QUEST is organized by Elan &amp; nVision, the annual
+            Nexus QUEST is organized by Elan & nVision, the annual
             techno-cultural fest of IIT Hyderabad.
           </p>
           <div className="h-10" />
         </motion.div>
       </div>
-      <div className="w-[70px]">
-
-      </div>
+      <div className="w-[70px]"></div>
     </div>
   );
 }
