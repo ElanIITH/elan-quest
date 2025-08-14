@@ -41,7 +41,12 @@ export default function RegisterPopUp({ setShowPopup }: PopUpProps) {
               img: "/popup/c10.svg",
             },
           ].map((item, idx) => (
-            <a key={idx} href={item.link}>
+            <a
+              key={idx}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src={item.img}
                 alt={`popup c${idx + 6}`}

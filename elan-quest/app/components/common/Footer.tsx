@@ -52,7 +52,7 @@ export default function Footer({ menuOpen }: Props) {
                   className="w-[150px] md:w-[190px] h-auto transform hover:scale-105 transition-transform duration-300 ease"
                 />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="/" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/footer/quest.svg"
                   alt="Quest Logo"
@@ -109,7 +109,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faInstagram}
+                  icon={faInstagram as any}
                   className="text-3xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
@@ -129,7 +129,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faInstagram}
+                  icon={faInstagram as any}
                   className="text-3xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
@@ -139,7 +139,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faFacebook}
+                  icon={faFacebook as any}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
@@ -149,7 +149,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faLinkedin}
+                  icon={faLinkedin as any}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
@@ -159,7 +159,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faXTwitter}
+                  icon={faXTwitter as any}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>

@@ -6,6 +6,7 @@ import AboutIIT from "../components/about-us/AboutIIT";
 import SingleLink from "../components/about-us/singleLink";
 import { Raleway } from "next/font/google";
 import { motion, Variants } from "framer-motion";
+import { div } from "framer-motion/client";
 
 const raleway = Raleway({ subsets: ["latin"], weight: ["400", "600", "700"] });
 
@@ -26,7 +27,7 @@ const fadeInUp: Variants = {
 export default function AboutPage() {
   return (
     <div
-      className={`body-font bg-[#252525] text-[#E8E8C6] pt-16 w-full overflow-x-hidden`}
+      className={`${raleway.className} bg-[#252525] text-[#E8E8C6] pt-16 w-full overflow-x-hidden`}
     >
       <div className="space-y-8">
         {/* ABOUT US */}
@@ -54,13 +55,26 @@ export default function AboutPage() {
           <motion.p
             variants={fadeInUp}
             custom={3}
-            className="mt-6 text-[20px] leading-relaxed md:text-justify text-left"
+            className="mt-6 text-[20px] leading-relaxed text-justify"
           >
             <strong>Nexus QUEST</strong> is a comprehensive nationwide academic
-            Olympiad conducted during <strong>IIT Hyderabad</strong>’s
+            Olympiad conducted during <strong>IIT Hyderabad</strong>'s
             prestigious annual techno-cultural fest{" "}
             <strong>Elan & nVision</strong>, designed to identify and celebrate
-            exceptional scholastic talent from schools across the country.
+            exceptional scholastic talent from schools across the country.{" "}
+            <span className="hidden md:inline">
+              Unlike conventional curriculum-based Olympiads that rely on
+              routine textbook questions, Nexus QUEST presents intellectually
+              stimulating puzzles and challenges that encourage students to
+              think creatively beyond traditional academic boundaries. The
+              examination emphasizes analytical thinking, problem-solving
+              skills, and multidisciplinary understanding while aligning with
+              national educational standards. Beyond academic assessment, it
+              serves as a prestigious platform for students to demonstrate their
+              intellectual capabilities, gain valuable exposure to the IIT
+              community, and develop clarity about their future educational and
+              career pathways through meaningful networking opportunities.
+            </span>
           </motion.p>
         </motion.div>
 
@@ -75,14 +89,17 @@ export default function AboutPage() {
           <motion.p
             variants={fadeInUp}
             custom={5}
-            className="text-[20px] leading-relaxed md:text-justify text-left"
+            className="text-[20px] leading-relaxed text-justify"
           >
-            <strong>Elan & nVision</strong> is <strong>IIT Hyderabad</strong>’s
+            <strong>Elan & nVision</strong> is <strong>IIT Hyderabad</strong>'s
             annual techno-cultural fest, blending innovation with celebration
-            brings together the best of both worlds – the rich cultural heritage
+            brings together the best of both worlds - the rich cultural heritage
             that connects us through stories, music, and shared experiences,
             alongside the cutting-edge technology and innovation that drives our
-            future.
+            future. Over three days, attendees enjoy performances, competitions,
+            concerts, and networking with industry professionals and alumni, all
+            while experiencing IITH's vibrant research and entrepreneurial
+            spirit.
           </motion.p>
 
           {/* Link + Hover Arrows */}
@@ -125,7 +142,7 @@ export default function AboutPage() {
           <motion.p
             variants={fadeInUp}
             custom={9}
-            className="mt-6 text-[20px] h-[200px] leading-relaxed md:text-justify text-left"
+            className="mt-6 text-[20px] h-[200px] leading-relaxed text-justify"
           >
             <strong>The Indian Institute of Technology Hyderabad</strong> (IITH)
             is a premier institute known for its strong focus on research and
