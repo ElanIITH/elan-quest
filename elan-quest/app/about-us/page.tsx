@@ -58,7 +58,7 @@ export default function AboutPage() {
             className="mt-6 text-[20px] leading-relaxed text-justify"
           >
             <strong>Nexus QUEST</strong> is a comprehensive nationwide academic
-            Olympiad conducted during <strong>IIT Hyderabad</strong>'s
+            Olympiad conducted during <strong>IIT Hyderabad</strong>&apos;s
             prestigious annual techno-cultural fest{" "}
             <strong>Elan & nVision</strong>, designed to identify and celebrate
             exceptional scholastic talent from schools across the country.{" "}
@@ -91,15 +91,15 @@ export default function AboutPage() {
             custom={5}
             className="text-[20px] leading-relaxed text-justify"
           >
-            <strong>Elan & nVision</strong> is <strong>IIT Hyderabad</strong>'s
-            annual techno-cultural fest, blending innovation with celebration
-            brings together the best of both worlds - the rich cultural heritage
-            that connects us through stories, music, and shared experiences,
-            alongside the cutting-edge technology and innovation that drives our
-            future. Over three days, attendees enjoy performances, competitions,
-            concerts, and networking with industry professionals and alumni, all
-            while experiencing IITH's vibrant research and entrepreneurial
-            spirit.
+            <strong>Elan & nVision</strong> is <strong>IIT Hyderabad</strong>
+            &apos;s annual techno-cultural fest, blending innovation with
+            celebration brings together the best of both worlds - the rich
+            cultural heritage that connects us through stories, music, and
+            shared experiences, alongside the cutting-edge technology and
+            innovation that drives our future. Over three days, attendees enjoy
+            performances, competitions, concerts, and networking with industry
+            professionals and alumni, all while experiencing IITH&apos;s vibrant
+            research and entrepreneurial spirit.
           </motion.p>
 
           {/* Link + Hover Arrows */}
