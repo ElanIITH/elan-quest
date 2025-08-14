@@ -68,7 +68,7 @@ export default function Footer({ menuOpen }: Props) {
           </div>
 
           {/* center - emails */}
-          <div className="px-4 w-full md:w-[40%] flex flex-col items-center lg:items-start justify-end gap-1 box-border text-sm md:text-base">
+          <div className="px-4 w-full md:w-[40%] flex flex-col items-center md:items-end justify-end gap-1 box-border text-sm md:text-base">
             <div>elan.nvision@sa.iith.ac.in</div>
             <div>elan.nvision.outreach@sa.iith.ac.in</div>
           </div>
