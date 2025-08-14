@@ -21,10 +21,17 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
     { id: 3, title: "Exam Details", href: "/exam-details", comingSoon: false },
     { id: 4, title: "Syllabus", href: "/syllabus", comingSoon: false },
     { id: 5, title: "Results", href: "/results", comingSoon: false },
-    { id: 6, title: "Leaderboards", href: "", comingSoon: true },
-    { id: 7, title: "Blog", href: "", comingSoon: true },
-    { id: 8, title: "FAQs", href: "", comingSoon: true },
-    { id: 9, title: "Terms & Conditions", href: "/terms-conditions", comingSoon: false },
+
+    { id: 6, title: "Leaderboards", href: "/", comingSoon: true },
+    { id: 7, title: "Blog", href: "/", comingSoon: true },
+    { id: 8, title: "FAQs", href: "/", comingSoon: true },
+    {
+      id: 9,
+      title: "Terms & Conditions",
+      href: "/terms-conditions",
+      comingSoon: false,
+    },
+
   ];
 
   useEffect(() => {
@@ -168,7 +175,17 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
                   <img
                     src="/menu/coming-soon.svg"
                     alt="coming soon"
-                    className="w-[70px] h-auto body-font ml-auto box-border"
+                    className={`w-[70px] h-auto body-font ml-auto box-border transition-transform duration-200
+      ${
+        hoveredId === item.id && selectedId === item.id
+          ? "scale-110"
+          : hoveredId && hoveredId !== selectedId
+          ? ""
+          : selectedId === item.id
+          ? "scale-110"
+          : ""
+      }
+    `}
                   />
                 ) : null}
               </div>

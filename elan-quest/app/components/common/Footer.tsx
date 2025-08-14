@@ -3,6 +3,7 @@ import {
   faFacebook,
   faInstagram,
   faLinkedin,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
 interface Props {
@@ -93,16 +94,16 @@ export default function Footer({ menuOpen }: Props) {
             </div>
 
             {/* socials */}
-            <div className="h-[50px] w-full flex justify-between items-center px-2 md:px-1 box-border max-w-[270px]">
+            <div className="h-[50px] w-full flex justify-between items-center box-border max-w-[270px]">
               <img
                 src="/footer/quest-socials.svg"
                 alt="quest"
-                className="w-[20px] h-auto"
+                className="md:w-[20px] w-[25px] h-auto"
               />
               <a href="#">
                 <FontAwesomeIcon
                   icon={faInstagram as any}
-                  className="text-xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
+                  className="text-3xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
               <img
@@ -113,12 +114,12 @@ export default function Footer({ menuOpen }: Props) {
               <img
                 src="/footer/elan-socials.svg"
                 alt="elan"
-                className="w-[25px] h-auto"
+                className="md:w-[20px] w-[25px] h-auto"
               />
               <a href="#">
                 <FontAwesomeIcon
                   icon={faInstagram as any}
-                  className="text-xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
+                  className="text-3xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
               <a
@@ -128,7 +129,7 @@ export default function Footer({ menuOpen }: Props) {
               >
                 <FontAwesomeIcon
                   icon={faFacebook as any}
-                  className="text-xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
+                  className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
               <a
@@ -138,7 +139,13 @@ export default function Footer({ menuOpen }: Props) {
               >
                 <FontAwesomeIcon
                   icon={faLinkedin as any}
-                  className="text-xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
+                  className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
+                />
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon
+                  icon={faXTwitter as any}
+                  className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
             </div>

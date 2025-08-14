@@ -103,7 +103,7 @@ export default function ResultsPage() {
         />
 
         {/* Main Container */}
-        <div className="flex flex-col items-center md:items-start gap-6 sm:gap-10 max-w-7xl mx-auto box-border">
+        <div className="flex flex-col items-center md:items-start body-font gap-6 sm:gap-10 max-w-7xl mx-auto box-border">
           {/* Results Image */}
           <img
             src="/results/results.svg"
