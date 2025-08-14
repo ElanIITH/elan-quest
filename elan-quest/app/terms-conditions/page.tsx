@@ -188,7 +188,7 @@ export default function TermsPage() {
             </li>
             <li>
               Elan &amp; nVision is not liable for technical failures on the
-              participant's end.
+              participant&apos;s end.
             </li>
             <li>
               System-wide technical issues will be addressed fairly with
@@ -199,10 +199,10 @@ export default function TermsPage() {
           <p className="font-semibold text-xl">6.2 Limitation of Liability</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              Participation is voluntary and at the participant's own risk.
+              Participation is voluntary and at the participant&apos;s own risk.
             </li>
             <li>
-              Elan &amp; nVision's liability is limited to the extent permitted
+              Elan &amp; nVision&apos;s liability is limited to the extent permitted
               by applicable law.
             </li>
             <li>
