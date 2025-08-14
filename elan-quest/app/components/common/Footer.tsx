@@ -109,7 +109,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  // @ts-expect-error
+                  // @ts-expect-error ignore
                   icon={faInstagram}
                   className="text-3xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
                 />
@@ -130,7 +130,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  // @ts-expect-error
+                  // @ts-expect-error ignore
                   icon={faInstagram}
                   className="text-3xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
                 />
@@ -141,7 +141,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  // @ts-expect-error
+                  // @ts-expect-error ignore
                   icon={faFacebook}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
@@ -152,7 +152,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  // @ts-expect-error
+                  // @ts-expect-error ignore
                   icon={faLinkedin}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
@@ -163,7 +163,7 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  // @ts-expect-error
+                  // @ts-expect-error ignore
                   icon={faXTwitter}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
