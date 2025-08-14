@@ -6,7 +6,6 @@ import AboutIIT from "../components/about-us/AboutIIT";
 import SingleLink from "../components/about-us/singleLink";
 import { Raleway } from "next/font/google";
 import { motion, Variants } from "framer-motion";
-import { div } from "framer-motion/client";
 
 const raleway = Raleway({ subsets: ["latin"], weight: ["400", "600", "700"] });
 

@@ -109,7 +109,8 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faInstagram as any}
+                  // @ts-expect-error
+                  icon={faInstagram}
                   className="text-3xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
@@ -129,7 +130,8 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faInstagram as any}
+                  // @ts-expect-error
+                  icon={faInstagram}
                   className="text-3xl md:text-2xl transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
@@ -139,7 +141,8 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faFacebook as any}
+                  // @ts-expect-error
+                  icon={faFacebook}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
@@ -149,7 +152,8 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faLinkedin as any}
+                  // @ts-expect-error
+                  icon={faLinkedin}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
@@ -159,7 +163,8 @@ export default function Footer({ menuOpen }: Props) {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faXTwitter as any}
+                  // @ts-expect-error
+                  icon={faXTwitter}
                   className="text-3xl md:text-2xl text-[var(--background)] transform hover:scale-110 transition-transform duration-300 ease"
                 />
               </a>
