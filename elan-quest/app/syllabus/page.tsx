@@ -44,12 +44,12 @@ export default function SyllabusPage() {
         {/* Mobile Books Illustration */}
         <motion.div
           variants={sectionVariants}
-          className="absolute top-0 right-0 mx-auto"
+          className="absolute top-5 mx-auto"
         >
           <img
-            src="/syllabus/books.svg"
+            src="/mobile/syllabus/books.svg"
             alt="books"
-            className="md:hidden block w-[130px] md:w-[200px] lg:w-[270px] xl:w-[350px] h-auto max-w-[45vw] box-border"
+            className="md:hidden hidden w-[130px] md:w-[200px] lg:w-[270px] xl:w-[350px] h-auto max-w-[45vw] box-border"
           />
         </motion.div>
 
@@ -68,23 +68,26 @@ export default function SyllabusPage() {
         {/* Top Section */}
         <motion.div
           variants={sectionVariants}
-          className="flex flex-col items-center md:mt-0 md:items-start gap-7 w-[300px] md:w-full box-border"
+          className="mt-0 flex flex-col items-center md:mt-0 md:items-start gap-7 w-[300px] md:w-full box-border"
         >
           <img
             src="/syllabus/syllabus.svg"
             alt="syllabus"
-            className="md:relative md:top-7 lg:relative lg:top-0 w-[52vw] md:w-[50vw] max-w-full h-auto box-border"
+            className="md:relative md:top-7 lg:relative lg:top-0 w-[1000px] md:w-[50vw] max-w-full h-auto box-border"
           />
-          <div className="md:text-justify text-center text-lg leading-relaxed text-[var(--foreground)] md:pt-17 w-[52vw] md:w-full lg:pt-0 lg:w-[67vw] box-border">
+          <div className="md:text-justify text-left text-lg leading-relaxed text-[var(--foreground)] md:pt-17 w-full  md:w-full lg:pt-0 lg:w-[67vw] box-border">
             Nexus QUEST spans four key academic areas -{" "}
             <span className="font-semibold">Logical Reasoning</span>,{" "}
             <span className="font-semibold">Mathematics</span>,{" "}
             <span className="font-semibold">Physics</span>, and{" "}
             <span className="font-semibold">Chemistry</span>, testing students'
             theoretical knowledge, problem-solving capabilities, and real-world
-            application of basic concepts. The examination balances
-            curriculum-aligned topics with analytical reasoning, delivering a
-            complete evaluation of scholarly performance across varied subjects.
+            application of basic concepts.{" "}
+            <span className="md:block hidden">
+              The examination balances curriculum-aligned topics with analytical
+              reasoning, delivering a complete evaluation of scholarly
+              performance across varied subjects.
+            </span>
           </div>
         </motion.div>
 

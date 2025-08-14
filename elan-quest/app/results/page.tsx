@@ -116,7 +116,7 @@ export default function ResultsPage() {
         <img
           src="/mobile/results/trophy.svg"
           alt="trophy"
-          className="absolute bottom-0 left-0 w-[200px] md:w-[170px] lg:w-[220px] xl:w-[200px] h-auto block md:hidden"
+          className="absolute bottom-0 left-0 w-[200px] md:w-[170px] lg:w-[220px] xl:w-[200px] h-auto hidden md:hidden"
         />
 
         {/* Main Container */}

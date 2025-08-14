@@ -37,7 +37,6 @@ export default function RootLayout({
       </head>
       <body className="relative antialiased bg-[var(--background)] text-[var(--foreground)] w-screen min-h-screen flex flex-col">
         <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        {/* <div className="w-full h-[400px] px-4 py-3 border">hello</div> */}
         <div
           className={`flex-grow + ${
             menuOpen
@@ -45,7 +44,7 @@ export default function RootLayout({
               : "transition duration-300 ease"
           }`}
         >
-          <main className="w-full">{children}</main>
+          <main className="w-full pt-[80px] md:pt-[0px]">{children}</main>
         </div>
         <Footer menuOpen={menuOpen} />
       </body>
