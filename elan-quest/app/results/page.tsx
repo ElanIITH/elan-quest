@@ -10,7 +10,7 @@ export default function ResultsPage() {
     {
       id: 1,
       content:
-        "Results will be declared within 7 days of the examination date and will be communicated through the official portal and registered email addresses.",
+        "Results will be declared within one month of the examination date and will be communicated through the official portal and registered email addresses.",
     },
     {
       id: 2,
