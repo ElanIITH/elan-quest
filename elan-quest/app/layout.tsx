@@ -31,9 +31,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${pressStart2P.variable} ${raleway.variable}`}>
       <head>
-        <title>Elan Quest</title>
-        <meta name="description" content="Created by Nathan Alvares" />
+        <title>Nexus Quest</title>
+        <meta
+          name="description"
+          content="Official olympiad of Elan & nVision"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body className="relative antialiased bg-[var(--background)] text-[var(--foreground)] w-screen min-h-screen flex flex-col">
         <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
