@@ -1,3 +1,5 @@
+"use client";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -5,12 +7,11 @@ import {
   faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { useMenu } from "@/app/context/MenuContent";
 
-interface Props {
-  menuOpen: boolean;
-}
+export default function Footer() {
+  const { menuOpen } = useMenu();
 
-export default function Footer({ menuOpen }: Props) {
   return (
     <div
       className={

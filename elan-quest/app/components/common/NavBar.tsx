@@ -3,18 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import { Menu as MenuIcon } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
-import Menu from "./Menu"; // Adjust path as needed
+import Menu from "./Menu";
 import RegisterPopUp from "./RegisterPopUp";
+import { useMenu } from "@/app/context/MenuContent";
 
-interface Props {
-  menuOpen: boolean;
-  setMenuOpen: (val: boolean) => void;
-}
-
-export default function NavBar({ menuOpen, setMenuOpen }: Props) {
+export default function NavBar() {
   const menuRef = useRef<HTMLDivElement>(null);
   const [showPopup, setShowPopup] = useState(false);
+  const { menuOpen, setMenuOpen } = useMenu();
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
