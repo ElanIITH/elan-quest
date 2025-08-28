@@ -39,7 +39,7 @@ export default function RootLayout({
       <body className="relative antialiased bg-[var(--background)] text-[var(--foreground)] w-screen min-h-screen flex flex-col">
         <MenuProvider>
           <NavBar />
-          <MainWrapper children={children} />
+          <MainWrapper>{children}</MainWrapper>
           <Footer />
         </MenuProvider>
       </body>
