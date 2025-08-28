@@ -31,7 +31,6 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
       href: "/terms-conditions",
       comingSoon: false,
     },
-
   ];
 
   useEffect(() => {
@@ -82,7 +81,7 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
   }, [selectedId]);
 
   return (
-    <div className="relative z-100 right-0 w-full lg:w-[480px] h-full px-6 sm:px-8 lg:px-10 py-10 bg-[var(--foreground)] text-[var(--background)] flex flex-col box-border">
+    <div className="border relative z-100 right-0 w-full lg:w-[480px] h-full px-6 sm:px-8 lg:px-10 py-10 bg-[var(--foreground)] text-[var(--background)] flex flex-col box-border">
       {/* Close Button */}
       <button
         onClick={closeMenu}
