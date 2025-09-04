@@ -131,7 +131,7 @@ export default function NavBar() {
       {/* Menu */}
       <div
         ref={menuRef}
-        className={`fixed flex justify-end w-auto top-0 right-0 h-full transition-transform duration-800 ease-in-out z-40 ${
+        className={`fixed flex justify-end md:w-auto w-full top-0 right-0 h-full transition-transform duration-800 ease-in-out z-40 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
