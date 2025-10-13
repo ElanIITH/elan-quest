@@ -39,7 +39,7 @@ export default function HomePage() {
               />
             </div>
             <div className="text-center md:text-left">
-              <p className="text-xl md:text-3xl body-font">October 12, 2025</p>
+              <p className="text-xl md:text-3xl body-font">December 10, 2025</p>
               <p className="text-lg md:text-2xl body-font">Quest Olympiad</p>
             </div>
           </motion.div>
