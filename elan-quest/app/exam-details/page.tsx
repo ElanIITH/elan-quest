@@ -97,7 +97,7 @@ export default function ExamDetailsPage() {
             <div className="flex flex-col justify-between ml-4 py-2 h-[40px] body-font">
               {[
                 { date: "August 7, 2025", label: "Registrations Open" },
-                { date: "October 11, 2025", label: "Registrations Close" },
+                { date: "December 9, 2025", label: "Registrations Close" },
                 { date: "December 10, 2025", label: "Quest Olympiad" },
                 { date: "Febraury, 2026", label: "Prize Distribution" },
               ].map((item, idx) => (
