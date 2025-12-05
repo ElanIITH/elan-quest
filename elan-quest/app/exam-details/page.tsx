@@ -99,7 +99,7 @@ export default function ExamDetailsPage() {
                 { date: "August 7, 2025", label: "Registrations Open" },
                 { date: "December 20, 2025", label: "Registrations Close" },
                 { date: "December 21, 2025", label: "Quest Olympiad" },
-                { date: "Febraury, 2026", label: "Prize Distribution" },
+                { date: "January 9, 2026", label: "Prize Distribution" },
               ].map((item, idx) => (
                 <div key={idx} className="mb-2">
                   <div className="text-[34px] font-semibold">{item.date}</div>
