@@ -1,13 +1,8 @@
 "use client";
 
-import AboutUs from "../components/about-us/AboutUs";
-import AboutNexus from "../components/about-us/AboutNexus";
-import AboutIIT from "../components/about-us/AboutIIT";
-import SingleLink from "../components/about-us/singleLink";
-import { Raleway } from "next/font/google";
+import { ArrowRight } from "lucide-react";
 import { motion, Variants } from "framer-motion";
-
-const raleway = Raleway({ subsets: ["latin"], weight: ["400", "600", "700"] });
+import SectionHeading from "../components/common/SectionHeading";
 
 // Typed as Variants so TS knows it's valid
 const fadeInUp: Variants = {
@@ -25,9 +20,7 @@ const fadeInUp: Variants = {
 
 export default function AboutPage() {
   return (
-    <div
-      className={`${raleway.className} bg-[#252525] text-[#E8E8C6] pt-16 w-full overflow-x-hidden`}
-    >
+    <div className="body-font bg-[var(--background)] text-[var(--foreground)] pt-16 w-full overflow-x-hidden">
       <div className="space-y-8">
         {/* ABOUT US */}
         <motion.div
@@ -37,19 +30,11 @@ export default function AboutPage() {
           custom={0}
           className="px-6 md:px-20"
         >
-          <motion.div
-            variants={fadeInUp}
-            custom={1}
-            className="w-full max-w-[700px] h-[90px]"
-          >
-            <AboutUs />
+          <motion.div variants={fadeInUp} custom={1}>
+            <SectionHeading title="About Us" />
           </motion.div>
-          <motion.div
-            variants={fadeInUp}
-            custom={2}
-            className="w-full max-w-[1050px] h-[80px] mt-6"
-          >
-            <AboutNexus />
+          <motion.div variants={fadeInUp} custom={2} className="mt-6">
+            <SectionHeading title="About Nexus Quest" />
           </motion.div>
           <motion.p
             variants={fadeInUp}
@@ -101,7 +86,7 @@ export default function AboutPage() {
             research and entrepreneurial spirit.
           </motion.p>
 
-          {/* Link + Hover Arrows */}
+          {/* Link + Hover Arrow */}
           <motion.div
             variants={fadeInUp}
             custom={6}
@@ -114,10 +99,10 @@ export default function AboutPage() {
               className="flex items-center gap-2 group"
             >
               <span className="text-sm underline">visit elan.org.in</span>
-              <div className="flex items-center gap-1 w-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-x-0 group-hover:translate-x-1">
-                <SingleLink />
-                <SingleLink />
-              </div>
+              <ArrowRight
+                size={18}
+                className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-x-0 group-hover:translate-x-1"
+              />
             </a>
           </motion.div>
         </motion.div>
@@ -130,18 +115,14 @@ export default function AboutPage() {
           custom={7}
           className="px-6 md:px-20"
         >
-          <motion.div
-            variants={fadeInUp}
-            custom={8}
-            className="w-full max-w-[1200px] h-[70px]"
-          >
-            <AboutIIT />
+          <motion.div variants={fadeInUp} custom={8}>
+            <SectionHeading title="About IIT Hyderabad" />
           </motion.div>
 
           <motion.p
             variants={fadeInUp}
             custom={9}
-            className="mt-6 text-[20px] h-[200px] leading-relaxed text-justify"
+            className="mt-6 text-[20px] leading-relaxed text-justify"
           >
             <strong>The Indian Institute of Technology Hyderabad</strong> (IITH)
             is a premier institute known for its strong focus on research and

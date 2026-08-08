@@ -1,10 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { Raleway } from "next/font/google";
 import { motion, Variants } from "framer-motion";
-
-const raleway = Raleway({ subsets: ["latin"], weight: ["400", "600", "700"] });
+import SectionHeading from "../components/common/SectionHeading";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -21,9 +18,7 @@ const fadeInUp: Variants = {
 
 export default function TermsPage() {
   return (
-    <div
-      className={`${raleway.className} bg-[#252525] text-[#E8E8C6] pt-16 w-full overflow-x-hidden`}
-    >
+    <div className="body-font bg-[var(--background)] text-[var(--foreground)] pt-16 w-full overflow-x-hidden">
       <div className="space-y-20">
         {/* Header */}
         <motion.div
@@ -33,19 +28,8 @@ export default function TermsPage() {
           custom={0}
           className="px-6 md:px-20"
         >
-          <motion.div
-            variants={fadeInUp}
-            custom={1}
-            className="w-full max-w-[1200px] h-[90px] mx-auto"
-          >
-            <Image
-              src="/Terms-conditions.svg"
-              alt="Terms & Conditions"
-              width={1200}
-              height={90}
-              priority
-              className="w-full h-full object-contain"
-            />
+          <motion.div variants={fadeInUp} custom={1}>
+            <SectionHeading title="Terms & Conditions" />
           </motion.div>
         </motion.div>
 
@@ -317,7 +301,6 @@ export default function TermsPage() {
           <div className="h-10" />
         </motion.div>
       </div>
-      <div className="w-[70px]"></div>
     </div>
   );
 }

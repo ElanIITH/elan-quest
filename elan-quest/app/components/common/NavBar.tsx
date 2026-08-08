@@ -7,6 +7,12 @@ import Menu from "./Menu";
 import RegisterPopUp from "./RegisterPopUp";
 import { useMenu } from "@/app/context/MenuContent";
 
+const NAV_LINKS = [
+  { href: "/exam-details", label: "EXAM DETAILS" },
+  { href: "/syllabus", label: "SYLLABUS" },
+  { href: "/results", label: "RESULTS" },
+];
+
 export default function NavBar() {
   const menuRef = useRef<HTMLDivElement>(null);
   const [showPopup, setShowPopup] = useState(false);
@@ -39,88 +45,37 @@ export default function NavBar() {
             : "transition duration-300 ease"
         }
       >
-        <nav className="fixed top-0 w-full px-4 py-3 shadow-md flex justify-between items-center bg-[var(--foreground)] md:relative z-10">
-          <div className="text-xl font-bold text-[var(--background)] flex items-center">
-            <Link href={"/"}>
-              <img
-                src="/footer/quest.svg"
-                alt="logo"
-                className="w-[100px] h-auto hover:content-[url('/NexusQuestAsh.svg')]"
-              />
+        <nav className="fixed top-0 w-full px-4 py-3 shadow-md flex justify-between items-center bg-[var(--surface)] md:relative z-10">
+          {/* Logo — kept exactly as the original image, per request */}
+          <div className="flex items-center">
+            <Link href="/">
+              <img src="/footer/quest.svg" alt="logo" className="w-[100px] h-auto" />
             </Link>
           </div>
-          <div className="flex-1 hidden md:block">
-            <ul className="flex flex-row px-10 justify-end gap-10">
-              <li className="flex items-center">
-                <div className="flex justify-center items-center relative group">
-                  <img
-                    src="/Subtract.svg"
-                    alt="logo"
-                    className="w-[170px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-12 pt-1"
-                  />
-                  <Link
-                    href="/exam-details"
-                    className="absolute flex items-center"
-                  >
-                    <p className="body-font group-hover:text-[var(--foreground)] transition-text duration-300 text-[var(--background)] font-semibold text-xl z-13">
-                      EXAM DETAILS
-                    </p>
-                  </Link>
-                </div>
-              </li>
-              <li className="flex items-center">
-                <div className="flex justify-center items-center relative group">
-                  <img
-                    src="/Subtract.svg"
-                    alt="logo"
-                    className="w-[170px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-12 pt-1"
-                  />
-                  <Link href="/syllabus" className="absolute flex items-center">
-                    <p className="body-font group-hover:text-[var(--foreground)] transition-text duration-300 text-[var(--background)] font-semibold text-xl z-13">
-                      SYLLABUS
-                    </p>
-                  </Link>
-                </div>
-              </li>
-              <li className="flex items-center">
-                <div className="flex justify-center items-center relative group">
-                  <img
-                    src="/Subtract.svg"
-                    alt="logo"
-                    className="w-[170px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-12 pt-1"
-                  />
-                  <Link href="/results" className="absolute flex items-center">
-                    <p className="body-font group-hover:text-[var(--foreground)] transition-text duration-300 text-[var(--background)] font-semibold text-xl z-13">
-                      RESULTS
-                    </p>
-                  </Link>
-                </div>
-              </li>
-              <li className="flex items-center">
-                <div
-                  className="relative pt-2 group cursor-pointer"
-                  onClick={() => setShowPopup(true)}
-                >
-                  <img
-                    src="/menu/register-bg.svg"
-                    className="w-[260px] h-auto group-hover:opacity-0 transition-opacity duration-500"
-                  />
-                  <img
-                    src="/Union.svg"
-                    className="w-[260px] h-auto absolute flex inset-0 mt-2 transform scale-97 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  />
-                  <p className="absolute inset-0 flex items-center justify-center text-xl text-[var(--foreground)] font-extrabold group-hover:text-[var(--background)] transition-text duration-500">
-                    REGISTER NOW
-                  </p>
-                </div>
 
-                {showPopup && <RegisterPopUp setShowPopup={setShowPopup} />}
-              </li>
-            </ul>
+          {/* Desktop links — plain, in-flow Links (fixes the broken click target) */}
+          <div className="flex-1 hidden md:flex justify-end items-center gap-10 px-10">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="body-font text-[var(--surface-foreground)] font-semibold text-lg hover:opacity-60 transition-opacity duration-300"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <button
+              onClick={() => setShowPopup(true)}
+              className="cursor-pointer border border-[var(--surface-foreground)] rounded-md px-5 py-2 text-base body-font font-semibold hover:opacity-70 transition-opacity duration-300"
+            >
+              REGISTER NOW
+            </button>
+            {showPopup && <RegisterPopUp setShowPopup={setShowPopup} />}
           </div>
+
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-[var(--background)] cursor-pointer z-20"
+            className="text-[var(--surface-foreground)] cursor-pointer z-20"
             aria-label="Toggle menu"
           >
             {menuOpen ? null : <MenuIcon size={30} />}

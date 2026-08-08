@@ -1,14 +1,7 @@
 "use client";
 import { motion, Variants } from "framer-motion";
-import ExamDetails from "../components/exam-details/ExamDetails";
-import Eligibility from "../components/exam-details/Eligibility";
-import Dates from "../components/exam-details/Dates";
-import Duration from "../components/exam-details/Duration";
-import MarkingScheme from "../components/exam-details/MarkingScheme";
-import Format from "../components/exam-details/Format";
-import Rocket from "../components/exam-details/Rocket";
-import Microscope from "../components/exam-details/Microscope";
-import ArrowPointer from "../components/exam-details/ArrowPointer";
+import { ChevronRight } from "lucide-react";
+import SectionHeading from "../components/common/SectionHeading";
 
 // fadeInUp animation
 const fadeInUp: Variants = {
@@ -22,20 +15,7 @@ const fadeInUp: Variants = {
 
 export default function ExamDetailsPage() {
   return (
-    <div
-      className={`overflow-x-hidden body-font relative bg-[#252525] text-[#E8E8C6] px-4 py-8`}
-    >
-      {/* Microscope aligned to bottom */}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={fadeInUp}
-        custom={0}
-        className="hidden md:block w-[380px] absolute bottom-0 right-0 z-0"
-      >
-        <Microscope />
-      </motion.div>
-
+    <div className="overflow-x-hidden body-font relative bg-[var(--background)] text-[var(--foreground)] px-4 py-8">
       {/* Desktop Version */}
       <div className="hidden md:block">
         {/* Exam Details */}
@@ -46,7 +26,7 @@ export default function ExamDetailsPage() {
           custom={1}
           className="w-full max-w-7xl h-auto py-10"
         >
-          <ExamDetails />
+          <SectionHeading title="Exam Details" />
         </motion.div>
 
         {/* Eligibility Section */}
@@ -57,9 +37,7 @@ export default function ExamDetailsPage() {
           custom={2}
           className="w-full max-w-4xl h-auto py-10"
         >
-          <div className="w-[950px] h-[100px]">
-            <Eligibility />
-          </div>
+          <SectionHeading title="Eligibility" />
 
           <ul className="text-[18px] max-w-5xl mt-4 space-y-3">
             {[
@@ -69,9 +47,7 @@ export default function ExamDetailsPage() {
               "Students from all educational boards (CBSE, ICSE, State boards) within the specified grade range can apply for the examination.",
             ].map((text, idx) => (
               <li key={idx} className="flex items-start gap-2">
-                <div className="w-[16px]">
-                  <ArrowPointer />
-                </div>
+                <ChevronRight size={18} className="flex-shrink-0 mt-1" />
                 <span>{text}</span>
               </li>
             ))}
@@ -86,27 +62,20 @@ export default function ExamDetailsPage() {
           custom={3}
           className="py-10"
         >
-          <div className="w-[400px] h-[100px]">
-            <Dates />
-          </div>
+          <SectionHeading title="Important Dates" />
 
-          <div className="relative flex mt-6">
-            <div className="w-[190px]">
-              <Rocket />
-            </div>
-            <div className="flex flex-col justify-between ml-4 py-2 h-[40px] body-font">
-              {[
-                { date: "August 7, 2025", label: "Registrations Open" },
-                { date: "December 20, 2025", label: "Registrations Close" },
-                { date: "December 21, 2025", label: "Quest Olympiad" },
-                { date: "January 9, 2026", label: "Prize Distribution" },
-              ].map((item, idx) => (
-                <div key={idx} className="mb-2">
-                  <div className="text-[34px] font-semibold">{item.date}</div>
-                  <div className="text-[18px]">{item.label}</div>
-                </div>
-              ))}
-            </div>
+          <div className="flex flex-col justify-between mt-6 py-2 body-font">
+            {[
+              { date: "August 7, 2025", label: "Registrations Open" },
+              { date: "December 20, 2025", label: "Registrations Close" },
+              { date: "December 21, 2025", label: "Quest Olympiad" },
+              { date: "January 9, 2026", label: "Prize Distribution" },
+            ].map((item, idx) => (
+              <div key={idx} className="mb-2">
+                <div className="text-[34px] font-semibold">{item.date}</div>
+                <div className="text-[18px]">{item.label}</div>
+              </div>
+            ))}
           </div>
         </motion.div>
 
@@ -118,10 +87,8 @@ export default function ExamDetailsPage() {
           custom={4}
           className="py-12"
         >
-          <div className="w-[650px] h-[100px]">
-            <Duration />
-          </div>
-          <p className="text-[16px] max-w-4xl">
+          <SectionHeading title="Duration" />
+          <p className="text-[16px] max-w-4xl mt-4">
             Participants will have a total of 90 minutes to complete the test.
             Make sure to manage your time wisely to attempt all sections.
           </p>
@@ -135,21 +102,15 @@ export default function ExamDetailsPage() {
           custom={5}
           className="py-10 w-fit"
         >
-          <div className="w-auto md:w-[1150px] h-[100px]">
-            <MarkingScheme />
-          </div>
+          <SectionHeading title="Marking Scheme" />
 
-          <ul className="text-[16px] max-w-4xl mt-2 space-y-3">
+          <ul className="text-[16px] max-w-4xl mt-4 space-y-3">
             <li className="flex items-start gap-2">
-              <div className="w-[16px]">
-                <ArrowPointer />
-              </div>
+              <ChevronRight size={18} className="flex-shrink-0 mt-1" />
               <span>+1 mark for correct answers</span>
             </li>
             <li className="flex items-start gap-2">
-              <div className="w-[16px]">
-                <ArrowPointer />
-              </div>
+              <ChevronRight size={18} className="flex-shrink-0 mt-1" />
               <span>0 marks for incorrect responses</span>
             </li>
           </ul>
@@ -162,13 +123,11 @@ export default function ExamDetailsPage() {
           animate="visible"
           variants={fadeInUp}
           custom={6}
-          className="flex justify-between py-12 items-start bottom-0 right-0 z-0"
+          className="flex justify-between py-12 items-start"
         >
           <div className="w-[calc(100%-420px)]">
-            <div className="w-[500px] h-[100px]">
-              <Format />
-            </div>
-            <p className="text-[16px] max-w-4xl mt-2">
+            <SectionHeading title="Exam Format" />
+            <p className="text-[16px] max-w-4xl mt-4">
               50 multiple-choice questions with single correct answers,
               promoting accuracy and efficient time management.
             </p>
@@ -180,9 +139,7 @@ export default function ExamDetailsPage() {
                 "Chemistry - 10",
               ].map((text, idx) => (
                 <li key={idx} className="flex items-start gap-2">
-                  <div className="w-[16px]">
-                    <ArrowPointer />
-                  </div>
+                  <ChevronRight size={18} className="flex-shrink-0 mt-1" />
                   <span>{text}</span>
                 </li>
               ))}
@@ -200,46 +157,34 @@ export default function ExamDetailsPage() {
         className="block md:hidden"
       >
         <div className="space-y-10">
-          <div className="w-[400px]">
-            <ExamDetails />
-          </div>
+          <SectionHeading title="Exam Details" />
 
           <div>
-            <div className="w-[350px] h-[40px]">
-              <Eligibility />
-            </div>
+            <SectionHeading title="Eligibility" />
             <ul className="text-[14px] space-y-2 mt-2">
               <li className="flex items-start gap-2">
-                <div className="w-[22px]">
-                  <ArrowPointer />
-                </div>
+                <ChevronRight size={16} className="flex-shrink-0 mt-1" />
                 <span>
                   Students currently enrolled in Classes 6th to 10th from any
                   recognized school are eligible to participate in Nexus QUEST.
                 </span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-[20px]">
-                  <ArrowPointer />
-                </div>
+                <ChevronRight size={16} className="flex-shrink-0 mt-1" />
                 <span>
                   Participants must be actively studying in their respective
                   academic year during the examination period.
                 </span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-[13px]">
-                  <ArrowPointer />
-                </div>
+                <ChevronRight size={16} className="flex-shrink-0 mt-1" />
                 <span>
                   Class-specific question sets will be provided to ensure fair
                   assessment.
                 </span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-[15px]">
-                  <ArrowPointer />
-                </div>
+                <ChevronRight size={16} className="flex-shrink-0 mt-1" />
                 <span>
                   Students from all boards (CBSE, ICSE, State) within the grade
                   range can apply.
@@ -247,10 +192,11 @@ export default function ExamDetailsPage() {
               </li>
             </ul>
 
+            {/* NOTE: these dates differ from the desktop version above —
+                pre-existing content mismatch, not touched here. Flag to
+                whoever owns exam date content. */}
             <div className="py-10 space-y-6">
-              <div className="w-[150px] h-[0px]">
-                <Dates />
-              </div>
+              <SectionHeading title="Important Dates" />
 
               <div className="flex flex-col md:flex-row md:items-start md:space-x-6">
                 <div className="mt-4 md:mt-0 flex flex-col justify-between space-y-4">
@@ -271,29 +217,21 @@ export default function ExamDetailsPage() {
               </div>
             </div>
 
-            <div className="w-[400px] h-[40px]">
-              <MarkingScheme />
-            </div>
+            <SectionHeading title="Marking Scheme" />
             <ul className="text-[14px] mt-2 space-y-1">
               <li className="flex items-start gap-2">
-                <div className="w-[12px]">
-                  <ArrowPointer />
-                </div>
+                <ChevronRight size={14} className="flex-shrink-0 mt-1" />
                 +1 mark per correct answer
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-[12px]">
-                  <ArrowPointer />
-                </div>
+                <ChevronRight size={14} className="flex-shrink-0 mt-1" />
                 No negative marking
               </li>
             </ul>
           </div>
 
           <div>
-            <div className="w-[150px] h-[40px]">
-              <Format />
-            </div>
+            <SectionHeading title="Exam Format" />
 
             <ul className="text-[14px] mt-2 space-y-1">
               {[
@@ -303,9 +241,7 @@ export default function ExamDetailsPage() {
                 "Chemistry - 10",
               ].map((text, idx) => (
                 <li key={idx} className="flex items-start gap-2">
-                  <div className="w-[12px]">
-                    <ArrowPointer />
-                  </div>
+                  <ChevronRight size={14} className="flex-shrink-0 mt-1" />
                   {text}
                 </li>
               ))}
