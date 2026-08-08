@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
+  /* ---- THEME VALUES — swap these two lines when a new theme drops ---- */
   --background: #252525;
   --foreground: #e8e8c6;
+  /* ---------------------------------------------------------------------- */
 
   --font-body: var(--font-raleway);
   --font-heading: var(--font-press-start);
 
-  :root {
-    --vh: 1vh;
-  }
+  --vh: 1vh;
 }
 
 html,

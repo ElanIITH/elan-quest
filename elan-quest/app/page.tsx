@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import RegisterPopUp from "./components/common/RegisterPopUp";
 import { ArrowUpRight } from "lucide-react";
+import { EVENT_CONFIG, HOME_SECTIONS, THEME_ASSETS } from "@/app/lib/site-config";
 
 export default function HomePage() {
   const [showPopup, setShowPopup] = useState(false);
@@ -33,14 +34,14 @@ export default function HomePage() {
           >
             <div>
               <img
-                src="/logo_light.svg"
+                src={THEME_ASSETS.logo}
                 alt="logo"
                 className="w-[250px] md:w-[500px] h-auto mx-auto md:mx-0"
               />
             </div>
             <div className="text-center md:text-left">
-              <p className="text-xl md:text-3xl body-font">December 21, 2025</p>
-              <p className="text-lg md:text-2xl body-font">Quest Olympiad</p>
+              <p className="text-xl md:text-3xl body-font">{EVENT_CONFIG.eventDate}</p>
+              <p className="text-lg md:text-2xl body-font">{EVENT_CONFIG.eventName}</p>
             </div>
           </motion.div>
 
@@ -52,7 +53,7 @@ export default function HomePage() {
           >
             <div className="flex flex-row items-center justify-center md:justify-start gap-3 group mt-0 md:mt-35">
               <img
-                src="/RightArrow.svg"
+                src={THEME_ASSETS.arrowRight}
                 alt="Left Arrow"
                 className="h-[40px] md:h-[50px] w-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               />
@@ -62,7 +63,7 @@ export default function HomePage() {
               >
                 <div>
                   <img
-                    src="/registerNow.svg"
+                    src={THEME_ASSETS.registerNowBadge}
                     alt="Register Now"
                     className="md:h-[50px] md:w-auto"
                   />
@@ -72,14 +73,13 @@ export default function HomePage() {
                 </div>
               </div>
               <img
-                src="/LeftArrow.svg"
+                src={THEME_ASSETS.arrowLeft}
                 alt="Right Arrow"
                 className="h-[40px] md:h-[50px] w-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               />
             </div>
             <p className="text-base text-center md:text-2xl px-4 md:pl-15 body-font">
-              A national-level Olympiad for school students, organized by Elan &
-              nVision, the annual techno-cultural fest of IIT Hyderabad.
+              {EVENT_CONFIG.tagline}
             </p>
           </motion.div>
         </motion.div>
@@ -94,24 +94,7 @@ export default function HomePage() {
             visible: { transition: { staggerChildren: 0.2 } },
           }}
         >
-          {[
-            {
-              href: "/exam-details",
-              img: "/examDetails.svg",
-              text: `Elan & nVision is IIT Hyderabad's annual techno-cultural fest, blending innovation with celebration. This vibrant celebration brings together the best of both worlds - the rich cultural heritage that connects us through stories, music, and shared experiences, alongside the cutting-edge technology and innovation that drives our future. 
-`,
-            },
-            {
-              href: "/syllabus",
-              img: "/syllabus.svg",
-              text: `Nexus Quest tests students across four core domains: Logical Reasoning, Mathematics, Physics, and Chemistry. The syllabus emphasizes deep conceptual understanding, analytical thinking, and real-world application of fundamental principles.`,
-            },
-            {
-              href: "/results",
-              img: "/results.svg",
-              text: `This section outlines how performance will be evaluated, from score calculation to tie-breakers. It also features details about awards, certificates, and exclusive goodies awaiting top performers."`,
-            },
-          ].map((section, index) => (
+          {HOME_SECTIONS.map((section, index) => (
             <motion.div
               key={index}
               variants={{
@@ -129,7 +112,7 @@ export default function HomePage() {
                       className="w-auto h-[35px] md:h-[40px]"
                     />
                     <img
-                      src="/blackArrow.svg"
+                      src={THEME_ASSETS.hoverArrow}
                       alt="Go"
                       className="w-auto h-[35px] md:h-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     />

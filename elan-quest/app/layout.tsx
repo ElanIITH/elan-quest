@@ -7,6 +7,7 @@ import NavBar from "./components/common/NavBar";
 import { MenuProvider } from "./context/MenuContent";
 import MainWrapper from "./components/common/MainWrapper";
 
+// ---- THEME FONTS — swap these two imports/configs when a new theme drops ----
 const pressStart2P = Press_Start_2P({
   subsets: ["latin"],
   weight: "400",
@@ -20,6 +21,7 @@ const raleway = Raleway({
   variable: "--font-raleway",
   display: "swap",
 });
+// -------------------------------------------------------------------------------
 
 export const metadata = {
   title: "Nexus Quest",
