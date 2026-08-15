@@ -24,7 +24,7 @@ export default function Menu({ closeMenu, menuOpen }: Props) {
 
     { id: 6, title: "Leaderboards", href: "/", comingSoon: true },
     { id: 7, title: "Blog", href: "/", comingSoon: true },
-    { id: 8, title: "FAQs", href: "/", comingSoon: true },
+    { id: 8, title: "FAQs", href: "/faqs", comingSoon: false },
     {
       id: 9,
       title: "Terms & Conditions",
