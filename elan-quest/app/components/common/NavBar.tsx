@@ -111,10 +111,10 @@ export default function Navbar({ onRegisterClick }: NavbarProps) {
       <div className="flex items-center gap-3">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/footer/quest.svg"
+            src="/pics/navbar.png"
             alt="logo"
-            width={76}
-            height={76}
+            width={150}
+            height={150}
             className="object-contain"
           />
           {/* <Image

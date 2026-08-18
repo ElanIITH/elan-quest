@@ -153,18 +153,12 @@ export default function Footer() {
     <footer className="w-full bg-[#B2D5FF] px-6 py-4 md:px-12 flex items-center justify-between relative z-20">
       {/* Logos Container */}
       <div className="flex items-center gap-6 md:gap-8">
+        
         <Image
-          src="/elan-logo.svg"
-          alt="Elan & nVision Logo"
-          width={100}
-          height={32}
-          className="object-contain h-8 w-auto"
-        />
-        <Image
-          src="/footer/quest.svg"
+          src="/pics/footer.png"
           alt="logo"
-          width={100}
-          height={100}
+          width={200}
+          height={200}
           className="object-contain py-3.5"
         />
       </div>
