@@ -27,9 +27,7 @@ export default function HomePage() {
       "
     >
       {/* Registration Modal */}
-      {showPopup && (
-        <RegisterPopUp setShowPopup={setShowPopup} />
-      )}
+      {showPopup && <RegisterPopUp setShowPopup={setShowPopup} />}
 
       {/* =====================================================
           WHOLE PAGE PATTERN BACKGROUND
@@ -57,7 +55,6 @@ export default function HomePage() {
           PAGE CONTENT
           ===================================================== */}
       <main className="relative z-10 w-full">
-
         {/* =====================================================
             HERO
             ===================================================== */}
@@ -70,15 +67,14 @@ export default function HomePage() {
             overflow-visible
           "
         >
-
           {/* =================================================
               RUNNER
               Desktop stays exactly as before.
               Mobile gets a wider image so it doesn't squeeze.
               ================================================= */}
-        {/* Runner - hero only */}
-<div
-  className="
+          {/* Runner - hero only */}
+          <div
+            className="
     absolute
     z-0
     pointer-events-none
@@ -94,16 +90,16 @@ export default function HomePage() {
     md:left-0
     md:w-full
   "
->
-  <Image
-    src="/pics/runner.png"
-    alt="Runner Vector Illustration"
-    width={1920}
-    height={1080}
-    priority
-    className="w-full h-auto"
-  />
-</div>
+          >
+            <Image
+              src="/pics/runner.png"
+              alt="Runner Vector Illustration"
+              width={1920}
+              height={1080}
+              priority
+              className="w-full h-auto"
+            />
+          </div>
 
           {/* =================================================
               HERO CONTENT
@@ -119,13 +115,12 @@ export default function HomePage() {
               max-w-[1440px]
             "
           >
-
             {/* =================================================
                 QUEST LOGO
                 ================================================= */}
-   {/* Quest Logo */}
-<div
-  className="
+            {/* Quest Logo */}
+            <div
+              className="
     absolute
     z-20
 
@@ -139,22 +134,21 @@ export default function HomePage() {
     md:top-[clamp(40px,3.125vw,45px)]
     md:w-[clamp(360px,39vw,560px)]
   "
->
-  <Image
-    src="/pics/questColor.png"
-    alt="Nexus Quest Logo"
-    width={700}
-    height={350}
-    priority
-    className="h-auto w-full object-contain"
-  />
-</div>
+            >
+              <Image
+                src="/pics/questColor.png"
+                alt="Nexus Quest Logo"
+                width={700}
+                height={350}
+                priority
+                className="h-auto w-full object-contain"
+              />
+            </div>
 
-
-{/* Register Button */}
-<button
-  onClick={togglePopup}
-  className="
+            {/* Register Button */}
+            <button
+              onClick={togglePopup}
+              className="
     absolute
     z-30
     rounded-[12px]
@@ -186,9 +180,9 @@ export default function HomePage() {
     md:py-[clamp(12px,1.11vw,16px)]
     md:text-[clamp(16px,1.39vw,20px)]
   "
->
-  REGISTER NOW!
-</button>
+            >
+              REGISTER NOW!
+            </button>
           </div>
         </section>
 
@@ -207,7 +201,6 @@ export default function HomePage() {
           "
         >
           <div className="max-w-[620px]">
-
             <h2
               className="
                 mb-4
@@ -237,7 +230,6 @@ export default function HomePage() {
               organized by Elan & nVision, the annual techno-cultural fest of
               IIT Hyderabad.
             </p>
-
           </div>
         </section>
 
@@ -254,7 +246,6 @@ export default function HomePage() {
             md:px-[6.5%]
           "
         >
-
           <h2
             className="
               mb-7
@@ -306,7 +297,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-
         </section>
 
         {/* =====================================================
@@ -331,7 +321,6 @@ export default function HomePage() {
 
           <div className="absolute inset-0 bg-[#D8D4B5]/35" />
         </section>
-
       </main>
     </div>
   );
