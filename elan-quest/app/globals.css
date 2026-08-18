@@ -27,4 +27,13 @@ body {
 
 .heading-font {
   font-family: var(--font-heading), sans-serif;
+}@tailwind base;
+@tailwind utilities;
+
+html, 
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #F9F5E8 !important;
+  overflow-x: hidden;
 }

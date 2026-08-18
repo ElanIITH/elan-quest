@@ -1,254 +1,311 @@
-"use client";
-import { motion, Variants } from "framer-motion";
-import { ChevronRight } from "lucide-react";
-import SectionHeading from "../components/common/SectionHeading";
 
-// fadeInUp animation
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (custom: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: custom * 0.2, duration: 0.6, ease: "easeOut" },
-  }),
-};
-
-export default function ExamDetailsPage() {
+export default function Results() {
   return (
-    <div className="overflow-x-hidden body-font relative bg-[var(--background)] text-[var(--foreground)] px-4 py-8">
-      {/* Desktop Version */}
-      <div className="hidden md:block">
-        {/* Exam Details */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={1}
-          className="w-full max-w-7xl h-auto py-10"
+    <main className="relative min-h-0 w-full overflow-x-hidden bg-[#F0ECCF] text-[#0F2851]">
+
+      {/* =========================
+          PATTERN BACKGROUND
+          ========================= */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/pics/patternfinal.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "top center",
+          backgroundRepeat: "repeat-y",
+        }}
+      />
+
+      {/* =========================
+          PAGE CONTENT
+          ========================= */}
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 py-10 sm:px-10 md:px-[6.5%] md:py-12">
+
+        {/* Heading */}
+        <h1
+          className="
+            mb-8
+            text-4xl
+            font-black
+            uppercase
+            tracking-wide
+            text-[#0F2851]
+            sm:text-5xl
+            md:text-[52px]
+          "
         >
-          <SectionHeading title="Exam Details" />
-        </motion.div>
+          EXAM DETAILS
+        </h1>
 
-        {/* Eligibility Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={2}
-          className="w-full max-w-4xl h-auto py-10"
+        {/* YOUR SVG — KEEP EVERY PATH EXACTLY AS IT IS */}
+        <div className="w-full overflow-x-auto">
+          <svg
+            viewBox="0 0 1650 125"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-auto w-[340px] md:w-[1100px]"
+          >
+      <path d="M975 100H1000V125H975V100Z" fill="#E8E8C6" />
+      <path d="M975 75H1000V100H975V75Z" fill="#E8E8C6" />
+      <path d="M975 50H1000V75H975V50Z" fill="#E8E8C6" />
+      <path d="M1550 50H1575V75H1550V50Z" fill="#E8E8C6" />
+      <path d="M1550 100H1575V125H1550V100Z" fill="#E8E8C6" />
+      <path d="M1525 100H1550V125H1525V100Z" fill="#E8E8C6" />
+      <path d="M1000 0H1025V25H1000V0Z" fill="#E8E8C6" />
+      <path d="M925 0H950V25H925V0Z" fill="#E8E8C6" />
+      <path d="M1550 0H1575V25H1550V0Z" fill="#E8E8C6" />
+      <path d="M1575 50H1600V75H1575V50Z" fill="#E8E8C6" />
+      <path d="M1575 100H1600V125H1575V100Z" fill="#E8E8C6" />
+      <path d="M1625 75H1650V100H1625V75Z" fill="#E8E8C6" />
+      <path d="M1025 0H1050V25H1025V0Z" fill="#E8E8C6" />
+      <path d="M950 0H975V25H950V0Z" fill="#E8E8C6" />
+      <path d="M1575 0H1600V25H1575V0Z" fill="#E8E8C6" />
+      <path d="M1600 50H1625V75H1600V50Z" fill="#E8E8C6" />
+      <path d="M1600 100H1625V125H1600V100Z" fill="#E8E8C6" />
+      <path d="M1600 0H1625V25H1600V0Z" fill="#E8E8C6" />
+      <path d="M1625 0H1650V25H1625V0Z" fill="#E8E8C6" />
+      <path d="M975 25H1000V50H975V25Z" fill="#E8E8C6" />
+      <path d="M1525 25H1550V50H1525V25Z" fill="#E8E8C6" />
+      <path d="M975 0H1000V25H975V0Z" fill="#E8E8C6" />
+      <path d="M450 25H475V0H450V25Z" fill="#E8E8C6" />
+      <path d="M575 25H550V0H575V25Z" fill="#E8E8C6" />
+      <path d="M1075 100H1100V125H1075V100Z" fill="#E8E8C6" />
+      <path d="M1250 125V100H1225V125H1250Z" fill="#E8E8C6" />
+      <path d="M775 100H800V125H775V100Z" fill="#E8E8C6" />
+      <path d="M0 100H25V125H0V100Z" fill="#E8E8C6" />
+      <path d="M625 100H650V125H625V100Z" fill="#E8E8C6" />
+      <path d="M1175 100H1200V125H1175V100Z" fill="#E8E8C6" />
+      <path d="M1350 125V100H1325V125H1350Z" fill="#E8E8C6" />
+      <path d="M775 0H800V25H775V0Z" fill="#E8E8C6" />
+      <path d="M0 0H25V25H0V0Z" fill="#E8E8C6" />
+      <path d="M625 0H650V25H625V0Z" fill="#E8E8C6" />
+      <path d="M450 50H475V25H450V50Z" fill="#E8E8C6" />
+      <path d="M575 50H550V25H575V50Z" fill="#E8E8C6" />
+      <path d="M1075 75H1100V100H1075V75Z" fill="#E8E8C6" />
+      <path d="M1275 125V100H1250V125H1275Z" fill="#E8E8C6" />
+      <path d="M775 75H800V100H775V75Z" fill="#E8E8C6" />
+      <path d="M0 75H25V100H0V75Z" fill="#E8E8C6" />
+      <path d="M625 75H650V100H625V75Z" fill="#E8E8C6" />
+      <path d="M1175 75H1200V100H1175V75Z" fill="#E8E8C6" />
+      <path d="M1275 25V0H1250V25H1275Z" fill="#E8E8C6" />
+      <path d="M875 100H900V125H875V100Z" fill="#E8E8C6" />
+      <path d="M100 100H125V125H100V100Z" fill="#E8E8C6" />
+      <path d="M725 75H750V100H725V75Z" fill="#E8E8C6" />
+      <path d="M450 75H475V50H450V75Z" fill="#E8E8C6" />
+      <path d="M575 75H550V50H575V75Z" fill="#E8E8C6" />
+      <path d="M1075 50H1100V75H1075V50Z" fill="#E8E8C6" />
+      <path d="M1300 125V100H1275V125H1300Z" fill="#E8E8C6" />
+      <path d="M775 50H800V75H775V50Z" fill="#E8E8C6" />
+      <path d="M0 50H25V75H0V50Z" fill="#E8E8C6" />
+      <path d="M625 50H650V75H625V50Z" fill="#E8E8C6" />
+      <path d="M1175 50H1200V75H1175V50Z" fill="#E8E8C6" />
+      <path d="M1300 25V0H1275V25H1300Z" fill="#E8E8C6" />
+      <path d="M725 50H750V75H725V50Z" fill="#E8E8C6" />
+      <path d="M475 50H500V25H475V50Z" fill="#E8E8C6" />
+      <path d="M550 50H525V25H550V50Z" fill="#E8E8C6" />
+      <path d="M1100 50H1125V75H1100V50Z" fill="#E8E8C6" />
+      <path d="M1300 100V75H1275V100H1300Z" fill="#E8E8C6" />
+      <path d="M800 50H825V75H800V50Z" fill="#E8E8C6" />
+      <path d="M25 50H50V75H25V50Z" fill="#E8E8C6" />
+      <path d="M800 100H825V125H800V100Z" fill="#E8E8C6" />
+      <path d="M25 100H50V125H25V100Z" fill="#E8E8C6" />
+      <path d="M650 100H675V125H650V100Z" fill="#E8E8C6" />
+      <path d="M1100 0H1125V25H1100V0Z" fill="#E8E8C6" />
+      <path d="M800 0H825V25H800V0Z" fill="#E8E8C6" />
+      <path d="M25 0H50V25H25V0Z" fill="#E8E8C6" />
+      <path d="M650 0H675V25H650V0Z" fill="#E8E8C6" />
+      <path d="M500 75H525V50H500V75Z" fill="#E8E8C6" />
+      <path d="M1125 50H1150V75H1125V50Z" fill="#E8E8C6" />
+      <path d="M1300 75V50H1275V75H1300Z" fill="#E8E8C6" />
+      <path d="M825 50H850V75H825V50Z" fill="#E8E8C6" />
+      <path d="M50 50H75V75H50V50Z" fill="#E8E8C6" />
+      <path d="M1350 25V0H1325V25H1350Z" fill="#E8E8C6" />
+      <path d="M825 100H850V125H825V100Z" fill="#E8E8C6" />
+      <path d="M50 100H75V125H50V100Z" fill="#E8E8C6" />
+      <path d="M675 100H700V125H675V100Z" fill="#E8E8C6" />
+      <path d="M1125 0H1150V25H1125V0Z" fill="#E8E8C6" />
+      <path d="M825 0H850V25H825V0Z" fill="#E8E8C6" />
+      <path d="M50 0H75V25H50V0Z" fill="#E8E8C6" />
+      <path d="M675 0H700V25H675V0Z" fill="#E8E8C6" />
+      <path d="M1150 50H1175V75H1150V50Z" fill="#E8E8C6" />
+      <path d="M1300 50V25H1275V50H1300Z" fill="#E8E8C6" />
+      <path d="M850 50H875V75H850V50Z" fill="#E8E8C6" />
+      <path d="M75 50H100V75H75V50Z" fill="#E8E8C6" />
+      <path d="M1250 25V0H1225V25H1250Z" fill="#E8E8C6" />
+      <path d="M850 100H875V125H850V100Z" fill="#E8E8C6" />
+      <path d="M75 100H100V125H75V100Z" fill="#E8E8C6" />
+      <path d="M700 100H725V125H700V100Z" fill="#E8E8C6" />
+      <path d="M1150 0H1175V25H1150V0Z" fill="#E8E8C6" />
+      <path d="M850 0H875V25H850V0Z" fill="#E8E8C6" />
+      <path d="M75 0H100V25H75V0Z" fill="#E8E8C6" />
+      <path d="M700 0H725V25H700V0Z" fill="#E8E8C6" />
+      <path d="M1175 25H1200V50H1175V25Z" fill="#E8E8C6" />
+      <path d="M1325 25V0H1300V25H1325Z" fill="#E8E8C6" />
+      <path d="M875 0H900V25H875V0Z" fill="#E8E8C6" />
+      <path d="M100 0H125V25H100V0Z" fill="#E8E8C6" />
+      <path d="M725 25H750V50H725V25Z" fill="#E8E8C6" />
+      <path d="M450 100H475V75H450V100Z" fill="#E8E8C6" />
+      <path d="M575 100H550V75H575V100Z" fill="#E8E8C6" />
+      <path d="M1075 25H1100V50H1075V25Z" fill="#E8E8C6" />
+      <path d="M1325 125V100H1300V125H1325Z" fill="#E8E8C6" />
+      <path d="M775 25H800V50H775V25Z" fill="#E8E8C6" />
+      <path d="M0 25H25V50H0V25Z" fill="#E8E8C6" />
+      <path d="M625 25H650V50H625V25Z" fill="#E8E8C6" />
+      <path d="M450 125H475V100H450V125Z" fill="#E8E8C6" />
+      <path d="M575 125H550V100H575V125Z" fill="#E8E8C6" />
+      <path d="M1375 75H1400V100H1375V75Z" fill="#E8E8C6" />
+      <path d="M1375 50H1400V75H1375V50Z" fill="#E8E8C6" />
+      <path d="M1375 0H1400V25H1375V0Z" fill="#E8E8C6" />
+      <path d="M1400 100H1425V125H1400V100Z" fill="#E8E8C6" />
+      <path d="M1375 100H1400V125H1375V100Z" fill="#E8E8C6" />
+      <path d="M1475 100H1500V125H1475V100Z" fill="#E8E8C6" />
+      <path d="M1425 100H1450V125H1425V100Z" fill="#E8E8C6" />
+      <path d="M1450 100H1475V125H1450V100Z" fill="#E8E8C6" />
+      <path d="M1375 25H1400V50H1375V25Z" fill="#E8E8C6" />
+      <path d="M150 100H175V125H150V100Z" fill="#E8E8C6" />
+      <path d="M150 25H175V0H150V25Z" fill="#E8E8C6" />
+      <path d="M275 100H250V125H275V100Z" fill="#E8E8C6" />
+      <path d="M275 25H250V0H275V25Z" fill="#E8E8C6" />
+      <path d="M175 75H200V100H175V75Z" fill="#E8E8C6" />
+      <path d="M175 50H200V25H175V50Z" fill="#E8E8C6" />
+      <path d="M250 75H225V100H250V75Z" fill="#E8E8C6" />
+      <path d="M250 50H225V25H250V50Z" fill="#E8E8C6" />
+      <path d="M200 50H225V75H200V50Z" fill="#E8E8C6" />
+      <path d="M300 100H325V125H300V100Z" fill="#E8E8C6" />
+      <path d="M400 100H425V125H400V100Z" fill="#E8E8C6" />
+      <path d="M300 75H325V100H300V75Z" fill="#E8E8C6" />
+      <path d="M400 75H425V100H400V75Z" fill="#E8E8C6" />
+      <path d="M300 50H325V75H300V50Z" fill="#E8E8C6" />
+      <path d="M400 50H425V75H400V50Z" fill="#E8E8C6" />
+      <path d="M325 50H350V75H325V50Z" fill="#E8E8C6" />
+      <path d="M325 0H350V25H325V0Z" fill="#E8E8C6" />
+      <path d="M350 50H375V75H350V50Z" fill="#E8E8C6" />
+      <path d="M350 0H375V25H350V0Z" fill="#E8E8C6" />
+      <path d="M375 50H400V75H375V50Z" fill="#E8E8C6" />
+      <path d="M375 0H400V25H375V0Z" fill="#E8E8C6" />
+      <path d="M400 25H425V50H400V25Z" fill="#E8E8C6" />
+      <path d="M300 25H325V50H300V25Z" fill="#E8E8C6" />
+
+          </svg>
+        </div>
+
+        {/* =========================
+            EXAM INFORMATION
+            ========================= */}
+        <div
+          className="
+            mt-8
+            max-w-[1000px]
+            space-y-5
+            text-[#0F2851]
+            text-sm
+            font-medium
+            leading-relaxed
+            sm:text-base
+            md:text-lg
+          "
         >
-          <SectionHeading title="Eligibility" />
 
-          <ul className="text-[18px] max-w-5xl mt-4 space-y-3">
-            {[
-              "Students currently enrolled in Classes 6th to 10th from any recognized school are eligible to participate in Nexus QUEST.",
-              "Participants must be actively studying in their respective academic year during the examination period.",
-              "Age-appropriate question sets will be provided based on the student’s current class level to ensure fair assessment.",
-              "Students from all educational boards (CBSE, ICSE, State boards) within the specified grade range can apply for the examination.",
-            ].map((text, idx) => (
-              <li key={idx} className="flex items-start gap-2">
-                <ChevronRight size={18} className="flex-shrink-0 mt-1" />
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
-        {/* Dates Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={3}
-          className="py-10"
-        >
-          <SectionHeading title="Important Dates" />
-
-          <div className="flex flex-col justify-between mt-6 py-2 body-font">
-            {[
-              { date: "August 7, 2025", label: "Registrations Open" },
-              { date: "December 20, 2025", label: "Registrations Close" },
-              { date: "December 21, 2025", label: "Quest Olympiad" },
-              { date: "January 9, 2026", label: "Prize Distribution" },
-            ].map((item, idx) => (
-              <div key={idx} className="mb-2">
-                <div className="text-[34px] font-semibold">{item.date}</div>
-                <div className="text-[18px]">{item.label}</div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Exam Organizing Body</p>
+            <p>Elan &amp; nVision, IIT Hyderabad</p>
           </div>
-        </motion.div>
 
-        {/* Duration Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={4}
-          className="py-12"
-        >
-          <SectionHeading title="Duration" />
-          <p className="text-[16px] max-w-4xl mt-4">
-            Participants will have a total of 90 minutes to complete the test.
-            Make sure to manage your time wisely to attempt all sections.
-          </p>
-        </motion.div>
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Eligibility</p>
+            <p>Students from classes 6 - 12</p>
+          </div>
 
-        {/* Marking Scheme Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={5}
-          className="py-10 w-fit"
-        >
-          <SectionHeading title="Marking Scheme" />
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Exam Level</p>
+            <p>Intermediate</p>
+          </div>
 
-          <ul className="text-[16px] max-w-4xl mt-4 space-y-3">
-            <li className="flex items-start gap-2">
-              <ChevronRight size={18} className="flex-shrink-0 mt-1" />
-              <span>+1 mark for correct answers</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <ChevronRight size={18} className="flex-shrink-0 mt-1" />
-              <span>0 marks for incorrect responses</span>
-            </li>
-          </ul>
-          <p className="mt-2 text-[16px]">There will be no negative marking.</p>
-        </motion.div>
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Application Process</p>
+            <p>Via Unstop</p>
+          </div>
 
-        {/* Format Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={6}
-          className="flex justify-between py-12 items-start"
-        >
-          <div className="w-[calc(100%-420px)]">
-            <SectionHeading title="Exam Format" />
-            <p className="text-[16px] max-w-4xl mt-4">
-              50 multiple-choice questions with single correct answers,
-              promoting accuracy and efficient time management.
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Exam Dates</p>
+            <p>November 1st Week</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Exam Mode</p>
+            <p>Online</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Fee of registration</p>
+            <p>₹ 350</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Objective</p>
+            <p>
+              To identify young academic talent by promoting conceptual
+              learning, logical reasoning and creative problem solving
             </p>
-            <ul className="text-[16px] max-w-4xl mt-4 space-y-3">
-              {[
-                "Logical Reasoning - 20",
-                "Mathematics - 10",
-                "Physics - 10",
-                "Chemistry - 10",
-              ].map((text, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <ChevronRight size={18} className="flex-shrink-0 mt-1" />
-                  <span>{text}</span>
-                </li>
-              ))}
-            </ul>
           </div>
-        </motion.div>
-      </div>
 
-      {/* Mobile Version */}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={fadeInUp}
-        custom={7}
-        className="block md:hidden"
-      >
-        <div className="space-y-10">
-          <SectionHeading title="Exam Details" />
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Languages</p>
+            <p>English</p>
+          </div>
 
-          <div>
-            <SectionHeading title="Eligibility" />
-            <ul className="text-[14px] space-y-2 mt-2">
-              <li className="flex items-start gap-2">
-                <ChevronRight size={16} className="flex-shrink-0 mt-1" />
-                <span>
-                  Students currently enrolled in Classes 6th to 10th from any
-                  recognized school are eligible to participate in Nexus QUEST.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <ChevronRight size={16} className="flex-shrink-0 mt-1" />
-                <span>
-                  Participants must be actively studying in their respective
-                  academic year during the examination period.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <ChevronRight size={16} className="flex-shrink-0 mt-1" />
-                <span>
-                  Class-specific question sets will be provided to ensure fair
-                  assessment.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <ChevronRight size={16} className="flex-shrink-0 mt-1" />
-                <span>
-                  Students from all boards (CBSE, ICSE, State) within the grade
-                  range can apply.
-                </span>
-              </li>
-            </ul>
+        </div>
 
-            {/* NOTE: these dates differ from the desktop version above —
-                pre-existing content mismatch, not touched here. Flag to
-                whoever owns exam date content. */}
-            <div className="py-10 space-y-6">
-              <SectionHeading title="Important Dates" />
+        {/* =========================
+            DATES
+            ========================= */}
+        <section className="mt-12 max-w-[900px] text-[#0F2851]">
 
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-6">
-                <div className="mt-4 md:mt-0 flex flex-col justify-between space-y-4">
-                  {[
-                    { date: "August 7, 2025", label: "Registrations Open" },
-                    { date: "October 11, 2025", label: "Registrations Close" },
-                    { date: "October 12, 2025", label: "Quest Olympiad" },
-                    { date: "Febraury, 2026", label: "Prize Distribution" },
-                  ].map((item, idx) => (
-                    <div key={idx} className="mb-2">
-                      <div className="text-[30px] font-semibold">
-                        {item.date}
-                      </div>
-                      <div className="text-[15px]">{item.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+          <h2 className="mb-4 text-2xl font-black uppercase tracking-wide sm:text-3xl">
+            DATES
+          </h2>
+
+          <div className="space-y-1 text-sm font-medium leading-relaxed sm:text-base md:text-lg">
+            <p>Registrations: August 23, 2026</p>
+            <p>Registrations Close: October 15, 2026</p>
+            <p>Quest Olympiad: 1st week of November(date TBA)</p>
+            <p>Prize Distribution: January 8, 2027</p>
+          </div>
+
+        </section>
+
+        {/* =========================
+            ELIGIBILITY
+            ========================= */}
+        <section className="mt-12 max-w-[950px] text-[#0F2851]">
+
+          <h2 className="mb-5 text-2xl font-black uppercase tracking-wide sm:text-3xl">
+            ELIGIBILITY
+          </h2>
+
+          <div className="space-y-5 text-sm font-medium leading-relaxed sm:text-base md:text-lg">
+
+            <div className="flex items-start gap-3">
+              <span>•</span>
+              <p>
+                Students currently enrolled in Classes 6th to 12th from any
+                recognized school are eligible to participate in Nexus QUEST.
+              </p>
             </div>
 
-            <SectionHeading title="Marking Scheme" />
-            <ul className="text-[14px] mt-2 space-y-1">
-              <li className="flex items-start gap-2">
-                <ChevronRight size={14} className="flex-shrink-0 mt-1" />
-                +1 mark per correct answer
-              </li>
-              <li className="flex items-start gap-2">
-                <ChevronRight size={14} className="flex-shrink-0 mt-1" />
-                No negative marking
-              </li>
-            </ul>
+            <div className="flex items-start gap-3">
+              <span>•</span>
+              <p>
+                Students from all educational boards (CBSE, ICSE, State boards)
+                within the specified grade range can apply for the examination.
+              </p>
+            </div>
+
           </div>
 
-          <div>
-            <SectionHeading title="Exam Format" />
+        </section>
 
-            <ul className="text-[14px] mt-2 space-y-1">
-              {[
-                "Logical Reasoning - 20",
-                "Maths - 10",
-                "Physics - 10",
-                "Chemistry - 10",
-              ].map((text, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <ChevronRight size={14} className="flex-shrink-0 mt-1" />
-                  {text}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </motion.div>
-    </div>
+      </div>
+    </main>
   );
 }

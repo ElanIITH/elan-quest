@@ -172,12 +172,103 @@
 // }
 "use client";
 
+import { motion } from "framer-motion";
+import { ChevronRight } from "lucide-react";
+// import SectionHeading from "../components/common/SectionHeading";
+
+export const MotionUl = motion("ul");
+export const MotionLi = motion("li");
+
 export default function ResultsPage() {
+  const processItems = [
+    {
+      id: 1,
+      content:
+        "Results will be declared within one month of the examination date and will be communicated through the official portal and registered email addresses.",
+    },
+    {
+      id: 2,
+      content:
+        "Every participant will receive a detailed digital marksheet, outlining their scores in each section: Mental Ability (MAT), Mathematics, Physics, and Chemistry.",
+    },
+    {
+      id: 3,
+      content:
+        "The overall performance will be assessed using the absolute scores from all sections combined.",
+    },
+    {
+      id: 4,
+      content:
+        "In the event of tied scores, tie-breakers will be applied in the following order of section scores: Mathematics, followed by Mental Ability, Physics, and then Chemistry.",
+    },
+    {
+      id: 5,
+      content:
+        "Top-performing students will be shortlisted for further honors based on standard-wise and school-wise performance segmentation.",
+    },
+    {
+      id: 6,
+      content:
+        "Selected high achievers will receive formal invitations to the prestigious Elan & nVision festival at IIT Hyderabad, where they will be felicitated at a special award ceremony.",
+    },
+    {
+      id: 7,
+      content:
+        "Final selections and merit lists will undergo a thorough validation process by the academic team before announcement.",
+    },
+    {
+      id: 8,
+      content:
+        "Any changes or re-evaluation requests will be addressed through a formal review mechanism, details of which will be shared post result declaration.",
+    },
+  ];
+
+  const awardsList = [
+    {
+      id: 1,
+      content:
+        "Top 3 achievers from every class in each school will be awarded Merit Medals and Certificates of Recognition.",
+    },
+    {
+      id: 2,
+      content:
+        "Top 10 highest scorers per class will be presented with Excellence Medals and receive exclusive goodies and rewards.",
+    },
+    {
+      id: 3,
+      content:
+        "Students will visit the IIT Hyderabad campus, exploring cutting-edge labs and state-of-the-art facilities on guided tours.",
+    },
+    {
+      id: 4,
+      content:
+        "Participants will interact with current students, gaining insights, mentorship, and lasting connections.",
+    },
+    {
+      id: 5,
+      content:
+        "Grand award celebration at IIT Hyderabad with media coverage — winners will be featured on official platforms to honor their success.",
+    },
+  ];
+
   return (
-    <main className="relative w-full overflow-x-hidden bg-[#F0ECCF]">
-      {/* Pattern Background */}
+    <motion.main
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="
+        relative
+        w-full
+        overflow-x-hidden
+        bg-[#F0ECCF]
+        text-[#111111]
+      "
+    >
+      {/* =====================================================
+          PATTERN BACKGROUND
+          ===================================================== */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 pointer-events-none"
         style={{
           backgroundImage: "url('/pics/patternfinal.png')",
           backgroundSize: "cover",
@@ -186,140 +277,199 @@ export default function ResultsPage() {
         }}
       />
 
-      {/* Results Content */}
-      <section className="relative z-10 mx-auto w-full max-w-[1440px] px-6 py-10 sm:px-10 md:px-[6.5%] md:py-12">
-        <h1 className="mb-8 text-4xl font-black uppercase tracking-wide text-[#0F2851] md:text-5xl">
-          RESULTS
-        </h1>
-
-        <div className="grid w-full max-w-[1000px] grid-cols-1 gap-y-7 md:grid-cols-2 md:gap-x-24 md:gap-y-7">
-          {/* Exam Organizing Body */}
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Exam Organizing Body
-          </div>
-
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Elan & nVision, IIT Hyderabad
-          </div>
-
-          {/* Eligibility */}
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Eligibility
-          </div>
-
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Students from classes 6 - 12
-          </div>
-
-          {/* Exam Level */}
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Exam Level
-          </div>
-
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Intermediate
-          </div>
-
-          {/* Application Process */}
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Application Process
-          </div>
-
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Via Unstop
-          </div>
-
-          {/* Exam Dates */}
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Exam Dates
-          </div>
-
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            November 1st Week
-          </div>
-
-          {/* Exam Mode */}
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Exam Mode
-          </div>
-
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Online
-          </div>
-
-          {/* Fee of registration */}
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Fee of registration
-          </div>
-
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            ₹ 350
-          </div>
-
-          {/* Objective */}
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Objective
-          </div>
-
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            To identify young academic talent
-            <br />
-            by promoting conceptual learning,
-            <br />
-            logical reasoning and creative
-            <br />
-            problem solving
-          </div>
-
-          {/* Languages */}
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            Languages
-          </div>
-
-          <div className="text-base leading-relaxed text-black md:text-lg">
-            English
-          </div>
-          {/* Dates */}
-          <section className="mt-14 max-w-[900px]">
-            <h2 className="mb-3 text-xl font-black uppercase tracking-wide text-[#0F2851] md:text-2xl">
-              DATES
-            </h2>
-
-            <div className="space-y-1 text-base leading-relaxed text-black md:text-lg">
-              <p>Registrations: August 23, 2026</p>
-              <p>Registrations Close: October 15, 2026</p>
-              <p>Quest Olympiad: 1st week of November(date TBA)</p>
-              <p>Prize Distribution: January 8, 2027</p>
-            </div>
-          </section>
-
-          {/* Eligibility */}
-          <section className="mt-14 max-w-[900px]">
-            <h2 className="mb-5 text-xl font-black uppercase tracking-wide text-[#0F2851] md:text-2xl">
-              ELIGIBILITY
-            </h2>
-
-            <div className="space-y-7 text-base leading-relaxed text-black md:text-lg">
-              <div className="flex gap-4">
-                <span className="mt-1">•</span>
-                <p>
-                  Students currently enrolled in Classes 6th to 12th from any
-                  recognized school are eligible to participate in Nexus QUEST.
-                </p>
-              </div>
-
-              <div className="flex gap-4">
-                <span className="mt-1">•</span>
-                <p>
-                  Students from all educational boards (CBSE, ICSE, State
-                  boards) within the specified grade range can apply for the
-                  examination.
-                </p>
-              </div>
-            </div>
-          </section>
+      {/* =====================================================
+          CONTENT
+          ===================================================== */}
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          w-full
+          max-w-[1440px]
+          px-6
+          py-10
+          sm:px-10
+          sm:py-12
+          md:px-[6.5%]
+          md:py-14
+        "
+      >
+        {/* =================================================
+            RESULTS
+            ================================================= */}
+        <div className="mb-10">
+          <h1
+            className="
+              text-4xl
+              font-black
+              uppercase
+              tracking-wide
+              text-[#0F2851]
+              sm:text-5xl
+              md:text-[52px]
+            "
+          >
+            RESULTS
+          </h1>
         </div>
-      </section>
-    </main>
+
+        {/* =================================================
+            PROCESS
+            ================================================= */}
+        <section className="w-full max-w-[1050px] mb-14">
+          <h2
+            className="
+              mb-5
+              text-2xl
+              font-black
+              uppercase
+              tracking-wide
+              text-[#0F2851]
+              sm:text-3xl
+            "
+          >
+            PROCESS
+          </h2>
+
+          <MotionUl
+            className="w-full text-left text-sm sm:text-base md:text-[17px]"
+            initial="hidden"
+            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.1,
+                },
+              },
+            }}
+          >
+            {processItems.map((item) => (
+              <MotionLi
+                key={item.id}
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    y: 20,
+                  },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                  },
+                }}
+                className="
+                  flex
+                  items-start
+                  gap-3
+                  py-2.5
+                  sm:py-3
+                  leading-relaxed
+                "
+              >
+                <ChevronRight
+                  size={19}
+                  strokeWidth={3}
+                  className="
+                    mt-1
+                    flex-shrink-0
+                    text-[#466B9E]
+                  "
+                />
+
+                <div>{item.content}</div>
+              </MotionLi>
+            ))}
+          </MotionUl>
+        </section>
+
+        {/* =================================================
+            AWARDS & PRIZES
+            ================================================= */}
+        <section className="w-full max-w-[1050px]">
+          <h2
+            className="
+              mb-5
+              text-2xl
+              font-black
+              uppercase
+              tracking-wide
+              text-[#0F2851]
+              sm:text-3xl
+            "
+          >
+            AWARDS & PRIZES
+          </h2>
+
+          <p
+            className="
+              mb-5
+              max-w-[950px]
+              text-left
+              text-sm
+              leading-relaxed
+              sm:text-base
+              md:text-[17px]
+            "
+          >
+            The participating students stand to gain many prizes and goodies,
+            as well as invaluable experience by participating in the Nexus
+            QUEST examination:
+          </p>
+
+          <MotionUl
+            className="w-full text-left text-sm sm:text-base md:text-[17px]"
+            initial="hidden"
+            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.1,
+                },
+              },
+            }}
+          >
+            {awardsList.map((item) => (
+              <MotionLi
+                key={item.id}
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    y: 20,
+                  },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                  },
+                }}
+                className="
+                  flex
+                  items-start
+                  gap-3
+                  py-2.5
+                  sm:py-3
+                  leading-relaxed
+                "
+              >
+                <ChevronRight
+                  size={19}
+                  strokeWidth={3}
+                  className="
+                    mt-1
+                    flex-shrink-0
+                    text-[#466B9E]
+                  "
+                />
+
+                <div>{item.content}</div>
+              </MotionLi>
+            ))}
+          </MotionUl>
+        </section>
+      </div>
+    </motion.main>
   );
 }
