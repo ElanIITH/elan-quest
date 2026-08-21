@@ -125,21 +125,21 @@ export default function HomePage() {
     z-20
 
     /* MOBILE — UNCHANGED */
-    max-md:left-[7%]
+    max-md:left-[4%]
     max-md:top-[45px]
-    max-md:w-[190px]
+    max-md:w-[230px]
 
     /* DESKTOP — RESPONSIVE */
-    md:left-[6.5%]
-    md:top-[clamp(40px,3.125vw,45px)]
-    md:w-[clamp(360px,39vw,560px)]
+    md:left-[4.5%]
+    md:top-[clamp(160px,5vw,240px)]
+    md:w-[clamp(430px,45vw,650px)]
   "
             >
               <Image
                 src="/pics/questColor.png"
                 alt="Nexus Quest Logo"
-                width={700}
-                height={350}
+                width={950}
+                height={475}
                 priority
                 className="h-auto w-full object-contain"
               />
@@ -167,18 +167,18 @@ export default function HomePage() {
     whitespace-nowrap
 
     /* MOBILE — UNCHANGED */
-    max-md:left-[25%]
+    max-md:left-[23%]
     max-md:top-[165px]
     max-md:px-4
     max-md:py-2
     max-md:text-xs
 
     /* DESKTOP — RESPONSIVE */
-    md:left-[25%]
-    md:top-[clamp(240px,22.92vw,330px)]
-    md:px-[clamp(24px,2.22vw,32px)]
-    md:py-[clamp(12px,1.11vw,16px)]
-    md:text-[clamp(16px,1.39vw,20px)]
+    md:left-[28%]
+    md:top-[clamp(480px,27vw,580px)]
+md:px-[clamp(20px,2.8vw,34px)]
+md:py-[clamp(13px,1.4vw,18px)]
+md:text-[clamp(18px,1.6vw,23px)]
   "
             >
               REGISTER NOW!
