@@ -1,318 +1,162 @@
-"use client";
-import { motion, Variants } from "framer-motion";
-import ExamDetails from "../components/exam-details/ExamDetails";
-import Eligibility from "../components/exam-details/Eligibility";
-import Dates from "../components/exam-details/Dates";
-import Duration from "../components/exam-details/Duration";
-import MarkingScheme from "../components/exam-details/MarkingScheme";
-import Format from "../components/exam-details/Format";
-import Rocket from "../components/exam-details/Rocket";
-import Microscope from "../components/exam-details/Microscope";
-import ArrowPointer from "../components/exam-details/ArrowPointer";
 
-// fadeInUp animation
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (custom: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: custom * 0.2, duration: 0.6, ease: "easeOut" },
-  }),
-};
-
-export default function ExamDetailsPage() {
+export default function Results() {
   return (
-    <div
-      className={`overflow-x-hidden body-font relative bg-[#252525] text-[#E8E8C6] px-4 py-8`}
-    >
-      {/* Microscope aligned to bottom */}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={fadeInUp}
-        custom={0}
-        className="hidden md:block w-[380px] absolute bottom-0 right-0 z-0"
-      >
-        <Microscope />
-      </motion.div>
+    <main className="relative min-h-0 w-full overflow-x-hidden bg-[#F0ECCF] text-[#0F2851]">
 
-      {/* Desktop Version */}
-      <div className="hidden md:block">
-        {/* Exam Details */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={1}
-          className="w-full max-w-7xl h-auto py-10"
-        >
-          <ExamDetails />
-        </motion.div>
+      {/* =========================
+          PATTERN BACKGROUND
+          ========================= */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/pics/patternfinal.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "top center",
+          backgroundRepeat: "repeat-y",
+        }}
+      />
 
-        {/* Eligibility Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={2}
-          className="w-full max-w-4xl h-auto py-10"
+      {/* =========================
+          PAGE CONTENT
+          ========================= */}
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 py-10 sm:px-10 md:px-[6.5%] md:py-12">
+
+        {/* Heading */}
+        <h1
+          className="
+            mb-8
+            text-4xl
+            font-black
+            uppercase
+            tracking-wide
+            text-[#0F2851]
+            sm:text-5xl
+            md:text-[52px]
+          "
         >
-          <div className="w-[950px] h-[100px]">
-            <Eligibility />
+          EXAM DETAILS
+        </h1>
+
+        {/* YOUR SVG — KEEP EVERY PATH EXACTLY AS IT IS */}
+       
+
+        {/* =========================
+            EXAM INFORMATION
+            ========================= */}
+        <div
+          className="
+            mt-8
+            max-w-[1000px]
+            space-y-5
+            text-[#0F2851]
+            text-sm
+            font-medium
+            leading-relaxed
+            sm:text-base
+            md:text-lg
+          "
+        >
+
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Exam Organizing Body</p>
+            <p>Elan &amp; nVision, IIT Hyderabad</p>
           </div>
 
-          <ul className="text-[18px] max-w-5xl mt-4 space-y-3">
-            {[
-              "Students currently enrolled in Classes 6th to 10th from any recognized school are eligible to participate in Nexus QUEST.",
-              "Participants must be actively studying in their respective academic year during the examination period.",
-              "Age-appropriate question sets will be provided based on the student’s current class level to ensure fair assessment.",
-              "Students from all educational boards (CBSE, ICSE, State boards) within the specified grade range can apply for the examination.",
-            ].map((text, idx) => (
-              <li key={idx} className="flex items-start gap-2">
-                <div className="w-[16px]">
-                  <ArrowPointer />
-                </div>
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
-        {/* Dates Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={3}
-          className="py-10"
-        >
-          <div className="w-[400px] h-[100px]">
-            <Dates />
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Eligibility</p>
+            <p>Students from classes 6 - 12</p>
           </div>
 
-          <div className="relative flex mt-6">
-            <div className="w-[190px]">
-              <Rocket />
-            </div>
-            <div className="flex flex-col justify-between ml-4 py-2 h-[40px] body-font">
-              {[
-                { date: "August 7, 2025", label: "Registrations Open" },
-                { date: "December 20, 2025", label: "Registrations Close" },
-                { date: "December 21, 2025", label: "Quest Olympiad" },
-                { date: "January 9, 2026", label: "Prize Distribution" },
-              ].map((item, idx) => (
-                <div key={idx} className="mb-2">
-                  <div className="text-[34px] font-semibold">{item.date}</div>
-                  <div className="text-[18px]">{item.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Duration Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={4}
-          className="py-12"
-        >
-          <div className="w-[650px] h-[100px]">
-            <Duration />
-          </div>
-          <p className="text-[16px] max-w-4xl">
-            Participants will have a total of 90 minutes to complete the test.
-            Make sure to manage your time wisely to attempt all sections.
-          </p>
-        </motion.div>
-
-        {/* Marking Scheme Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={5}
-          className="py-10 w-fit"
-        >
-          <div className="w-auto md:w-[1150px] h-[100px]">
-            <MarkingScheme />
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Exam Level</p>
+            <p>Intermediate</p>
           </div>
 
-          <ul className="text-[16px] max-w-4xl mt-2 space-y-3">
-            <li className="flex items-start gap-2">
-              <div className="w-[16px]">
-                <ArrowPointer />
-              </div>
-              <span>+1 mark for correct answers</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className="w-[16px]">
-                <ArrowPointer />
-              </div>
-              <span>0 marks for incorrect responses</span>
-            </li>
-          </ul>
-          <p className="mt-2 text-[16px]">There will be no negative marking.</p>
-        </motion.div>
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Application Process</p>
+            <p>Via Unstop</p>
+          </div>
 
-        {/* Format Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={6}
-          className="flex justify-between py-12 items-start bottom-0 right-0 z-0"
-        >
-          <div className="w-[calc(100%-420px)]">
-            <div className="w-[500px] h-[100px]">
-              <Format />
-            </div>
-            <p className="text-[16px] max-w-4xl mt-2">
-              50 multiple-choice questions with single correct answers,
-              promoting accuracy and efficient time management.
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Exam Dates</p>
+            <p>November 1st Week</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Exam Mode</p>
+            <p>Online</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Fee of registration</p>
+            <p>₹ 350</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Objective</p>
+            <p>
+              To identify young academic talent by promoting conceptual
+              learning, logical reasoning and creative problem solving
             </p>
-            <ul className="text-[16px] max-w-4xl mt-4 space-y-3">
-              {[
-                "Logical Reasoning - 20",
-                "Mathematics - 10",
-                "Physics - 10",
-                "Chemistry - 10",
-              ].map((text, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <div className="w-[16px]">
-                    <ArrowPointer />
-                  </div>
-                  <span>{text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Mobile Version */}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={fadeInUp}
-        custom={7}
-        className="block md:hidden"
-      >
-        <div className="space-y-10">
-          <div className="w-[400px]">
-            <ExamDetails />
           </div>
 
-          <div>
-            <div className="w-[350px] h-[40px]">
-              <Eligibility />
-            </div>
-            <ul className="text-[14px] space-y-2 mt-2">
-              <li className="flex items-start gap-2">
-                <div className="w-[22px]">
-                  <ArrowPointer />
-                </div>
-                <span>
-                  Students currently enrolled in Classes 6th to 10th from any
-                  recognized school are eligible to participate in Nexus QUEST.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="w-[20px]">
-                  <ArrowPointer />
-                </div>
-                <span>
-                  Participants must be actively studying in their respective
-                  academic year during the examination period.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="w-[13px]">
-                  <ArrowPointer />
-                </div>
-                <span>
-                  Class-specific question sets will be provided to ensure fair
-                  assessment.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="w-[15px]">
-                  <ArrowPointer />
-                </div>
-                <span>
-                  Students from all boards (CBSE, ICSE, State) within the grade
-                  range can apply.
-                </span>
-              </li>
-            </ul>
-
-            <div className="py-10 space-y-6">
-              <div className="w-[150px] h-[0px]">
-                <Dates />
-              </div>
-
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-6">
-                <div className="mt-4 md:mt-0 flex flex-col justify-between space-y-4">
-                  {[
-                    { date: "August 7, 2025", label: "Registrations Open" },
-                    { date: "October 11, 2025", label: "Registrations Close" },
-                    { date: "October 12, 2025", label: "Quest Olympiad" },
-                    { date: "Febraury, 2026", label: "Prize Distribution" },
-                  ].map((item, idx) => (
-                    <div key={idx} className="mb-2">
-                      <div className="text-[30px] font-semibold">
-                        {item.date}
-                      </div>
-                      <div className="text-[15px]">{item.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="w-[400px] h-[40px]">
-              <MarkingScheme />
-            </div>
-            <ul className="text-[14px] mt-2 space-y-1">
-              <li className="flex items-start gap-2">
-                <div className="w-[12px]">
-                  <ArrowPointer />
-                </div>
-                +1 mark per correct answer
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="w-[12px]">
-                  <ArrowPointer />
-                </div>
-                No negative marking
-              </li>
-            </ul>
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Languages</p>
+            <p>English</p>
           </div>
 
-          <div>
-            <div className="w-[150px] h-[40px]">
-              <Format />
-            </div>
-
-            <ul className="text-[14px] mt-2 space-y-1">
-              {[
-                "Logical Reasoning - 20",
-                "Maths - 10",
-                "Physics - 10",
-                "Chemistry - 10",
-              ].map((text, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <div className="w-[12px]">
-                    <ArrowPointer />
-                  </div>
-                  {text}
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
-      </motion.div>
-    </div>
+
+        {/* =========================
+            DATES
+            ========================= */}
+        <section className="mt-12 max-w-[900px] text-[#0F2851]">
+
+          <h2 className="mb-4 text-2xl font-black uppercase tracking-wide sm:text-3xl">
+            DATES
+          </h2>
+
+          <div className="space-y-1 text-sm font-medium leading-relaxed sm:text-base md:text-lg">
+            <p>Registrations: August 23, 2026</p>
+            <p>Registrations Close: October 15, 2026</p>
+            <p>Quest Olympiad: 1st week of November(date TBA)</p>
+            <p>Prize Distribution: January 8, 2027</p>
+          </div>
+
+        </section>
+
+        {/* =========================
+            ELIGIBILITY
+            ========================= */}
+        <section className="mt-12 max-w-[950px] text-[#0F2851]">
+
+          <h2 className="mb-5 text-2xl font-black uppercase tracking-wide sm:text-3xl">
+            ELIGIBILITY
+          </h2>
+
+          <div className="space-y-5 text-sm font-medium leading-relaxed sm:text-base md:text-lg">
+
+            <div className="flex items-start gap-3">
+              <span>•</span>
+              <p>
+                Students currently enrolled in Classes 6th to 12th from any
+                recognized school are eligible to participate in Nexus QUEST.
+              </p>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span>•</span>
+              <p>
+                Students from all educational boards (CBSE, ICSE, State boards)
+                within the specified grade range can apply for the examination.
+              </p>
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+    </main>
   );
 }
