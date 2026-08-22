@@ -31,8 +31,8 @@ export default function AboutPage() {
 
           <p className="mb-8 text-sm font-medium leading-relaxed md:text-base">
             Nexus QUEST is a nationwide Talent Hunt Examination for school
-            students, conducted as part of Elan & nVision — IIT Hyderabad's
-            annual techno-cultural fest. It's designed to identify and
+            students, conducted as part of Elan & nVision — IIT Hyderabad&apos;s
+            annual techno-cultural fest. It&apos;s designed to identify and
             celebrate exceptional scholastic talent from schools across the
             country.
           </p>
@@ -50,9 +50,9 @@ export default function AboutPage() {
           </h2>
 
           <p className="mb-8 text-sm font-medium leading-relaxed md:text-base">
-            Elan & nVision is IIT Hyderabad's flagship techno-cultural fest —
+            Elan & nVision is IIT Hyderabad&apos;s flagship techno-cultural fest —
             and the platform Nexus QUEST is held under. Now in its 17th edition,
-            it's recognized as South India's largest student-run techno-cultural
+            it&apos;s recognized as South India&apos;s largest student-run techno-cultural
             festival, drawing over 50,000 students, innovators, artists, and
             young entrepreneurs from across the country over three days.
           </p>
@@ -64,7 +64,7 @@ export default function AboutPage() {
 
           <p className="mb-5 text-sm font-medium leading-relaxed md:text-base">
             Nexus QUEST is conducted by the Indian Institute of Technology
-            Hyderabad (IITH) — established in 2008 and now one of India's
+            Hyderabad (IITH) — established in 2008 and now one of India&apos;s
             fastest-rising technical institutes.
           </p>
 
@@ -80,7 +80,7 @@ export default function AboutPage() {
             <li>Research Institutions - 15th</li>
 
             <li>
-              Research-driven campus: running "Patent a Day: Mission 365,"
+              Research-driven campus: running &quot;Patent a Day: Mission 365,&quot;
               having already filed 580+ patents, including 210+ in the last
               year alone, across 30+ Centres and Centres of Excellence
             </li>
@@ -106,8 +106,8 @@ export default function AboutPage() {
           </ul>
 
           <p className="mt-8 text-sm font-medium leading-relaxed md:text-base">
-            For a school student, this means Nexus QUEST isn't just another
-            Olympiad — it's a direct touchpoint with a nationally top-ranked
+            For a school student, this means Nexus QUEST isn&apos;t just another
+            Olympiad — it&apos;s a direct touchpoint with a nationally top-ranked
             IIT, its faculty, and its research culture
           </p>
 
