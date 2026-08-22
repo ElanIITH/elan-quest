@@ -1,113 +1,327 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import Image from "next/image";
 import RegisterPopUp from "./components/common/RegisterPopUp";
-import { ArrowUpRight, FileText, BookOpen, Trophy, ChevronRight } from "lucide-react";
-import { EVENT_CONFIG, HOME_SECTIONS } from "@/app/lib/site-config";
-
-const SECTION_ICONS = {
-  FileText: FileText,
-  BookOpen: BookOpen,
-  Trophy: Trophy,
-};
 
 export default function HomePage() {
   const [showPopup, setShowPopup] = useState(false);
 
-  const handleClick = () => {
+  const togglePopup = () => {
     setShowPopup(!showPopup);
   };
 
+  const perks = [{ id: 1 }, { id: 2 }, { id: 3 }];
+
   return (
-    <>
-      <div className="overflow-x-hidden">
-        {showPopup && <RegisterPopUp setShowPopup={setShowPopup} />}
+    <div
+      className="
+        relative
+        -mt-[100px]
+        md:mt-0
+        min-h-screen
+        w-full
+        overflow-x-hidden
+        bg-[#F0ECCF]
+        text-[#0F2851]
+      "
+    >
+      {/* Registration Modal */}
+      {showPopup && <RegisterPopUp setShowPopup={setShowPopup} />}
 
-        {/* Top section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="h-auto md:h-[calc(100vh-80px)] flex flex-col md:flex-row gap-6 md:gap-10 px-5 md:px-25 py-6 md:py-10"
-        >
-          <motion.div
-            className="flex flex-col justify-center gap-6 md:gap-10 w-full md:w-[1000px]"
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div className="text-center md:text-left">
-              <h1 className="heading-font text-3xl md:text-6xl">Nexus Quest</h1>
-            </div>
-            <div className="text-center md:text-left">
-              <p className="text-xl md:text-3xl body-font">{EVENT_CONFIG.eventDate}</p>
-              <p className="text-lg md:text-2xl body-font">{EVENT_CONFIG.eventName}</p>
-            </div>
-          </motion.div>
+      {/* =====================================================
+          WHOLE PAGE PATTERN BACKGROUND
+          ===================================================== */}
+      <div className="absolute top-0 left-0 z-0 h-[3309px] w-full pointer-events-none">
+        <Image
+          src="/pics/patternfinal.png"
+          alt=""
+          fill
+          priority
+          className="object-cover object-top"
+        />
 
-          <motion.div
-            className="flex flex-col justify-center gap-6 md:gap-10"
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="flex flex-row items-center justify-center md:justify-start gap-3 mt-0 md:mt-35">
-              <button
-                onClick={handleClick}
-                className="w-fit cursor-pointer flex items-center gap-2 border border-[var(--foreground)] rounded-md px-5 py-3 text-base md:text-xl body-font hover:opacity-80 transition-opacity"
-              >
-                Register Now
-                <ArrowUpRight size={22} />
-              </button>
-            </div>
-            <p className="text-base text-center md:text-2xl px-4 md:pl-15 body-font">
-              {EVENT_CONFIG.tagline}
-            </p>
-          </motion.div>
-        </motion.div>
-
-        {/* Sections with hover arrow */}
-        <motion.div
-          className="flex flex-col gap-7 px-5 md:px-10 py-12"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.2 } },
+        {/* Pattern becomes lighter as we move down */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(249,245,232,0.12) 0%, rgba(249,245,232,0.30) 30%, rgba(249,245,232,0.55) 65%, rgba(249,245,232,0.80) 100%)",
           }}
-        >
-          {HOME_SECTIONS.map((section, index) => {
-            const Icon = SECTION_ICONS[section.icon as keyof typeof SECTION_ICONS];
-            return (
-              <motion.div
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                transition={{ duration: 0.6 }}
-              >
-                <Link href={section.href}>
-                  <div className="flex flex-col gap-5 group cursor-pointer">
-                    <div className="flex flex-row gap-5 md:gap-7 items-center">
-                      <Icon size={32} className="md:w-10 md:h-10" />
-                      <ChevronRight
-                        size={32}
-                        className="md:w-10 md:h-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      />
-                    </div>
-                    <p className="text-base md:text-2xl text-justify body-font">
-                      {section.text}
-                    </p>
-                  </div>
-                </Link>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+        />
       </div>
-    </>
+
+      {/* =====================================================
+          PAGE CONTENT
+          ===================================================== */}
+      <main className="relative z-10 w-full">
+        {/* =====================================================
+            HERO
+            ===================================================== */}
+        <section
+          className="
+            relative
+            w-full
+            min-h-[900px]
+            max-md:min-h-[700px]
+            overflow-visible
+          "
+        >
+          {/* =================================================
+              RUNNER
+              Desktop stays exactly as before.
+              Mobile gets a wider image so it doesn't squeeze.
+              ================================================= */}
+          {/* Runner - hero only */}
+          <div
+            className="
+    absolute
+    z-0
+    pointer-events-none
+
+    /* MOBILE */
+    max-md:top-[120px]
+    max-md:left-[-8%]
+    max-md:w-[125%]
+    max-md:max-w-none
+
+    /* DESKTOP - UNCHANGED */
+    md:top-0
+    md:left-0
+    md:w-full
+  "
+          >
+            <Image
+              src="/pics/runner.png"
+              alt="Runner Vector Illustration"
+              width={1920}
+              height={1080}
+              priority
+              className="w-full h-auto"
+            />
+          </div>
+
+          {/* =================================================
+              HERO CONTENT
+              ================================================= */}
+          <div
+            className="
+              relative
+              z-10
+              mx-auto
+              min-h-[900px]
+              max-md:min-h-[700px]
+              w-full
+              max-w-[1440px]
+            "
+          >
+            {/* =================================================
+                QUEST LOGO
+                ================================================= */}
+            {/* Quest Logo */}
+            <div
+              className="
+    absolute
+    z-20
+
+    /* MOBILE — UNCHANGED */
+    max-md:left-[4%]
+    max-md:top-[45px]
+    max-md:w-[230px]
+
+    /* DESKTOP — RESPONSIVE */
+    md:left-[4.5%]
+    md:top-[clamp(160px,5vw,240px)]
+    md:w-[clamp(430px,45vw,650px)]
+  "
+            >
+              <Image
+                src="/pics/questColor.png"
+                alt="Nexus Quest Logo"
+                width={950}
+                height={475}
+                priority
+                className="h-auto w-full object-contain"
+              />
+            </div>
+
+            {/* Register Button */}
+            <button
+              onClick={togglePopup}
+              className="
+    absolute
+    z-30
+    rounded-[12px]
+    bg-[#FF7779]
+    text-white
+    font-black
+    uppercase
+    tracking-wide
+    shadow-md
+    transition-all
+    duration-200
+    hover:scale-105
+    hover:bg-[#ff6568]
+    active:scale-95
+    cursor-pointer
+    whitespace-nowrap
+
+    /* MOBILE — UNCHANGED */
+    max-md:left-[23%]
+    max-md:top-[165px]
+    max-md:px-4
+    max-md:py-2
+    max-md:text-xs
+
+    /* DESKTOP — RESPONSIVE */
+    md:left-[28%]
+    md:top-[clamp(480px,27vw,580px)]
+md:px-[clamp(20px,2.8vw,34px)]
+md:py-[clamp(13px,1.4vw,18px)]
+md:text-[clamp(18px,1.6vw,23px)]
+  "
+            >
+              REGISTER NOW!
+            </button>
+          </div>
+        </section>
+
+        {/* =====================================================
+            WHAT IS QUEST
+            ===================================================== */}
+        <section
+          className="
+            relative
+            w-full
+            px-6
+            pt-[120px]
+            sm:px-10
+            md:px-[6.5%]
+            md:pt-[120px]
+          "
+        >
+          <div className="max-w-[620px]">
+            <h2
+              className="
+                mb-4
+                text-xl
+                font-black
+                uppercase
+                tracking-wide
+                text-[#0F2851]
+                sm:text-2xl
+                md:text-[28px]
+              "
+            >
+              WHAT IS QUEST?
+            </h2>
+
+            <p
+              className="
+                text-sm
+                font-semibold
+                leading-[1.5]
+                text-[#0F2851]/80
+                sm:text-base
+                md:text-lg
+              "
+            >
+              A national-level Talent Hunt examination for school students,
+              organized by Elan & nVision, the annual techno-cultural fest of
+              IIT Hyderabad.
+            </p>
+          </div>
+        </section>
+
+        {/* =====================================================
+            PERKS AND PRIZES
+            ===================================================== */}
+        <section
+          className="
+            relative
+            w-full
+            px-6
+            pt-[45px]
+            sm:px-10
+            md:px-[6.5%]
+          "
+        >
+          <h2
+            className="
+              mb-7
+              text-xl
+              font-black
+              uppercase
+              tracking-wide
+              text-[#0F2851]
+              sm:text-2xl
+              md:text-[28px]
+            "
+          >
+            PERKS AND PRIZES
+          </h2>
+
+          <div
+            className="
+              grid
+              w-full
+              max-w-[900px]
+              grid-cols-1
+              gap-5
+              sm:grid-cols-2
+              md:grid-cols-3
+              md:gap-6
+            "
+          >
+            {perks.map((perk) => (
+              <div
+                key={perk.id}
+                className="
+                  h-[210px]
+                  w-full
+                  rounded-[22px]
+                  bg-[#466B9E]
+                  p-3.5
+                  shadow-md
+                  sm:h-[220px]
+                "
+              >
+                <div
+                  className="
+                    h-full
+                    w-full
+                    rounded-[15px]
+                    bg-[#F9F5E8]
+                  "
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* =====================================================
+            DARK PATTERN SECTION
+            ===================================================== */}
+        <section
+          className="
+            relative
+            z-20
+            mt-[50px]
+            h-[700px]
+            w-full
+            overflow-hidden
+          "
+        >
+          <Image
+            src="/pics/patternfinal.png"
+            alt=""
+            fill
+            className="object-cover object-top"
+          />
+
+          <div className="absolute inset-0 bg-[#D8D4B5]/35" />
+        </section>
+      </main>
+    </div>
   );
 }

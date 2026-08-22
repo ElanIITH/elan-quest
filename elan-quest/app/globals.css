@@ -1,30 +1,76 @@
 @import "tailwindcss";
 
+/* =========================
+   NEXA FONT
+   ========================= */
+
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa-Heavy.ttf") format("truetype");
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================
+   ROOT VARIABLES
+   ========================= */
+
 :root {
-  /* ---- THEME VALUES — currently plain placeholders, no theme decided yet ---- */
   --background: #ffffff;
   --foreground: #111111;
-  --surface: #f5f5f5;      /* slightly darker neutral — footer, cards, dividers */
+  --surface: #f5f5f5;
   --surface-foreground: #111111;
-  /* ---------------------------------------------------------------------- */
 
-  /* No theme font loaded yet — plain system stack until a theme is picked */
-  --font-body: ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-heading: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-body: "Nexa";
+  --font-heading: "Nexa";
 
   --vh: 1vh;
 }
+
+/* =========================
+   GLOBAL
+   ========================= */
 
 html,
 body {
   height: 100%;
   width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background-color: #F9F5E8 !important;
+  color: var(--foreground);
+
+  font-family: "Nexa", sans-serif;
+
+  overflow-x: hidden;
 }
 
+/* =========================
+   NEXA EVERYWHERE
+   ========================= */
+
+* {
+  font-family: "Nexa", sans-serif;
+}
+
+/* =========================
+   OPTIONAL UTILITY CLASSES
+   ========================= */
+
 .body-font {
-  font-family: var(--font-body), sans-serif;
+  font-family: "Nexa", sans-serif;
 }
 
 .heading-font {
-  font-family: var(--font-heading), sans-serif;
+  font-family: "Nexa", sans-serif;
 }

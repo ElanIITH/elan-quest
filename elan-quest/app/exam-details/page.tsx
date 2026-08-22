@@ -1,294 +1,162 @@
-"use client";
-import { motion, Variants } from "framer-motion";
-import { ChevronRight } from "lucide-react";
-import SectionHeading from "../components/common/SectionHeading";
 
-// fadeInUp animation
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (custom: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: custom * 0.2, duration: 0.6, ease: "easeOut" },
-  }),
-};
-
-const ELIGIBILITY_ITEMS = [
-  "Students currently enrolled in Classes 6th to 12th from any recognized school are eligible to participate in Nexus QUEST.",
-  "Participants must be actively studying in their respective academic year during the examination period.",
-  "Standard-appropriate question sets will be provided based on the student's current class level to ensure fair assessment.",
-  "Students from all educational boards (CBSE, ICSE, State boards) within the specified grade range can apply for the examination.",
-];
-
-const EXAM_DATES = [
-  { date: "August 23, 2026", label: "Registrations Open" },
-  { date: "October 15, 2026", label: "Registrations Close" },
-  { date: "1st Week of November (date TBA)", label: "Quest Olympiad" },
-  { date: "January 8, 2027", label: "Prize Distribution" },
-];
-
-const MARKING_SCHEME_ITEMS = [
-  "+1 mark for correct answers",
-  "-0.5 marks for incorrect responses",
-  "0 marks for unattempted questions",
-];
-
-const FORMAT_610 = [
-  "Logical Reasoning - 15",
-  "Mathematics - 15",
-  "Physics - 10",
-  "Chemistry - 10",
-];
-
-const FORMAT_1112 = [
-  "Logical Reasoning - 5",
-  "Mathematics - 15",
-  "Physics - 15",
-  "Chemistry - 15",
-];
-
-export default function ExamDetailsPage() {
+export default function Results() {
   return (
-    <div className="overflow-x-hidden body-font relative bg-[var(--background)] text-[var(--foreground)] px-4 py-8">
-      {/* Desktop Version */}
-      <div className="hidden md:block">
-        {/* Exam Details */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={1}
-          className="w-full max-w-7xl h-auto py-10"
+    <main className="relative min-h-0 w-full overflow-x-hidden bg-[#F0ECCF] text-[#0F2851]">
+
+      {/* =========================
+          PATTERN BACKGROUND
+          ========================= */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/pics/patternfinal.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "top center",
+          backgroundRepeat: "repeat-y",
+        }}
+      />
+
+      {/* =========================
+          PAGE CONTENT
+          ========================= */}
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 py-10 sm:px-10 md:px-[6.5%] md:py-12">
+
+        {/* Heading */}
+        <h1
+          className="
+            mb-8
+            text-4xl
+            font-black
+            uppercase
+            tracking-wide
+            text-[#0F2851]
+            sm:text-5xl
+            md:text-[52px]
+          "
         >
-          <SectionHeading title="Exam Details" />
-        </motion.div>
+          EXAM DETAILS
+        </h1>
 
-        {/* Eligibility Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={2}
-          className="w-full max-w-4xl h-auto py-10"
+        {/* YOUR SVG — KEEP EVERY PATH EXACTLY AS IT IS */}
+       
+
+        {/* =========================
+            EXAM INFORMATION
+            ========================= */}
+        <div
+          className="
+            mt-8
+            max-w-[1000px]
+            space-y-5
+            text-[#0F2851]
+            text-sm
+            font-medium
+            leading-relaxed
+            sm:text-base
+            md:text-lg
+          "
         >
-          <SectionHeading title="Eligibility" />
 
-          <ul className="text-[18px] max-w-5xl mt-4 space-y-3">
-            {ELIGIBILITY_ITEMS.map((text, idx) => (
-              <li key={idx} className="flex items-start gap-2">
-                <ChevronRight size={18} className="flex-shrink-0 mt-1" />
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
-        {/* Examination Mode Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={3}
-          className="py-10"
-        >
-          <SectionHeading title="Examination Mode" />
-          <p className="text-[16px] max-w-4xl mt-4">
-            Online examination conducted on the Unstop platform with an
-            integrated proctoring system, ensuring accessibility, security,
-            and convenience for participants nationwide.
-          </p>
-        </motion.div>
-
-        {/* Dates Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={4}
-          className="py-10"
-        >
-          <SectionHeading title="Important Dates" />
-
-          <div className="flex flex-col justify-between mt-6 py-2 body-font">
-            {EXAM_DATES.map((item, idx) => (
-              <div key={idx} className="mb-2">
-                <div className="text-[34px] font-semibold">{item.date}</div>
-                <div className="text-[18px]">{item.label}</div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Exam Organizing Body</p>
+            <p>Elan &amp; nVision, IIT Hyderabad</p>
           </div>
-        </motion.div>
 
-        {/* Duration Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={5}
-          className="py-12"
-        >
-          <SectionHeading title="Duration" />
-          <p className="text-[16px] max-w-4xl mt-4">
-            Participants will have a total of 90 minutes for a comprehensive
-            assessment across all subject areas. Make sure to manage your
-            time wisely to attempt all sections.
-          </p>
-        </motion.div>
-
-        {/* Marking Scheme Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={6}
-          className="py-10 w-fit"
-        >
-          <SectionHeading title="Marking Scheme" />
-
-          <ul className="text-[16px] max-w-4xl mt-4 space-y-3">
-            {MARKING_SCHEME_ITEMS.map((text, idx) => (
-              <li key={idx} className="flex items-start gap-2">
-                <ChevronRight size={18} className="flex-shrink-0 mt-1" />
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
-        {/* Format Section */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          custom={7}
-          className="flex justify-between py-12 items-start"
-        >
-          <div className="w-[calc(100%-420px)]">
-            <SectionHeading title="Exam Format" />
-            <p className="text-[16px] max-w-4xl mt-4">
-              50 multiple-choice questions with single correct answers,
-              promoting accuracy and efficient time management.
-            </p>
-
-            <p className="text-[16px] font-semibold mt-6">
-              For Classes 6th to 10th:
-            </p>
-            <ul className="text-[16px] max-w-4xl mt-2 space-y-3">
-              {FORMAT_610.map((text, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <ChevronRight size={18} className="flex-shrink-0 mt-1" />
-                  <span>{text}</span>
-                </li>
-              ))}
-            </ul>
-
-            <p className="text-[16px] font-semibold mt-6">
-              For Classes 11th and 12th:
-            </p>
-            <ul className="text-[16px] max-w-4xl mt-2 space-y-3">
-              {FORMAT_1112.map((text, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <ChevronRight size={18} className="flex-shrink-0 mt-1" />
-                  <span>{text}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Eligibility</p>
+            <p>Students from classes 6 - 12</p>
           </div>
-        </motion.div>
-      </div>
 
-      {/* Mobile Version */}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={fadeInUp}
-        custom={8}
-        className="block md:hidden"
-      >
-        <div className="space-y-10">
-          <SectionHeading title="Exam Details" />
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Exam Level</p>
+            <p>Intermediate</p>
+          </div>
 
-          <div>
-            <SectionHeading title="Eligibility" />
-            <ul className="text-[14px] space-y-2 mt-2">
-              {ELIGIBILITY_ITEMS.map((text, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <ChevronRight size={16} className="flex-shrink-0 mt-1" />
-                  <span>{text}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Application Process</p>
+            <p>Via Unstop</p>
+          </div>
 
-            <div className="py-6">
-              <SectionHeading title="Examination Mode" />
-              <p className="text-[14px] mt-2">
-                Online examination conducted on the Unstop platform with an
-                integrated proctoring system, ensuring accessibility,
-                security, and convenience for participants nationwide.
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Exam Dates</p>
+            <p>November 1st Week</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Exam Mode</p>
+            <p>Online</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Fee of registration</p>
+            <p>₹ 350</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Objective</p>
+            <p>
+              To identify young academic talent by promoting conceptual
+              learning, logical reasoning and creative problem solving
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-[260px_1fr] sm:gap-8">
+            <p className="font-bold">Languages</p>
+            <p>English</p>
+          </div>
+
+        </div>
+
+        {/* =========================
+            DATES
+            ========================= */}
+        <section className="mt-12 max-w-[900px] text-[#0F2851]">
+
+          <h2 className="mb-4 text-2xl font-black uppercase tracking-wide sm:text-3xl">
+            DATES
+          </h2>
+
+          <div className="space-y-1 text-sm font-medium leading-relaxed sm:text-base md:text-lg">
+            <p>Registrations: August 23, 2026</p>
+            <p>Registrations Close: October 15, 2026</p>
+            <p>Quest Olympiad: 1st week of November(date TBA)</p>
+            <p>Prize Distribution: January 8, 2027</p>
+          </div>
+
+        </section>
+
+        {/* =========================
+            ELIGIBILITY
+            ========================= */}
+        <section className="mt-12 max-w-[950px] text-[#0F2851]">
+
+          <h2 className="mb-5 text-2xl font-black uppercase tracking-wide sm:text-3xl">
+            ELIGIBILITY
+          </h2>
+
+          <div className="space-y-5 text-sm font-medium leading-relaxed sm:text-base md:text-lg">
+
+            <div className="flex items-start gap-3">
+              <span>•</span>
+              <p>
+                Students currently enrolled in Classes 6th to 12th from any
+                recognized school are eligible to participate in Nexus QUEST.
               </p>
             </div>
 
-            <div className="py-10 space-y-6">
-              <SectionHeading title="Important Dates" />
-
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-6">
-                <div className="mt-4 md:mt-0 flex flex-col justify-between space-y-4">
-                  {EXAM_DATES.map((item, idx) => (
-                    <div key={idx} className="mb-2">
-                      <div className="text-[30px] font-semibold">
-                        {item.date}
-                      </div>
-                      <div className="text-[15px]">{item.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="flex items-start gap-3">
+              <span>•</span>
+              <p>
+                Students from all educational boards (CBSE, ICSE, State boards)
+                within the specified grade range can apply for the examination.
+              </p>
             </div>
 
-            <SectionHeading title="Marking Scheme" />
-            <ul className="text-[14px] mt-2 space-y-1">
-              {MARKING_SCHEME_ITEMS.map((text, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <ChevronRight size={14} className="flex-shrink-0 mt-1" />
-                  {text}
-                </li>
-              ))}
-            </ul>
           </div>
 
-          <div>
-            <SectionHeading title="Exam Format" />
-            <p className="text-[14px] mt-2">
-              50 multiple-choice questions with single correct answers,
-              promoting accuracy and efficient time management.
-            </p>
+        </section>
 
-            <p className="text-[14px] font-semibold mt-4">
-              For Classes 6th to 10th:
-            </p>
-            <ul className="text-[14px] mt-2 space-y-1">
-              {FORMAT_610.map((text, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <ChevronRight size={14} className="flex-shrink-0 mt-1" />
-                  {text}
-                </li>
-              ))}
-            </ul>
-
-            <p className="text-[14px] font-semibold mt-4">
-              For Classes 11th and 12th:
-            </p>
-            <ul className="text-[14px] mt-2 space-y-1">
-              {FORMAT_1112.map((text, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <ChevronRight size={14} className="flex-shrink-0 mt-1" />
-                  {text}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </motion.div>
-    </div>
+      </div>
+    </main>
   );
 }
