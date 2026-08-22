@@ -7,6 +7,8 @@ import {
   syllabus8,
   syllabus9,
   syllabus10,
+  syllabus11,
+  syllabus12,
 } from "../components/syllabus/content";
 import { motion, Variants } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
@@ -18,6 +20,8 @@ const CLASS_TABS = [
   { classNum: 8, label: "Class 8" },
   { classNum: 9, label: "Class 9" },
   { classNum: 10, label: "Class 10" },
+  { classNum: 11, label: "Class 11" },
+  { classNum: 12, label: "Class 12" },
 ];
 
 export default function SyllabusPage() {
@@ -46,6 +50,10 @@ export default function SyllabusPage() {
         return syllabus9;
       case 10:
         return syllabus10;
+      case 11:
+        return syllabus11;
+      case 12:
+        return syllabus12;
       default:
         return [];
     }
@@ -201,18 +209,7 @@ export default function SyllabusPage() {
           variants={sectionVariants}
           className="md:grid hidden auto-rows-max md:grid-rows-5 relative text-[var(--background)] w-full box-border"
         >
-          {(activeNav === 1
-            ? syllabus6
-            : activeNav === 2
-            ? syllabus7
-            : activeNav === 3
-            ? syllabus8
-            : activeNav === 4
-            ? syllabus9
-            : activeNav === 5
-            ? syllabus10
-            : []
-          ).map((item, rowIdx) => {
+          {getSyllabusData(activeNav + 5).map((item, rowIdx) => {
             const baseColor = "232, 232, 198";
             const bgOpacity =
               rowIdx === 0 ? 1 : Math.max(0, 0.5 - 0.1 * rowIdx);
