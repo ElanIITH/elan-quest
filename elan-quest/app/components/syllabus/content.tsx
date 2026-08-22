@@ -113,4 +113,64 @@ const syllabus10 = [
   },
 ];
 
-export { syllabus6, syllabus7, syllabus8, syllabus9, syllabus10 };
+const syllabus11 = [
+  {
+    col1: "SUBJECTS",
+    col2: "TOPICS",
+  },
+  {
+    // NOTE: not specified in the Class 11 syllabus doc — reused the
+    // standard Logical Reasoning topics used for Classes 6-10 as a
+    // placeholder, since the exam format still allots marks to this
+    // section for Class 11. Confirm with the content owner.
+    col1: "Logical Reasoning",
+    col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number Ranking and Time Sequence Test, Coding-Decoding, Dot Situations and Paper Cutting-Folding, Time and Work, Direction Sense Test, Syllogism, Clocks, Ratio-Proportion and Variation.",
+  },
+  {
+    col1: "Physics",
+    col2: "Units and Measurements, Kinematics, Motion in a Straight Line, Motion in a Plane, Laws of Motion, Work, Energy and Power, System of Particles and Rotational Motion.",
+  },
+  {
+    col1: "Chemistry",
+    col2: "Atomic Structure, Classification of Elements and Periodicity in Properties, Chemical Bonding and Molecular Structure, States of Matter, Stoichiometry, Thermodynamics.",
+  },
+  {
+    col1: "Mathematics",
+    col2: "Sets and Relations, Functions, Quadratic Equations, Matrices, Trigonometry, Sequence and Series, Vectors, Locus, Transformation of Axes.",
+  },
+];
+
+const syllabus12 = [
+  {
+    col1: "SUBJECTS",
+    col2: "TOPICS",
+  },
+  {
+    // NOTE: same placeholder as Class 11 — not specified in the Class 12
+    // syllabus doc. Confirm with the content owner.
+    col1: "Logical Reasoning",
+    col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number Ranking and Time Sequence Test, Coding-Decoding, Dot Situations and Paper Cutting-Folding, Time and Work, Direction Sense Test, Syllogism, Clocks, Ratio-Proportion and Variation.",
+  },
+  {
+    col1: "Physics",
+    col2: "Mechanical Properties of Fluids/Solids, Current Electricity, Electric Charges and Fields, Thermodynamics, Kinetic Theory, Gravitation.",
+  },
+  {
+    col1: "Chemistry",
+    col2: "GOC (General Organic Chemistry), Chemical Kinetics, Hydrogen and Its Compounds, s-Block Elements, p-Block Elements: Group-13, Group-14.",
+  },
+  {
+    col1: "Mathematics",
+    col2: "Complex Numbers, Binomial Theorem, Limits and Continuity, Differentiation, Circle, System of Circles, Permutations and Combinations.",
+  },
+];
+
+export {
+  syllabus6,
+  syllabus7,
+  syllabus8,
+  syllabus9,
+  syllabus10,
+  syllabus11,
+  syllabus12,
+};

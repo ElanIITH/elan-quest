@@ -17,7 +17,7 @@ export default function ResultsPage() {
     {
       id: 2,
       content:
-        "Every participant will receive a detailed digital marksheet, outlining their scores in each section: Mental Ability (MAT), Mathematics, Physics, and Chemistry.",
+        "Every participant will receive a detailed digital marksheet, outlining their scores in each section: Logical Reasoning, Mathematics, Physics, and Chemistry.",
     },
     {
       id: 3,
@@ -27,7 +27,17 @@ export default function ResultsPage() {
     {
       id: 4,
       content:
-        "In the event of tied scores, tie-breakers will be applied in the following order of section scores: Mathematics, followed by Mental Ability, Physics, and then Chemistry.",
+        "In the event of tied scores, tie-breakers will be applied based on class levels in the following order of section scores:",
+      subItems: [
+        {
+          label: "For Classes 6th to 10th:",
+          text: "Mathematics, followed by Logical Reasoning, Physics, and then Chemistry.",
+        },
+        {
+          label: "For Classes 11th and 12th:",
+          text: "Mathematics, followed by Physics, Chemistry, and then Logical Reasoning.",
+        },
+      ],
     },
     {
       id: 5,
@@ -65,15 +75,20 @@ export default function ResultsPage() {
     {
       id: 3,
       content:
-        "Students will visit the IIT Hyderabad campus, exploring cutting-edge labs and state-of-the-art facilities on guided tours.",
+        "Special School Incentive: Schools with more than 200 registered students will receive fest passes for top 2–3 toppers of that school to attend the Elan & nVision festival at IIT Hyderabad.",
     },
     {
       id: 4,
       content:
-        "Participants will interact with current students, gaining insights, mentorship, and lasting connections.",
+        "Students will visit the IIT Hyderabad campus, exploring cutting-edge labs and state-of-the-art facilities on guided tours.",
     },
     {
       id: 5,
+      content:
+        "Participants will interact with current students, gaining insights, mentorship, and lasting connections.",
+    },
+    {
+      id: 6,
       content:
         "Grand award celebration at IIT Hyderabad with media coverage — winners will be featured on official platforms to honor their success.",
     },
@@ -120,7 +135,19 @@ export default function ResultsPage() {
                   className="py-2 sm:py-3 flex gap-5 sm:gap-3 items-start box-border"
                 >
                   <ChevronRight size={18} className="flex-shrink-0 mt-1" />
-                  <div>{item.content}</div>
+                  <div>
+                    <div>{item.content}</div>
+                    {item.subItems && (
+                      <ul className="mt-2 space-y-1 pl-4">
+                        {item.subItems.map((sub, idx) => (
+                          <li key={idx}>
+                            <span className="font-semibold">{sub.label}</span>{" "}
+                            {sub.text}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
                 </MotionLi>
               ))}
             </MotionUl>
