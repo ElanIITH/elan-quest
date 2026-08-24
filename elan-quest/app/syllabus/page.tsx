@@ -10,9 +10,7 @@ import {
   syllabus11,
   syllabus12,
 } from "../components/syllabus/content";
-import { motion, Variants } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import SectionHeading from "../components/common/SectionHeading";
 
 const CLASS_TABS = [
   { classNum: 6, label: "Class 6" },
@@ -59,138 +57,137 @@ export default function SyllabusPage() {
     }
   };
 
-  // Framer Motion variants for staggered sections
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.25,
-      },
-    },
-  };
-
-  const sectionVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
   return (
-    <motion.div
-      initial="hidden"
-      animate="show"
-      variants={containerVariants}
-      className="relative flex flex-col gap-15 w-full items-start body-font bg-[var(--background)] min-h-screen px-0 pt-1 box-border"
-    >
-      <div className="flex flex-col gap-15 items-center md:items-start body-font bg-[var(--background)] min-h-screen px-5 pt-10 pb-20 box-border">
-        {/* Top Section */}
-        <motion.div
-          variants={sectionVariants}
-          className="mt-0 flex flex-col items-center md:mt-0 md:items-start gap-7 w-[300px] md:w-full box-border"
-        >
-          <SectionHeading title="Syllabus" />
-          <div className="md:text-justify text-left text-lg leading-relaxed text-[var(--foreground)] w-full box-border">
-            Nexus QUEST spans four key academic areas -{" "}
-            <span className="font-semibold">Logical Reasoning</span>,{" "}
-            <span className="font-semibold">Mathematics</span>,{" "}
-            <span className="font-semibold">Physics</span>, and{" "}
-            <span className="font-semibold">Chemistry</span>, testing students&#39;
-            theoretical knowledge, problem-solving capabilities, and real-world
-            application of basic concepts.{" "}
-            <span className="md:block hidden">
-              The examination balances curriculum-aligned topics with analytical
-              reasoning, delivering a complete evaluation of scholarly
-              performance across varied subjects.
-            </span>
-          </div>
-        </motion.div>
+    <main className="relative min-h-0 w-full overflow-x-hidden bg-[#F0ECCF] text-[#0F2851]">
+      {/* =========================
+          PATTERN BACKGROUND
+          ========================= */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/pics/patternfinal.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "top center",
+          backgroundRepeat: "repeat-y",
+        }}
+      />
 
-        {/* Class Tabs — plain buttons instead of 5 image states + invisible click overlays */}
-        <motion.div
-          variants={sectionVariants}
-          className="hidden md:flex gap-6 border-b border-[var(--foreground)] w-full box-border"
+      {/* =========================
+          PAGE CONTENT
+          ========================= */}
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 py-10 sm:px-10 md:px-[6.5%] md:py-12">
+        {/* Heading */}
+        <h1
+          className="
+            mb-8
+            text-4xl
+            font-black
+            uppercase
+            tracking-wide
+            text-[#0F2851]
+            sm:text-5xl
+            md:text-[52px]
+          "
         >
+          SYLLABUS
+        </h1>
+
+        {/* Intro copy */}
+        <div
+          className="
+            max-w-[1000px]
+            text-sm
+            font-medium
+            leading-relaxed
+            text-[#0F2851]
+            sm:text-base
+            md:text-lg
+          "
+        >
+          Nexus QUEST spans four key academic areas -{" "}
+          <span className="font-bold">Logical Reasoning</span>,{" "}
+          <span className="font-bold">Mathematics</span>,{" "}
+          <span className="font-bold">Physics</span>, and{" "}
+          <span className="font-bold">Chemistry</span>, testing students&#39;
+          theoretical knowledge, problem-solving capabilities, and real-world
+          application of basic concepts. The examination balances
+          curriculum-aligned topics with analytical reasoning, delivering a
+          complete evaluation of scholarly performance across varied subjects.
+        </div>
+
+        {/* =========================
+            CLASS TABS (desktop)
+            ========================= */}
+        <div className="mt-10 hidden md:flex gap-8 border-b border-[#0F2851]/30 w-full">
           {CLASS_TABS.map((tab, i) => (
             <button
               key={tab.classNum}
               onClick={() => setActiveNav(i + 1)}
-              className={`pb-3 body-font text-lg transition-opacity ${
+              className={`pb-3 text-sm md:text-base font-bold uppercase tracking-wide transition-opacity ${
                 activeNav === i + 1
-                  ? "font-semibold border-b-2 border-[var(--foreground)]"
-                  : "opacity-60 hover:opacity-100"
+                  ? "text-[#0F2851] border-b-2 border-[#0F2851]"
+                  : "text-[#0F2851]/50 hover:text-[#0F2851]/80"
               }`}
             >
               {tab.label}
             </button>
           ))}
-        </motion.div>
+        </div>
 
-        {/* Class Dropdowns (mobile) */}
-        <motion.div
-          variants={sectionVariants}
-          className="w-full max-w-4xl mx-auto space-y-4"
-        >
+        {/* =========================
+            CLASS DROPDOWNS (mobile)
+            ========================= */}
+        <div className="mt-8 w-full space-y-4 md:hidden">
           {CLASS_TABS.map((classItem) => (
             <div
               key={classItem.classNum}
-              className="md:hidden block bg-[var(--foreground)] rounded-lg shadow-lg overflow-hidden"
+              className="overflow-hidden rounded-lg bg-[#0F2851] shadow-md"
             >
-              {/* Dropdown Header */}
               <div
-                className="flex items-center justify-between p-4 cursor-pointer hover:bg-opacity-90 transition-colors"
+                className="flex cursor-pointer items-center justify-between p-4 transition-colors hover:bg-opacity-90"
                 onClick={() => toggleDropdown(classItem.classNum)}
               >
-                <span className="text-[var(--background)] body-font text-lg font-semibold">
+                <span className="text-lg font-semibold text-[#F0ECCF]">
                   {classItem.label}
                 </span>
-                <div className="text-[var(--background)]">
+                <div className="text-[#F0ECCF]">
                   {openDropdowns.has(classItem.classNum) ? (
-                    <ChevronUp className="w-6 h-6" />
+                    <ChevronUp className="h-6 w-6" />
                   ) : (
-                    <ChevronDown className="w-6 h-6" />
+                    <ChevronDown className="h-6 w-6" />
                   )}
                 </div>
               </div>
 
-              {/* Dropdown Content - Syllabus Table */}
               {openDropdowns.has(classItem.classNum) && (
-                <motion.div
-                  variants={sectionVariants}
-                  className="grid auto-rows-max relative text-[var(--background)] w-full box-border md:hidden"
-                >
+                <div className="grid w-full auto-rows-max">
                   {getSyllabusData(classItem.classNum).map((item, rowIdx) => {
-                    const baseColor = "232, 232, 198";
                     const bgOpacity =
                       rowIdx === 0 ? 1 : Math.max(0, 0.5 - 0.1 * rowIdx);
-                    const fontColor =
-                      rowIdx !== 0 ? "var(--background)" : "var(--foreground)";
+                    const fontColor = rowIdx !== 0 ? "#F0ECCF" : "#0F2851";
 
                     return (
                       <div
                         key={rowIdx}
-                        className="grid grid-cols-[1fr_20px_1fr] h-fit items-center px-5 py-6 gap-4 w-full box-border"
+                        className="grid h-fit w-full grid-cols-[1fr_20px_1fr] items-center gap-4 px-5 py-6"
                         style={{
-                          background: `rgba(${baseColor}, ${bgOpacity})`,
-                          color: `${fontColor}`,
+                          background: `rgba(240, 236, 207, ${bgOpacity})`,
+                          color: fontColor,
                         }}
                       >
                         <div
-                          className={`text-left text-xl leading-relaxed box-border ${
-                            rowIdx === 0 ? "font-bold" : ""
+                          className={`text-left text-lg leading-relaxed ${
+                            rowIdx === 0 ? "font-bold" : "font-medium"
                           }`}
                         >
                           {item.col1}
                         </div>
-                        <div className="flex justify-center items-center box-border">
+                        <div className="flex items-center justify-center">
                           •
                         </div>
                         <div
-                          className={`text-left text-lg leading-relaxed box-border ${
-                            rowIdx === 0 ? "font-bold" : ""
+                          className={`text-left text-base leading-relaxed ${
+                            rowIdx === 0 ? "font-bold" : "font-medium"
                           }`}
                         >
                           {item.col2}
@@ -198,46 +195,43 @@ export default function SyllabusPage() {
                       </div>
                     );
                   })}
-                </motion.div>
+                </div>
               )}
             </div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* Syllabus Table (desktop) */}
-        <motion.div
-          variants={sectionVariants}
-          className="md:grid hidden auto-rows-max md:grid-rows-5 relative text-[var(--background)] w-full box-border"
-        >
+        {/* =========================
+            SYLLABUS TABLE (desktop)
+            ========================= */}
+        <div className="relative mt-8 hidden w-full auto-rows-max md:grid">
           {getSyllabusData(activeNav + 5).map((item, rowIdx) => {
-            const baseColor = "232, 232, 198";
             const bgOpacity =
               rowIdx === 0 ? 1 : Math.max(0, 0.5 - 0.1 * rowIdx);
-            const fontColor =
-              rowIdx !== 0 ? "var(--foreground)" : "var(--background)";
+            const fontColor = rowIdx !== 0 ? "#0F2851" : "#F0ECCF";
 
             return (
               <div
                 key={rowIdx}
-                className="grid grid-cols-[1fr_20px_1fr] md:grid-cols-[1fr_30px_3fr] md:h-auto h-fit items-center md:px-6 px-5 py-6 gap-4 w-full box-border"
+                className="grid h-fit w-full grid-cols-[1fr_30px_3fr] items-center gap-4 px-6 py-6"
                 style={{
-                  background: `rgba(${baseColor}, ${bgOpacity})`,
-                  color: `${fontColor}`,
+                  background: `rgba(15, 40, 81, ${
+                    rowIdx === 0 ? 1 : bgOpacity * 0.15
+                  })`,
+                  color: fontColor,
                 }}
               >
                 <div
-                  className={`text-left md:text-center md:text-lg text-xl leading-relaxed box-border ${
-                    rowIdx == 0 ? "font-bold" : ""
+                  className={`text-center text-lg leading-relaxed ${
+                    rowIdx === 0 ? "font-bold uppercase tracking-wide" : "font-medium"
                   }`}
                 >
                   {item.col1}
                 </div>
-                <div className="flex justify-center items-center box-border">
-                  •
-                </div>
+                <div className="flex items-center justify-center">•</div>
                 <div
-                  className={`text-left md:text-center md:text-lg text-lg leading-relaxed box-border ${
-                    rowIdx === 0 ? "font-bold" : ""
+                  className={`text-center text-lg leading-relaxed ${
+                    rowIdx === 0 ? "font-bold uppercase tracking-wide" : "font-medium"
                   }`}
                 >
                   {item.col2}
@@ -245,8 +239,8 @@ export default function SyllabusPage() {
               </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </main>
   );
 }

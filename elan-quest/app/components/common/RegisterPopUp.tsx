@@ -10,6 +10,9 @@ const CLASS_OPTIONS = [
   { grade: 8, link: "https://unstop.com/p/nexus-quest-for-grade-8-iit-hyderabad-1540532" },
   { grade: 9, link: "https://unstop.com/p/nexus-quest-for-grade-9-iit-hyderabad-1541230" },
   { grade: 10, link: "https://unstop.com/p/nexus-quest-for-grade-10-iit-hyderabad-1541233" },
+  // TODO: add real Unstop links once provided
+  { grade: 11, link: "" },
+  { grade: 12, link: "" },
 ];
 
 export default function RegisterPopUp({ setShowPopup }: PopUpProps) {
@@ -30,17 +33,17 @@ export default function RegisterPopUp({ setShowPopup }: PopUpProps) {
           {CLASS_OPTIONS.map((option) => (
             <a
               key={option.grade}
-              href={option.link}
+              href={option.link || undefined}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-center border border-[var(--foreground)] rounded px-4 py-2 body-font font-semibold hover:opacity-70 transition-opacity duration-300"
+              className="text-center border border-[var(--foreground)] text-[var(--foreground)] rounded px-4 py-2 body-font font-semibold hover:opacity-70 transition-opacity duration-300"
             >
               Class {option.grade}
             </a>
           ))}
         </div>
         <button
-          className="cursor-pointer mt-4 px-4 py-2 border border-[var(--foreground)] hover:opacity-70 transition-opacity duration-300 font-semibold rounded"
+          className="cursor-pointer mt-4 px-4 py-2 border border-[var(--foreground)] text-[var(--foreground)] hover:opacity-70 transition-opacity duration-300 font-semibold rounded"
           onClick={() => setShowPopup(false)}
         >
           Close
