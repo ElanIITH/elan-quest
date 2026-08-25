@@ -128,7 +128,7 @@ export default function Navbar({ onRegisterClick }: NavbarProps) {
       </div>
 
       {/* Navigation Links Right */}
-      <nav className="flex items-center gap-6 md:gap-10">
+      <nav className="flex items-center gap-3 md:gap-10">
         <Link
           href="/exam-details"
           className="text-[#0F2851] font-extrabold text-xs md:text-sm tracking-wider uppercase hover:opacity-80 transition-opacity"
