@@ -31,7 +31,7 @@ export default function AboutPage() {
 
           <p className="mb-8 text-sm font-medium leading-relaxed md:text-base">
             Nexus QUEST is a nationwide Talent Hunt Examination for school
-            students, conducted as part of Elan & nVision — IIT Hyderabad&apos;s
+            students, conducted as part of Elan &amp; nVision — IIT Hyderabad&apos;s
             annual techno-cultural fest. It&apos;s designed to identify and
             celebrate exceptional scholastic talent from schools across the
             country.
@@ -46,11 +46,11 @@ export default function AboutPage() {
 
           {/* About Elan & nVision */}
           <h2 className="mb-2 text-lg font-black md:text-xl">
-            About Elan & nVision
+            About Elan &amp; nVision
           </h2>
 
           <p className="mb-8 text-sm font-medium leading-relaxed md:text-base">
-            Elan & nVision is IIT Hyderabad&apos;s flagship techno-cultural fest —
+            Elan &amp; nVision is IIT Hyderabad&apos;s flagship techno-cultural fest —
             and the platform Nexus QUEST is held under. Now in its 17th edition,
             it&apos;s recognized as South India&apos;s largest student-run techno-cultural
             festival, drawing over 50,000 students, innovators, artists, and

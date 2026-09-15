@@ -16,11 +16,16 @@ import MainWrapper from "./components/common/MainWrapper";
 // then update --font-body / --font-heading in globals.css to reference them,
 // and add `${themeHeading.variable} ${themeBody.variable}` to the <html> className below.
 
-export const metadata = {
+import type { Metadata, Viewport } from "next";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+export const metadata: Metadata = {
   title: "Nexus Quest",
   description: "Official olympiad of Elan & nVision",
-  viewport: "width=device-width, initial-scale=1.0",
-  charset: "UTF-8",
   icons: {
     icon: "/favicon4.svg",
   },
