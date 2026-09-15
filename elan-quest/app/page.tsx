@@ -94,27 +94,7 @@ export default function HomePage() {
       {/* Registration Modal */}
       {showPopup && <RegisterPopUp setShowPopup={setShowPopup} />}
 
-      {/* =====================================================
-          WHOLE PAGE PATTERN BACKGROUND
-          ===================================================== */}
-      <div className="absolute top-0 left-0 z-0 h-[3309px] w-full pointer-events-none">
-        <Image
-          src="/pics/patternfinal.png"
-          alt=""
-          fill
-          priority
-          className="object-cover object-top"
-        />
-
-        {/* Pattern becomes lighter as we move down */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(249,245,232,0.12) 0%, rgba(249,245,232,0.30) 30%, rgba(249,245,232,0.55) 65%, rgba(249,245,232,0.80) 100%)",
-          }}
-        />
-      </div>
+     
 
       {/* =====================================================
           PAGE CONTENT
@@ -443,28 +423,7 @@ md:text-[clamp(18px,1.6vw,23px)]
             ))}
           </div>
         </section>
-        {/* =====================================================
-            DARK PATTERN SECTION
-            ===================================================== */}
-        <section
-          className="
-            relative
-            z-20
-            mt-[50px]
-            h-[700px]
-            w-full
-            overflow-hidden
-          "
-        >
-          <Image
-            src="/pics/patternfinal.png"
-            alt=""
-            fill
-            className="object-cover object-top"
-          />
-
-          <div className="absolute inset-0 bg-[#D8D4B5]/35" />
-        </section>
+       
       </main>
     </div>
   );
