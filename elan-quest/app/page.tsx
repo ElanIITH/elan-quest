@@ -92,7 +92,7 @@ export default function HomePage() {
   "
           >
             <Image
-              src="/pics/runner.png"
+              src="/pics/newColored.png"
               alt="Runner Vector Illustration"
               width={1920}
               height={1080}
@@ -194,10 +194,10 @@ md:text-[clamp(18px,1.6vw,23px)]
             relative
             w-full
             px-6
-            pt-[120px]
+            pt-[300px]
             sm:px-10
             md:px-[6.5%]
-            md:pt-[120px]
+            md:pt-[300px]
           "
         >
           <div className="max-w-[620px]">
@@ -207,6 +207,7 @@ md:text-[clamp(18px,1.6vw,23px)]
                 text-xl
                 font-black
                 uppercase
+                md:ml-20
                 tracking-wide
                 text-[#0F2851]
                 sm:text-2xl
@@ -224,6 +225,7 @@ md:text-[clamp(18px,1.6vw,23px)]
                 text-[#0F2851]/80
                 sm:text-base
                 md:text-lg
+                md:ml-20
               "
             >
               A national-level Talent Hunt examination for school students,
@@ -244,6 +246,7 @@ md:text-[clamp(18px,1.6vw,23px)]
             pt-[45px]
             sm:px-10
             md:px-[6.5%]
+            
           "
         >
           <h2
@@ -256,6 +259,7 @@ md:text-[clamp(18px,1.6vw,23px)]
               text-[#0F2851]
               sm:text-2xl
               md:text-[28px]
+              md:ml-20
             "
           >
             PERKS AND PRIZES
@@ -263,37 +267,45 @@ md:text-[clamp(18px,1.6vw,23px)]
 
           <div
             className="
-              grid
-              w-full
-              max-w-[900px]
-              grid-cols-1
-              gap-5
-              sm:grid-cols-2
-              md:grid-cols-3
-              md:gap-6
-            "
+    flex
+    w-full
+    gap-18
+    flex-wrap
+    justify-center
+  "
           >
             {perks.map((perk) => (
               <div
                 key={perk.id}
                 className="
-                  h-[210px]
-                  w-full
-                  rounded-[22px]
-                  bg-[#466B9E]
-                  p-3.5
-                  shadow-md
-                  sm:h-[220px]
-                "
+                 h-[300px]
+        w-[250px]
+        md:h-[450px]
+        md:w-[350px]
+        rounded-[22px]
+        bg-[#466B9E]
+        p-[12px]
+        shadow-md
+      "
               >
                 <div
                   className="
-                    h-full
-                    w-full
-                    rounded-[15px]
-                    bg-[#F9F5E8]
-                  "
-                />
+                  h-[235px]
+          md:h-[335px]
+          w-full
+          overflow-hidden
+          rounded-[15px]
+          bg-[#F9F5E8]
+        "
+                >
+                  <Image
+                    src={`/pics/perk${perk.id}.png`}
+                    alt={`Perk ${perk.id}`}
+                    width={500}
+                    height={500}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
               </div>
             ))}
           </div>

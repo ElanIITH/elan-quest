@@ -1,16 +1,10 @@
 const syllabus6 = [
-  {
-    col1: "SUBJECTS",
-    col2: "TOPICS",
-  },
+  { col1: "SUBJECTS", col2: "TOPICS" },
   {
     col1: "Logical Reasoning",
     col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number Ranking and Time Sequence Test, Coding-Decoding, Dot Situations and Paper Cutting-Folding, Time and Work, Direction Sense Test, Syllogism, Clocks, Ratio-Proportion and Variation.",
   },
-  {
-    col1: "Physics",
-    col2: "Motion, Light, Electricity, Magnetism, Measurements.",
-  },
+  { col1: "Physics", col2: "Motion, Light, Electricity, Magnetism, Measurements." },
   {
     col1: "Chemistry",
     col2: "Introduction to Chemistry, Matter and Its Properties, Water and Its Resources, Air, Elements, Compounds and Mixtures.",
@@ -22,10 +16,7 @@ const syllabus6 = [
 ];
 
 const syllabus7 = [
-  {
-    col1: "SUBJECTS",
-    col2: "TOPICS",
-  },
+  { col1: "SUBJECTS", col2: "TOPICS" },
   {
     col1: "Logical Reasoning",
     col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number Ranking and Time Sequence Test, Coding-Decoding, Dot Situations and Paper Cutting-Folding, Time and Work, Direction Sense Test, Syllogism, Clocks, Ratio-Proportion and Variation.",
@@ -45,10 +36,7 @@ const syllabus7 = [
 ];
 
 const syllabus8 = [
-  {
-    col1: "SUBJECTS",
-    col2: "TOPICS",
-  },
+  { col1: "SUBJECTS", col2: "TOPICS" },
   {
     col1: "Logical Reasoning",
     col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number Ranking and Time Sequence Test, Coding-Decoding, Dot Situations and Paper Cutting-Folding, Time and Work, Direction Sense Test, Syllogism, Clocks, Ratio-Proportion and Variation.",
@@ -68,10 +56,7 @@ const syllabus8 = [
 ];
 
 const syllabus9 = [
-  {
-    col1: "SUBJECTS",
-    col2: "TOPICS",
-  },
+  { col1: "SUBJECTS", col2: "TOPICS" },
   {
     col1: "Logical Reasoning",
     col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number Ranking and Time Sequence Test, Coding-Decoding, Dot Situations and Paper Cutting-Folding, Time and Work, Direction Sense Test, Syllogism, Clocks, Ratio-Proportion and Variation.",
@@ -91,10 +76,7 @@ const syllabus9 = [
 ];
 
 const syllabus10 = [
-  {
-    col1: "SUBJECTS",
-    col2: "TOPICS",
-  },
+  { col1: "SUBJECTS", col2: "TOPICS" },
   {
     col1: "Logical Reasoning",
     col2: "Classification, Blood Relation, Analogy, Figure Matrix, Number Ranking and Time Sequence Test, Coding-Decoding, Dot Situations and Paper Cutting-Folding, Time and Work, Direction Sense Test, Syllogism, Clocks, Ratio-Proportion and Variation.",
@@ -114,10 +96,7 @@ const syllabus10 = [
 ];
 
 const syllabus11 = [
-  {
-    col1: "SUBJECTS",
-    col2: "TOPICS",
-  },
+  { col1: "SUBJECTS", col2: "TOPICS" },
   {
     // NOTE: not specified in the Class 11 syllabus doc — reused the
     // standard Logical Reasoning topics used for Classes 6-10 as a
@@ -141,10 +120,7 @@ const syllabus11 = [
 ];
 
 const syllabus12 = [
-  {
-    col1: "SUBJECTS",
-    col2: "TOPICS",
-  },
+  { col1: "SUBJECTS", col2: "TOPICS" },
   {
     // NOTE: same placeholder as Class 11 — not specified in the Class 12
     // syllabus doc. Confirm with the content owner.
