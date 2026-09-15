@@ -11,7 +11,72 @@ export default function HomePage() {
     setShowPopup(!showPopup);
   };
 
-  const perks = [{ id: 1 }, { id: 2 }, { id: 3 }];
+  const perks = [
+    {
+      id: 1,
+      text: (
+        <>
+          <strong>Students will visit the IIT Hyderabad campus</strong>
+        </>
+      ),
+    },
+
+    {
+      id: 2,
+      text: (
+        <>
+          <strong>Top 3 achievers</strong> from every class in each school will
+          be awarded <strong>Merit Medals and Certificates</strong> of
+          Recognition
+        </>
+      ),
+    },
+
+    {
+      id: 3,
+      text: (
+        <>
+          <strong>Top 10 highest scorers</strong> per class will be presented
+          with{" "}
+          <strong>
+            Excellence Medals and receive exclusive goodies and rewards
+          </strong>
+        </>
+      ),
+    },
+
+    {
+      id: 4,
+      text: (
+        <>
+          Participants will{" "}
+          <strong>interact with current students, gaining insights,</strong>{" "}
+          mentorship, and lasting connections.
+        </>
+      ),
+    },
+
+    {
+      id: 5,
+      text: (
+        <>
+          Special School Incentive: Schools with more than 200 registered
+          students will receive fest passes for top 2–3 toppers of that school
+          to attend the Elan & nVision festival at IIT Hyderabad.
+        </>
+      ),
+    },
+
+    {
+      id: 6,
+      text: (
+        <>
+          Grand award celebration at IIT Hyderabad with media coverage — winners
+          will be featured on official platforms to honor their success.
+        </>
+      ),
+    },
+  ];
 
   return (
     <div
@@ -187,46 +252,50 @@ md:text-[clamp(18px,1.6vw,23px)]
         </section>
 
         {/* =====================================================
-            WHAT IS QUEST
-            ===================================================== */}
+    WHAT IS QUEST?
+    ===================================================== */}
         <section
           className="
-            relative
-            w-full
-            px-6
-            pt-[300px]
-            sm:px-10
-            md:px-[6.5%]
-            md:pt-[300px]
-          "
+    relative
+    w-full
+    px-6
+    pt-[300px]
+    sm:px-10
+    md:px-[6.5%]
+    md:pt-[300px]
+  "
         >
-          <div className="max-w-[620px]">
+          <div className="mx-auto w-full max-w-[1000px] text-center">
+            {/* HEADING */}
             <h2
               className="
-                mb-4
-                text-xl
-                font-black
-                uppercase
-                md:ml-20
-                tracking-wide
-                text-[#0F2851]
-                sm:text-2xl
-                md:text-[28px]
-              "
+        mb-5
+        text-center
+        text-[32px]
+        font-black
+        uppercase
+        tracking-wide
+        text-[#0F2851]
+        sm:text-[38px]
+        md:text-[44px]
+      "
             >
               WHAT IS QUEST?
             </h2>
 
+            {/* DESCRIPTION */}
             <p
               className="
-                text-sm
-                font-semibold
-                leading-[1.5]
-                text-[#0F2851]/80
-                sm:text-base
-                md:text-lg
-                md:ml-20
-              "
+        mx-auto
+        max-w-[850px]
+        text-center
+        text-[17px]
+        font-normal
+        leading-[1.5]
+        text-[#0F2851]/80
+        sm:text-[19px]
+        md:text-[21px]
+      "
             >
               A national-level Talent Hunt examination for school students,
               organized by Elan & nVision, the annual techno-cultural fest of
@@ -234,83 +303,146 @@ md:text-[clamp(18px,1.6vw,23px)]
             </p>
           </div>
         </section>
-
         {/* =====================================================
-            PERKS AND PRIZES
-            ===================================================== */}
+    PERKS AND PRIZES
+    ===================================================== */}
         <section
           className="
-            relative
-            w-full
-            px-6
-            pt-[45px]
-            sm:px-10
-            md:px-[6.5%]
-            
-          "
+    relative
+    w-full
+    px-6
+    pt-[45px]
+    pb-[60px]
+    sm:px-10
+    md:px-[6.5%]
+  "
         >
-          <h2
-            className="
-              mb-7
-              text-xl
-              font-black
-              uppercase
-              tracking-wide
-              text-[#0F2851]
-              sm:text-2xl
-              md:text-[28px]
-              md:ml-20
-            "
-          >
-            PERKS AND PRIZES
-          </h2>
+          {/* HEADING */}
+          <div className="mx-auto w-full max-w-[1100px] text-center">
+            <h2
+              className="
+        mb-4
+        text-center
+        text-[32px]
+        font-black
+        uppercase
+        tracking-wide
+        text-[#0F2851]
+        sm:text-[38px]
+        md:text-[44px]
+      "
+            >
+              PERKS AND PRIZES
+            </h2>
 
+            {/* DESCRIPTION */}
+            <p
+              className="
+        mx-auto
+        mb-7
+        max-w-[950px]
+        text-center
+        text-[17px]
+        font-normal
+        leading-[1.45]
+        text-[#0F2851]
+        sm:text-[19px]
+        md:text-[21px]
+      "
+            >
+              The participating students stand to gain many prizes and goodies,
+              as well as invaluable experience by participating in the Nexus
+              QUEST examination:
+            </p>
+          </div>
+
+          {/* =====================================================
+      CARDS
+      ===================================================== */}
           <div
             className="
-    flex
-    w-full
-    gap-18
-    flex-wrap
-    justify-center
-  "
+      mx-auto
+      grid
+      w-full
+      max-w-[938px]
+      grid-cols-1
+      gap-5
+      sm:grid-cols-2
+      md:grid-cols-3
+      md:gap-x-[38px]
+      md:gap-y-[22px]
+    "
           >
             {perks.map((perk) => (
               <div
                 key={perk.id}
-                className="
-                 h-[300px]
-        w-[250px]
-        md:h-[450px]
-        md:w-[350px]
-        rounded-[22px]
-        bg-[#466B9E]
-        p-[12px]
-        shadow-md
-      "
-              >
-                <div
-                  className="
-                  h-[235px]
-          md:h-[335px]
+                className={`
+          flex
           w-full
-          overflow-hidden
-          rounded-[15px]
-          bg-[#F9F5E8]
-        "
+          flex-col
+          rounded-[22px]
+          bg-[#A9CEFF]
+          p-[16px]
+
+          ${perk.id <= 3 ? "h-[385px]" : "h-[145px] justify-center"}
+        `}
+              >
+                {/* =================================================
+            IMAGE — ONLY FOR FIRST 3 CARDS
+            ================================================= */}
+                {perk.id <= 3 && (
+                  <div
+                    className="
+              h-[255px]
+              w-full
+              shrink-0
+              overflow-hidden
+              rounded-[15px]
+              bg-[#F9F5E8]
+            "
+                  >
+                    <Image
+                      src={`/pics/perk${perk.id}.png`}
+                      alt={`Perk ${perk.id}`}
+                      width={500}
+                      height={500}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                )}
+
+                {/* =================================================
+            DESCRIPTION
+            ================================================= */}
+                <div
+                  className={`
+            flex
+            text-center
+            text-[#0F2851]
+
+            ${
+              perk.id <= 3
+                ? "flex-1 items-center justify-center pt-3"
+                : "items-center justify-center"
+            }
+          `}
                 >
-                  <Image
-                    src={`/pics/perk${perk.id}.png`}
-                    alt={`Perk ${perk.id}`}
-                    width={500}
-                    height={500}
-                    className="h-full w-full object-cover"
-                  />
+                  <p
+                    className="
+              text-[14px]
+              font-normal
+              leading-[1.35]
+              text-[#0F2851]
+              md:text-[16px]
+            "
+                  >
+                    {perk.text}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
         </section>
-
         {/* =====================================================
             DARK PATTERN SECTION
             ===================================================== */}
