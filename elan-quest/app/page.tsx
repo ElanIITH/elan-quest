@@ -44,38 +44,6 @@ export default function HomePage() {
         </>
       ),
     },
-
-    {
-      id: 4,
-      text: (
-        <>
-          Participants will{" "}
-          <strong>interact with current students, gaining insights,</strong>{" "}
-          mentorship, and lasting connections.
-        </>
-      ),
-    },
-
-    {
-      id: 5,
-      text: (
-        <>
-          Special School Incentive: Schools with more than 200 registered
-          students will receive fest passes for top 2–3 toppers of that school
-          to attend the Elan & nVision festival at IIT Hyderabad.
-        </>
-      ),
-    },
-
-    {
-      id: 6,
-      text: (
-        <>
-          Grand award celebration at IIT Hyderabad with media coverage — winners
-          will be featured on official platforms to honor their success.
-        </>
-      ),
-    },
   ];
 
   return (
@@ -356,23 +324,21 @@ md:text-[clamp(18px,1.6vw,23px)]
             {perks.map((perk) => (
               <div
                 key={perk.id}
-                className={`
+                className="
           flex
+          h-[385px]
           w-full
           flex-col
           rounded-[22px]
           bg-[#A9CEFF]
           p-[16px]
-
-          ${perk.id <= 3 ? "h-[385px]" : "h-[145px] justify-center"}
-        `}
+        "
               >
                 {/* =================================================
-            IMAGE — ONLY FOR FIRST 3 CARDS
+            IMAGE
             ================================================= */}
-                {perk.id <= 3 && (
-                  <div
-                    className="
+                <div
+                  className="
               h-[255px]
               w-full
               shrink-0
@@ -380,33 +346,20 @@ md:text-[clamp(18px,1.6vw,23px)]
               rounded-[15px]
               bg-[#F9F5E8]
             "
-                  >
-                    <Image
-                      src={`/pics/perk${perk.id}.png`}
-                      alt={`Perk ${perk.id}`}
-                      width={500}
-                      height={500}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                )}
+                >
+                  <Image
+                    src={`/pics/perk${perk.id}.png`}
+                    alt={`Perk ${perk.id}`}
+                    width={500}
+                    height={500}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
 
                 {/* =================================================
             DESCRIPTION
             ================================================= */}
-                <div
-                  className={`
-            flex
-            text-center
-            text-[#0F2851]
-
-            ${
-              perk.id <= 3
-                ? "flex-1 items-center justify-center pt-3"
-                : "items-center justify-center"
-            }
-          `}
-                >
+                <div className="flex flex-1 items-center justify-center pt-3 text-center text-[#0F2851]">
                   <p
                     className="
               text-[14px]
