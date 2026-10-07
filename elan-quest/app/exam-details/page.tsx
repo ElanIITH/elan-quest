@@ -4,17 +4,24 @@ import Image from "next/image";
 
 export default function Results() {
   return (
-    <main className="relative min-h-screen w-full overflow-x-hidden  bg-[#F0ECCF] text-[#092B55] ">
-
-     
-
+    <main className="relative min-h-screen w-full overflow-x-hidden bg-[#F0ECCF] text-[#092B55]">
+      {/* =========================================================
+          FULL PAGE BACKGROUND PATTERN
+      ========================================================= */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full"
+        style={{
+          backgroundImage: "url('/pics/pattern.png')",
+          backgroundSize: "auto",
+          backgroundPosition: "top center",
+          backgroundRepeat: "repeat",
+        }}
+      />
 
       {/* =========================================================
-          PAGE
+          PAGE CONTENT WRAPPER
       ========================================================= */}
-      <div >
-
-
+      <div className="relative z-10">
         {/* =======================================================
             HERO
             DESKTOP: 515px
@@ -30,18 +37,6 @@ export default function Results() {
             md:h-[515px]
           "
         >
-
-          {/* PATTERN */}
-          {/* <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url('/pics/patternfinal.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center -100px",
-              backgroundRepeat: "repeat-y",
-            }}
-          /> */}
-
           {/* DESKTOP HEADING */}
           <h1
             className="
@@ -85,7 +80,6 @@ export default function Results() {
             EXAM DETAILS
           </h1>
 
-
           {/* DESKTOP IMAGE */}
           <div
             className="
@@ -107,7 +101,6 @@ export default function Results() {
               className="object-contain"
             />
           </div>
-
 
           {/* MOBILE IMAGE */}
           <div
@@ -134,16 +127,12 @@ export default function Results() {
               className="object-contain"
             />
           </div>
-
         </section>
-
 
         {/* =======================================================
             CONTENT
         ======================================================= */}
         <div className="relative mx-auto w-full max-w-[1440px]">
-
-
           {/* =====================================================
               DESKTOP TABLE
           ===================================================== */}
@@ -162,9 +151,7 @@ export default function Results() {
               md:block
             "
           >
-
             <div className="grid grid-cols-[500px_664px]">
-
               <div className="flex h-[81px] items-center border-2 border-[#092B55] px-[10px]">
                 Exam Organizing Body
               </div>
@@ -245,10 +232,8 @@ export default function Results() {
               <div className="flex h-[81px] items-center border-r-2 border-b-2 border-[#092B55] px-[10px]">
                 90 minutes
               </div>
-
             </div>
           </section>
-
 
           {/* =====================================================
               MOBILE TABLE
@@ -262,7 +247,6 @@ export default function Results() {
               md:hidden
             "
           >
-
             <div
               className="
                 w-full
@@ -276,7 +260,6 @@ export default function Results() {
                 sm:text-[15px]
               "
             >
-
               {[
                 ["Exam Organizing Body", "Elan & nVision, IIT Hyderabad"],
                 ["Eligibility", "Students from classes 6 - 12"],
@@ -292,10 +275,7 @@ export default function Results() {
                 ["Languages", "English"],
                 ["Duration", "90 minutes"],
               ].map(([label, value], index) => (
-                <div
-                  key={index}
-                  className="grid grid-cols-[40%_60%]"
-                >
+                <div key={index} className="grid grid-cols-[40%_60%]">
                   <div
                     className="
                       border-b
@@ -321,10 +301,8 @@ export default function Results() {
                   </div>
                 </div>
               ))}
-
             </div>
           </section>
-
 
           {/* =====================================================
               DATES
@@ -340,20 +318,17 @@ export default function Results() {
               md:block
             "
           >
-
             <h2 className="font-['Nexa_Text'] text-[64px] font-bold uppercase leading-none">
               DATES
             </h2>
 
-            <div className="ml-[3px] mt-[28px] font-['Nexa_Text'] text-[32px] font-normal  text-black">
+            <div className="ml-[3px] mt-[28px] font-['Nexa_Text'] text-[32px] font-normal text-black">
               <p>Registrations: August 23, 2026</p>
               <p>Registrations Close: October 15, 2026</p>
               <p>Quest Olympiad: 1st week of November(date TBA)</p>
               <p>Prize Distribution: January 8, 2027</p>
             </div>
-
           </section>
-
 
           {/* =====================================================
               MOBILE DATES
@@ -368,7 +343,6 @@ export default function Results() {
               md:hidden
             "
           >
-
             <h2
               className="
                 font-['Nexa_Text']
@@ -398,9 +372,7 @@ export default function Results() {
               <p>Quest Olympiad: 1st week of November(date TBA)</p>
               <p>Prize Distribution: January 8, 2027</p>
             </div>
-
           </section>
-
 
           {/* =====================================================
               DESKTOP ELIGIBILITY
@@ -417,13 +389,11 @@ export default function Results() {
               md:block
             "
           >
-
             <h2 className="font-['Nexa_Text'] text-[64px] font-bold uppercase leading-none">
               ELIGIBILITY
             </h2>
 
             <div className="mt-[28px] font-['Nexa_Text'] text-[32px] font-normal leading-none text-black">
-
               <div className="flex items-start gap-[14px]">
                 <span>•</span>
                 <p>
@@ -432,17 +402,15 @@ export default function Results() {
                 </p>
               </div>
 
-              <div className="mt-[38px] flex items-start gap-[14px] mb-96">
+              <div className="mb-96 mt-[38px] flex items-start gap-[14px]">
                 <span>•</span>
                 <p>
                   Students from all educational boards (CBSE, ICSE, State boards)
                   within the specified grade range can apply for the examination.
                 </p>
               </div>
-
             </div>
           </section>
-
 
           {/* =====================================================
               MOBILE ELIGIBILITY
@@ -458,7 +426,6 @@ export default function Results() {
               md:hidden
             "
           >
-
             <h2
               className="
                 font-['Nexa_Text']
@@ -483,7 +450,6 @@ export default function Results() {
                 sm:text-[16px]
               "
             >
-
               <div className="flex items-start gap-2">
                 <span>•</span>
                 <p>
@@ -492,24 +458,17 @@ export default function Results() {
                 </p>
               </div>
 
-              <div className="mt-6 flex items-start gap-2 ">
+              <div className="mt-6 flex items-start gap-2">
                 <span>•</span>
                 <p>
                   Students from all educational boards (CBSE, ICSE, State boards)
                   within the specified grade range can apply for the examination.
                 </p>
               </div>
-
             </div>
-
           </section>
-
-
-  
-
         </div>
       </div>
-
     </main>
   );
 }

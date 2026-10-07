@@ -63,13 +63,13 @@ export default function SyllabusPage() {
       {/* =========================
           PATTERN BACKGROUND
           ========================= */}
-      <div
-        className="absolute inset-0 z-0 pointer-events-none"
+    <div
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full"
         style={{
-          backgroundImage: "url('/pics/patternfinal.png')",
-          backgroundSize: "cover",
+          backgroundImage: "url('/pics/pattern.png')",
+          backgroundSize: "auto",
           backgroundPosition: "top center",
-          backgroundRepeat: "repeat-y",
+          backgroundRepeat: "repeat",
         }}
       />
 

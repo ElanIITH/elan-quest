@@ -52,7 +52,6 @@ export default function HomePage() {
 
   return (
     <div
-
       className="
         relative
         -mt-[100px]
@@ -67,7 +66,13 @@ export default function HomePage() {
       {/* Registration Modal */}
       {showPopup && <RegisterPopUp setShowPopup={setShowPopup} />}
 
-     
+     <div
+  className="absolute inset-0"
+  style={{
+    backgroundImage: "url('/pics/pattern.png')",
+    backgroundRepeat: "repeat",
+  }}
+/>
 
       {/* =====================================================
           PAGE CONTENT
