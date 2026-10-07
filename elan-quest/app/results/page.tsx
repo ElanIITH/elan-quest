@@ -288,15 +288,13 @@ export default function ResultsPage() {
       className="relative w-full overflow-x-hidden bg-[#F0ECCF] text-[#0F2851]"
     >
       {/* Pattern Background Overlay */}
-      <div
-        className="absolute inset-0 z-0 pointer-events-none opacity-80"
-        style={{
-          backgroundImage: "url('/pics/patternfinal.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "top center",
-          backgroundRepeat: "repeat-y",
-        }}
-      />
+     <div
+  className="absolute inset-0"
+  style={{
+    backgroundImage: "url('/pics/pattern.png')",
+    backgroundRepeat: "repeat",
+  }}
+/> 
 
       {/* Hero Header Banner */}
       <header className="relative z-10 w-full pt-12 pb-16 px-6 md:px-16 flex items-center justify-between max-w-7xl mx-auto">

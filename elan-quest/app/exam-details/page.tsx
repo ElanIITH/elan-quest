@@ -4,7 +4,9 @@ import Image from "next/image";
 
 export default function Results() {
   return (
-    <main className="relative min-h-screen w-full overflow-x-hidden  bg-[#F0ECCF] text-[#092B55] ">
+    
+    <main className="relative min-h-screen w-full overflow-x-hidden  bg-[#F0ECCF] text-[#092B55] "
+    >
 
      
 
@@ -12,7 +14,8 @@ export default function Results() {
       {/* =========================================================
           PAGE
       ========================================================= */}
-      <div >
+      <div 
+      >
 
 
         {/* =======================================================
