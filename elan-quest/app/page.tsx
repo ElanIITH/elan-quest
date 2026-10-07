@@ -36,7 +36,6 @@ export default function HomePage() {
     ),
   },
 
-<<<<<<< HEAD
     {
       id: 3,
       text: (
@@ -50,56 +49,10 @@ export default function HomePage() {
       ),
     },
   ];
-=======
-  {
-    id: 3,
-    text: (
-      <>
-        <strong>Special School Incentive:</strong> Schools with 200+
-        registered students will receive Elan & nVision festival passes
-        for the top 2–3 performers from their school at IIT Hyderabad.
-      </>
-    ),
-  },
-
-  {
-    id: 4,
-    text: (
-      <>
-        <strong>IIT Hyderabad Campus Experience:</strong> Students will
-        get an opportunity to visit IIT Hyderabad and explore its
-        cutting-edge laboratories and state-of-the-art facilities
-        through guided tours.
-      </>
-    ),
-  },
-
-  {
-    id: 5,
-    text: (
-      <>
-        <strong>Student Interaction & Mentorship:</strong> Participants
-        will interact with current IIT Hyderabad students, gaining
-        valuable insights, mentorship, and lasting connections.
-      </>
-    ),
-  },
-
-  {
-    id: 6,
-    text: (
-      <>
-        <strong>Grand Award Celebration:</strong> Winners will be
-        felicitated at a grand award ceremony at IIT Hyderabad, with
-        media coverage and recognition on official platforms.
-      </>
-    ),
-  },
-];
->>>>>>> origin/skeleton-base
 
   return (
     <div
+
       className="
         relative
         -mt-[100px]
@@ -693,16 +646,9 @@ md:text-[clamp(18px,1.6vw,23px)]
                 {/* =================================================
             IMAGE
             ================================================= */}
-<<<<<<< HEAD
                 <div
                   className="
               h-[255px]
-=======
-                {perk.id <= 3 && (
-                  <div
-                    className="
-              h-[180px]
->>>>>>> origin/skeleton-base
               w-full
               shrink-0
               overflow-hidden
