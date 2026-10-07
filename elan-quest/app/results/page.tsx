@@ -172,14 +172,43 @@
 // }
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
-// import SectionHeading from "../components/common/SectionHeading";
 
 export const MotionUl = motion("ul");
 export const MotionLi = motion("li");
 
 export default function ResultsPage() {
+  const tableData = [
+    { label: "Exam Organizing Body", value: "Elan & nVision, IIT Hyderabad" },
+    { label: "Eligibility", value: "Students from classes 6 - 12" },
+    { label: "Exam Level", value: "Intermediate" },
+    { label: "Application Process", value: "Via Unstop" },
+    { label: "Exam Dates", value: "November 1st Week" },
+    { label: "Exam Mode", value: "Online" },
+    { label: "Fee of registration", value: "₹ 350" },
+    {
+      label: "Objective",
+      value:
+        "To identify young academic talent by promoting conceptual learning, logical reasoning and creative problem solving",
+    },
+    { label: "Languages", value: "English" },
+    { label: "Duration", value: "90 minutes" },
+  ];
+
+  const datesData = [
+    { label: "Registrations", value: "August 23, 2026" },
+    { label: "Registrations Close", value: "October 15, 2026" },
+    { label: "Quest Olympiad", value: "1st week of November (date TBA)" },
+    { label: "Prize Distribution", value: "January 8, 2027" },
+  ];
+
+  const eligibilityList = [
+    "Students currently enrolled in Classes 6th to 12th from any recognized school are eligible to participate in Nexus QUEST.",
+    "Students from all educational boards (CBSE, ICSE, State boards) within the specified grade range can apply for the examination.",
+  ];
+
   const processItems = [
     {
       id: 1,
@@ -253,22 +282,14 @@ export default function ResultsPage() {
 
   return (
     <motion.main
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="
-        relative
-        w-full
-        overflow-x-hidden
-        bg-[#F0ECCF]
-        text-[#111111]
-      "
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="relative w-full overflow-x-hidden bg-[#F0ECCF] text-[#0F2851]"
     >
-      {/* =====================================================
-          PATTERN BACKGROUND
-          ===================================================== */}
+      {/* Pattern Background Overlay */}
       <div
-        className="absolute inset-0 z-0 pointer-events-none"
+        className="absolute inset-0 z-0 pointer-events-none opacity-80"
         style={{
           backgroundImage: "url('/pics/patternfinal.png')",
           backgroundSize: "cover",
@@ -277,72 +298,98 @@ export default function ResultsPage() {
         }}
       />
 
-      {/* =====================================================
-          CONTENT
-          ===================================================== */}
-      <div
-        className="
-          relative
-          z-10
-          mx-auto
-          w-full
-          max-w-[1440px]
-          px-6
-          py-10
-          sm:px-10
-          sm:py-12
-          md:px-[6.5%]
-          md:py-14
-        "
-      >
-        {/* =================================================
-            RESULTS
-            ================================================= */}
-        <div className="mb-10">
-          <h1
-            className="
-              text-4xl
-              font-black
-              uppercase
-              tracking-wide
-              text-[#0F2851]
-              sm:text-5xl
-              md:text-[52px]
-            "
-          >
+      {/* Hero Header Banner */}
+      <header className="relative z-10 w-full pt-12 pb-16 px-6 md:px-16 flex items-center justify-between max-w-7xl mx-auto">
+        <div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-[#0F2851] uppercase">
             RESULTS
           </h1>
         </div>
 
-        {/* =================================================
-            PROCESS
-            ================================================= */}
-        <section className="w-full max-w-[1050px] mb-14">
-          <h2
-            className="
-              mb-5
-              text-2xl
-              font-black
-              uppercase
-              tracking-wide
-              text-[#0F2851]
-              sm:text-3xl
-            "
-          >
+        {/* Trophy Illustration Graphic */}
+        <div className="relative w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 flex-shrink-0">
+          <Image
+            src="/pics/prize.png" // Ensure this image path matches your public folder
+            alt="Trophy Celebration"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
+      </header>
+
+      {/* Main Content Area */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pb-20 space-y-16">
+        
+        {/* Exam Overview Specifications Table */}
+        <section className="relative bg-transparent">
+          {/* Top Right Floating Medal Asset
+          <div className="absolute -top-10 -right-4 w-20 h-20 sm:w-28 sm:h-28 z-20 pointer-events-none">
+            <Image
+              src="/pics/medal.png" // Ensure this image path matches your public folder
+              alt="Medal"
+              fill
+              className="object-contain"
+            />
+          </div> */}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-sm sm:text-base leading-relaxed">
+            {tableData.map((row, idx) => (
+              <div key={idx} className="contents">
+                <div className="font-semibold text-[#0F2851] py-1">
+                  {row.label}
+                </div>
+                <div className="text-[#2D3748] py-1 md:pl-4">
+                  {row.value}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Dates Section */}
+        <section className="space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-wide text-[#0F2851]">
+            DATES
+          </h2>
+          <div className="space-y-2 text-sm sm:text-base text-[#111111]">
+            {datesData.map((item, index) => (
+              <p key={index} className="leading-relaxed">
+                <span className="font-bold">{item.label}:</span> {item.value}
+              </p>
+            ))}
+          </div>
+        </section>
+
+        {/* Eligibility Section */}
+        <section className="space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-wide text-[#0F2851]">
+            ELIGIBILITY
+          </h2>
+          <ul className="space-y-3 text-sm sm:text-base text-[#111111]">
+            {eligibilityList.map((text, index) => (
+              <li key={index} className="flex items-start gap-2 leading-relaxed">
+                <span className="text-[#0F2851] font-bold text-lg">•</span>
+                <span>{text}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Process Section */}
+        <section className="space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-wide text-[#0F2851]">
             PROCESS
           </h2>
 
           <MotionUl
-            className="w-full text-left text-sm sm:text-base md:text-[17px]"
+            className="space-y-3 text-sm sm:text-base"
             initial="hidden"
-            animate="visible"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={{
               visible: {
-                transition: {
-                  staggerChildren: 0.1,
-                },
+                transition: { staggerChildren: 0.08 },
               },
             }}
           >
@@ -350,85 +397,42 @@ export default function ResultsPage() {
               <MotionLi
                 key={item.id}
                 variants={{
-                  hidden: {
-                    opacity: 0,
-                    y: 20,
-                  },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                  },
+                  hidden: { opacity: 0, y: 15 },
+                  visible: { opacity: 1, y: 0 },
                 }}
-                className="
-                  flex
-                  items-start
-                  gap-3
-                  py-2.5
-                  sm:py-3
-                  leading-relaxed
-                "
+                className="flex items-start gap-3 leading-relaxed text-[#111111]"
               >
                 <ChevronRight
-                  size={19}
+                  size={18}
                   strokeWidth={3}
-                  className="
-                    mt-1
-                    flex-shrink-0
-                    text-[#466B9E]
-                  "
+                  className="mt-1 flex-shrink-0 text-[#0F2851]"
                 />
-
                 <div>{item.content}</div>
               </MotionLi>
             ))}
           </MotionUl>
         </section>
 
-        {/* =================================================
-            AWARDS & PRIZES
-            ================================================= */}
-        <section className="w-full max-w-[1050px]">
-          <h2
-            className="
-              mb-5
-              text-2xl
-              font-black
-              uppercase
-              tracking-wide
-              text-[#0F2851]
-              sm:text-3xl
-            "
-          >
+        {/* Awards & Prizes Section */}
+        <section className="space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-wide text-[#0F2851]">
             AWARDS & PRIZES
           </h2>
 
-          <p
-            className="
-              mb-5
-              max-w-[950px]
-              text-left
-              text-sm
-              leading-relaxed
-              sm:text-base
-              md:text-[17px]
-            "
-          >
-            The participating students stand to gain many prizes and goodies,
-            as well as invaluable experience by participating in the Nexus
-            QUEST examination:
+          <p className="text-sm sm:text-base leading-relaxed text-[#111111]">
+            The participating students stand to gain many prizes and goodies, as
+            well as invaluable experience by participating in the Nexus QUEST
+            examination:
           </p>
 
           <MotionUl
-            className="w-full text-left text-sm sm:text-base md:text-[17px]"
+            className="space-y-3 text-sm sm:text-base"
             initial="hidden"
-            animate="visible"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={{
               visible: {
-                transition: {
-                  staggerChildren: 0.1,
-                },
+                transition: { staggerChildren: 0.08 },
               },
             }}
           >
@@ -436,39 +440,22 @@ export default function ResultsPage() {
               <MotionLi
                 key={item.id}
                 variants={{
-                  hidden: {
-                    opacity: 0,
-                    y: 20,
-                  },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                  },
+                  hidden: { opacity: 0, y: 15 },
+                  visible: { opacity: 1, y: 0 },
                 }}
-                className="
-                  flex
-                  items-start
-                  gap-3
-                  py-2.5
-                  sm:py-3
-                  leading-relaxed
-                "
+                className="flex items-start gap-3 leading-relaxed text-[#111111]"
               >
                 <ChevronRight
-                  size={19}
+                  size={18}
                   strokeWidth={3}
-                  className="
-                    mt-1
-                    flex-shrink-0
-                    text-[#466B9E]
-                  "
+                  className="mt-1 flex-shrink-0 text-[#0F2851]"
                 />
-
                 <div>{item.content}</div>
               </MotionLi>
             ))}
           </MotionUl>
         </section>
+
       </div>
     </motion.main>
   );
