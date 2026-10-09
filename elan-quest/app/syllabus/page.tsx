@@ -65,12 +65,12 @@ export default function SyllabusPage() {
           ========================= */}
     <div
         className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-        style={{
-          backgroundImage: "url('/pics/pattern.png')",
-          backgroundSize: "auto",
-          backgroundPosition: "top center",
-          backgroundRepeat: "repeat",
-        }}
+     style={{
+  backgroundImage: "url('/pics/pattern.png')",
+  backgroundSize: "auto",
+  backgroundPosition: "center -80px",
+  backgroundRepeat: "repeat",
+}}
       />
 
       {/* =========================
