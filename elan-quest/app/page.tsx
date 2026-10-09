@@ -24,7 +24,8 @@ const perks = [
     id: 2,
     text: (
       <>
-        <strong>Merit Medals and Certificates</strong>
+       <strong>Exclusive goodies and rewards</strong>
+       
       </>
     ),
   },
@@ -33,7 +34,7 @@ const perks = [
     id: 3,
     text: (
       <>
-        <strong>Exclusive goodies and rewards</strong>
+        <strong>Merit Medals and Certificates</strong>
       </>
     ),
   },
@@ -213,19 +214,18 @@ md:text-[clamp(18px,1.6vw,23px)]
     md:pt-[300px]
   "
 >
-  <div className="mx-auto w-full max-w-[1000px] text-center">
+  <div className="mx-auto w-full max-w-[1000px] ">
 
     <h2
       className="
         mb-5
-        text-center
         text-[32px]
         font-black
         uppercase
         tracking-wide
         text-[#0F2851]
         sm:text-[38px]
-        md:text-[44px]
+        md:text-[91px]
       "
     >
       WHAT IS QUEST?
@@ -234,14 +234,13 @@ md:text-[clamp(18px,1.6vw,23px)]
     <p
       className="
         mx-auto
-        max-w-[900px]
-        text-center
+        max-w-[1178px]
         text-[17px]
         font-normal
         leading-[1.5]
         text-[#0F2851]
         sm:text-[19px]
-        md:text-[21px]
+        md:text-[28px]
       "
     >
       Nexus QUEST is a nationwide Talent Hunt Examination conducted
@@ -252,14 +251,14 @@ md:text-[clamp(18px,1.6vw,23px)]
       className="
         mx-auto
         mt-5
-        max-w-[900px]
+        max-w-[1178px]
         text-center
         text-[17px]
         font-normal
         leading-[1.5]
         text-[#0F2851]
         sm:text-[19px]
-        md:text-[21px]
+        md:text-[28px]
       "
     >
       <strong>Key date:</strong> Round 1 – November last week
@@ -269,14 +268,14 @@ md:text-[clamp(18px,1.6vw,23px)]
       className="
         mx-auto
         mt-3
-        max-w-[900px]
+        max-w-[1178px]
         text-center
         text-[17px]
         font-normal
         leading-[1.5]
         text-[#0F2851]
         sm:text-[19px]
-        md:text-[21px]
+        md:text-[28px]
       "
     >
       Challenge yourself beyond rote learning and discover
@@ -298,7 +297,7 @@ md:text-[clamp(18px,1.6vw,23px)]
     md:px-[6.5%]
   "
 >
-  <div className="mx-auto w-full max-w-[1000px] text-center">
+  <div className="mx-auto w-full max-w-[1000px] ">
 
     <h2
       className="
@@ -309,7 +308,7 @@ md:text-[clamp(18px,1.6vw,23px)]
         tracking-wide
         text-[#0F2851]
         sm:text-[38px]
-        md:text-[44px]
+        md:text-[91px]
       "
     >
       EXAM STRUCTURE
@@ -318,13 +317,13 @@ md:text-[clamp(18px,1.6vw,23px)]
     <p
       className="
         mx-auto
-        max-w-[900px]
+        max-w-[1178px]
         text-[17px]
         font-normal
         leading-[1.5]
         text-[#0F2851]
         sm:text-[19px]
-        md:text-[21px]
+        md:text-[28px]
       "
     >
       The competition will be conducted in two rounds: an online
@@ -337,13 +336,13 @@ md:text-[clamp(18px,1.6vw,23px)]
       className="
         mx-auto
         mt-5
-        max-w-[900px]
+        max-w-[1178px]
         text-[17px]
         font-normal
         leading-[1.5]
         text-[#0F2851]
         sm:text-[19px]
-        md:text-[21px]
+        md:text-[28px]
       "
     >
       These students can enjoy exclusive campus experiences,
@@ -367,7 +366,7 @@ md:text-[clamp(18px,1.6vw,23px)]
     md:px-[6.5%]
   "
 >
-  <div className="mx-auto w-full max-w-[1000px] text-center">
+  <div className="mx-auto w-full max-w-[1000px] ">
 
     <h2
       className="
@@ -378,7 +377,7 @@ md:text-[clamp(18px,1.6vw,23px)]
         tracking-wide
         text-[#0F2851]
         sm:text-[38px]
-        md:text-[44px]
+        md:text-[91px]
       "
     >
       SYLLABUS
@@ -387,13 +386,13 @@ md:text-[clamp(18px,1.6vw,23px)]
     <p
       className="
         mx-auto
-        max-w-[900px]
+        max-w-[1178px]
         text-[17px]
         font-normal
         leading-[1.5]
         text-[#0F2851]
         sm:text-[19px]
-        md:text-[21px]
+        md:text-[28px]
       "
     >
       The syllabus for each class is based exclusively on the
@@ -421,14 +420,13 @@ md:text-[clamp(18px,1.6vw,23px)]
     <h2
       className="
         mb-6
-        text-center
         text-[32px]
         font-black
         uppercase
         tracking-wide
         text-[#0F2851]
         sm:text-[38px]
-        md:text-[44px]
+        md:text-[91px]
       "
     >
       ELIGIBILITY
@@ -437,13 +435,13 @@ md:text-[clamp(18px,1.6vw,23px)]
     <div
       className="
         mx-auto
-        max-w-[900px]
+        max-w-[1178px]
         space-y-5
         text-[17px]
         leading-[1.5]
         text-[#0F2851]
         sm:text-[19px]
-        md:text-[21px]
+        md:text-[28px]
       "
     >
 
@@ -479,14 +477,13 @@ md:text-[clamp(18px,1.6vw,23px)]
     <h2
       className="
         mb-8
-        text-center
         text-[32px]
         font-black
         uppercase
         tracking-wide
         text-[#0F2851]
         sm:text-[38px]
-        md:text-[44px]
+        md:text-[91px]
       "
     >
       IMPORTANT DATES
@@ -495,13 +492,13 @@ md:text-[clamp(18px,1.6vw,23px)]
     <div
       className="
         mx-auto
-        max-w-[850px]
+        max-w-[1178px]
         space-y-4
         text-[17px]
         leading-[1.5]
         text-[#0F2851]
         sm:text-[19px]
-        md:text-[21px]
+        md:text-[28px]
       "
     >
 
@@ -558,20 +555,19 @@ md:text-[clamp(18px,1.6vw,23px)]
      <h2
       className="
         mb-8
-        text-center
         text-[32px]
         font-black
         uppercase
         tracking-wide
         text-[#0F2851]
         sm:text-[38px]
-        md:text-[44px]
+        md:text-[65px]
       "
     >
       Rewards & Opportunities
     </h2>
 
-    <ul className="space-y-6 text-base leading-relaxed text-gray-700 md:text-lg">
+    <ul className="space-y-6 text-base leading-relaxed text-gray-700 md:text-[28px]">
       <li className="flex gap-3">
         <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-black" />
         <p>
@@ -653,18 +649,16 @@ md:text-[clamp(18px,1.6vw,23px)]
   "
         >
           {/* HEADING */}
-          <div className="mx-auto w-full max-w-[1100px] text-center">
+          <div className="mx-auto w-full max-w-[1100px] ">
             <h2
               className="
-        mb-4
-        text-center
-        text-[32px]
+        text-[27px]
         font-black
         uppercase
         tracking-wide
         text-[#0F2851]
         sm:text-[38px]
-        md:text-[44px]
+        md:text-[91px]
       "
             >
               PERKS AND PRIZES
@@ -673,16 +667,14 @@ md:text-[clamp(18px,1.6vw,23px)]
             {/* DESCRIPTION */}
             <p
               className="
-        mx-auto
         mb-7
-        max-w-[950px]
-        text-center
+        max-w-[1178px]
         text-[17px]
         font-normal
         leading-[1.45]
         text-[#0F2851]
         sm:text-[19px]
-        md:text-[21px]
+        md:text-[28px]
       "
             >
               The participating students stand to gain many prizes and goodies,
@@ -699,7 +691,7 @@ md:text-[clamp(18px,1.6vw,23px)]
       mx-auto
       grid
       w-full
-      max-w-[938px]
+      max-w-[1178px]
       grid-cols-1
       gap-5
       sm:grid-cols-2
@@ -714,6 +706,8 @@ md:text-[clamp(18px,1.6vw,23px)]
                 className="
           flex
           h-[355px]
+          md:h-[492px]
+          md:w-[367px]
           w-full
           flex-col
           rounded-[22px]
@@ -732,6 +726,8 @@ md:text-[clamp(18px,1.6vw,23px)]
               overflow-hidden
               rounded-[15px]
               bg-[#F9F5E8]
+              md:h-[351px]
+              md:w-[333px]
             "
                 >
                   <Image
@@ -753,7 +749,7 @@ md:text-[clamp(18px,1.6vw,23px)]
               font-normal
               leading-[1.35]
               text-[#0F2851]
-              md:text-[16px]
+              md:text-[36px]
             "
                   >
                     {perk.text}
