@@ -81,10 +81,32 @@ export default function AboutPage() {
               talent from schools across the country.
             </p>
             <p className="text-base leading-relaxed text-[#0f2438]/90 md:text-lg">
-              Unlike routine textbook based Olympiads, Nexus QUEST challenges
-              students with thought-provoking, analytical and multidisciplinary
-              problems beyond rote learning, while providing IIT exposure and
-              opportunities to explore future academic and career paths.
+            Unlike routine textbook-based Olympiads, Nexus QUEST offers:
+            </p>
+            <div className="space-y-5 pl-6 text-base leading-relaxed md:text-lg">
+  <p className="list-item list-disc">
+    <strong>Original, Non-Rote Problems:</strong>{" "}
+    Puzzles that test how students think, not what they have memorized.
+  </p>
+
+  <p className="list-item list-disc">
+    <strong>Analytical & Multidisciplinary Focus:</strong>{" "}
+    Problem-solving skills over syllabus recall.
+  </p>
+
+  <p className="list-item list-disc">
+    <strong>Alignment with National Educational Standards:</strong>{" "}
+    Designed to encourage meaningful and holistic learning.
+  </p>
+
+  <p className="list-item list-disc">
+    <strong>A Genuine Platform:</strong>{" "}
+    Direct exposure to the IIT community, plus networking opportunities that
+    help students think about future academic and career paths.
+  </p>
+</div>
+ <p className="text-base leading-relaxed text-[#0f2438]/90 md:text-lg">
+            It's run entirely by students and faculty of one of India's top-ranked technical institutes, giving participants a taste of the IIT ecosystem well before colleg
             </p>
           </motion.section>
 
@@ -101,13 +123,28 @@ export default function AboutPage() {
               About Elan & nVision
             </h2>
             <p className="text-base leading-relaxed text-[#0f2438]/90 md:text-lg">
-              Elan & nVision is IIT Hyderabad&apos;s flagship techno-cultural
-              fest — and the platform Nexus QUEST is held under. Now in its 17th
-              edition, it&apos;s recognized as South India&apos;s largest
-              student-run techno-cultural festival, drawing over 50,000
-              students, innovators, artists, and young entrepreneurs from
-              across the country over three days.
+             Elan & nVision is IIT Hyderabad's flagship techno-cultural fest and the platform Nexus QUEST is held under. Now in its 17th edition, it's recognized as South India's largest student-run techno-cultural festival, drawing over 30,000 students, innovators, artists, and young entrepreneurs from across the country over three days. 
             </p>
+            
+             <p className="text-base leading-relaxed text-[#0f2438]/90 md:text-lg">
+What this means for Nexus QUEST participants and their families:            </p>
+<div className="space-y-5 pl-6 text-base leading-relaxed md:text-lg">
+  <p className="list-item list-disc">
+    <strong>Performances by Major Artists:</strong>{" "}
+    Recent editions have featured renowned artists such as singer Mohit Chauhan.
+  </p>
+
+  <p className="list-item list-disc">
+    <strong>A Large, Energetic Campus Event:</strong>{" "}
+    Experience a vibrant campus atmosphere rather than a quiet, isolated exam.
+  </p>
+
+  <p className="list-item list-disc">
+    <strong>Beyond the Olympiad:</strong>{" "}
+    Exposure to robotics contests, hackathons, and design challenges alongside
+    the Olympiad.
+  </p>
+</div>
           </motion.section>
 
           {/* ABOUT IITH */}
@@ -123,58 +160,43 @@ export default function AboutPage() {
               About IITH
             </h2>
             <p className="text-base leading-relaxed text-[#0f2438]/90 md:text-lg">
-              Nexus QUEST is conducted by the Indian Institute of Technology
-              Hyderabad (IITH) — established in 2008 and now one of
-              India&apos;s fastest-rising technical institutes.
+              Nexus QUEST is conducted by the Indian Institute of Technology Hyderabad (IITH), established in 2008 and now one of India's fastest-rising technical institutes.
             </p>
 
             <div className="pt-2">
               <p className="text-base font-semibold md:text-lg">
                 Why that matters for participating students:
               </p>
-              <ul className="mt-2 list-inside list-disc space-y-2 pl-2 text-base text-[#0f2438]/90 md:text-lg">
-                <li>
-                  <strong>NIRF 2025 rankings:</strong>
-                  <ul className="mt-1 list-inside list-disc space-y-1 pl-6 text-sm md:text-base">
-                    <li>Overall - 12th</li>
-                    <li>Engineering - 7th</li>
-                    <li>Innovation - 6th</li>
-                    <li>Research Institutions - 15th</li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>Research-driven campus:</strong> running &quot;Patent
-                  a Day: Mission 365,&quot; having already filed 580+ patents,
-                  including 210+ in the last year alone, across 30+ Centres and
-                  Centres of Excellence.
-                </li>
-                <li>
-                  <strong>Strong innovation culture:</strong> has supported 320+
-                  student startups, with dedicated programs like BUILD and
-                  BHARATI that get first-year students hands-on with real
-                  engineering problems.
-                </li>
-                <li>
-                  <strong>Academic diversity:</strong> IIT Hyderabad offers
-                  programmes spanning engineering, science, design and liberal
-                  arts, including interdisciplinary programmes such as
-                  Artificial Intelligence and Computational Engineering.
-                </li>
-                <li>
-                  <strong>Global connections:</strong> IIT Hyderabad has
-                  strategic academic and research partnerships across seven
-                  countries, including Japan, Australia, the USA and European
-                  nations.
-                </li>
-              </ul>
+             <div className="space-y-5 pl-6 text-base leading-relaxed md:text-lg">
+  <p className="list-item list-disc">
+    <strong>NIRF 2025 Rankings:</strong>{" "}
+    #12 Overall · #7 Engineering · #6 Innovation · #15 Research Institutions,
+    placing IITH among the top technical institutes in the country.
+  </p>
+
+  <p className="list-item list-disc">
+    <strong>Research-Driven Campus:</strong>{" "}
+    Running "Patent a Day: Mission 365," with 580+ patents already filed,
+    including 210+ in the last year alone, across 30+ Centres and Centres of
+    Excellence.
+  </p>
+
+  <p className="list-item list-disc">
+    <strong>Strong Innovation Culture:</strong>{" "}
+    Supporting 320+ student startups, with dedicated programs like{" "}
+    <strong>BUILD</strong> and <strong>BHARATI</strong> that give first-year
+    students hands-on experience with real engineering problems.
+  </p>
+
+  <p className="list-item list-disc">
+    For a school student, this means <strong>Nexus QUEST</strong> isn't just
+    another Olympiad — it's a direct touchpoint with a nationally top-ranked
+    IIT and its research culture.
+  </p>
+</div>
             </div>
 
-            <p className="pt-3 text-base leading-relaxed text-[#0f2438]/90 md:text-lg">
-              For a school student, this means Nexus QUEST isn&apos;t just
-              another Olympiad — it&apos;s a direct touchpoint with a
-              nationally top-ranked IIT and its research
-              culture.
-            </p>
+          
           </motion.section>
         </div>
       </main>
