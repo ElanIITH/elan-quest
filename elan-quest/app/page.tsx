@@ -10,15 +10,12 @@ export default function HomePage() {
   const togglePopup = () => {
     setShowPopup(!showPopup);
   };
-
-  const perks = [
+const perks = [
   {
     id: 1,
     text: (
       <>
-        <strong>Merit Recognition:</strong> Top 3 achievers from every
-        class in each school will receive{" "}
-        <strong>Merit Medals and Certificates of Recognition.</strong>
+        <strong>Chance to visit IIT Hyderabad</strong>
       </>
     ),
   },
@@ -27,28 +24,20 @@ export default function HomePage() {
     id: 2,
     text: (
       <>
-        <strong>Excellence Rewards:</strong> The Top 10 highest scorers
-        in each class will receive{" "}
-        <strong>
-          Excellence Medals along with exclusive goodies and rewards.
-        </strong>
+        <strong>Merit Medals and Certificates</strong>
       </>
     ),
   },
 
-    {
-      id: 3,
-      text: (
-        <>
-          <strong>Top 10 highest scorers</strong> per class will be presented
-          with{" "}
-          <strong>
-            Excellence Medals and receive exclusive goodies and rewards
-          </strong>
-        </>
-      ),
-    },
-  ];
+  {
+    id: 3,
+    text: (
+      <>
+        <strong>Exclusive goodies and rewards</strong>
+      </>
+    ),
+  },
+];
 
   return (
     <div
@@ -564,6 +553,90 @@ md:text-[clamp(18px,1.6vw,23px)]
     </div>
 
   </div>
+  <section className="w-full px-6 py-16 md:px-12 lg:px-20">
+  <div className="mx-auto max-w-6xl">
+     <h2
+      className="
+        mb-8
+        text-center
+        text-[32px]
+        font-black
+        uppercase
+        tracking-wide
+        text-[#0F2851]
+        sm:text-[38px]
+        md:text-[44px]
+      "
+    >
+      Rewards & Opportunities
+    </h2>
+
+    <ul className="space-y-6 text-base leading-relaxed text-gray-700 md:text-lg">
+      <li className="flex gap-3">
+        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-black" />
+        <p>
+          <span className="font-semibold text-black">Merit Recognition:</span>{" "}
+          Top 3 achievers from every class in each school will receive Merit
+          Medals and Certificates of Recognition.
+        </p>
+      </li>
+
+      <li className="flex gap-3">
+        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-black" />
+        <p>
+          <span className="font-semibold text-black">Excellence Rewards:</span>{" "}
+          The Top 10 highest scorers in each class will receive Excellence
+          Medals, exclusive goodies, and rewards.
+        </p>
+      </li>
+
+      <li className="flex gap-3">
+        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-black" />
+        <p>
+          <span className="font-semibold text-black">
+            Special School Incentive:
+          </span>{" "}
+          Schools with 200+ registered students will receive Elan & nVision
+          festival passes for their top 2–3 performers at IIT Hyderabad.
+        </p>
+      </li>
+
+      <li className="flex gap-3">
+        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-black" />
+        <p>
+          <span className="font-semibold text-black">
+            IIT Hyderabad Campus Experience:
+          </span>{" "}
+          Winners will get an opportunity to visit IIT Hyderabad and explore
+          its cutting-edge laboratories and state-of-the-art facilities through
+          guided tours.
+        </p>
+      </li>
+
+      <li className="flex gap-3">
+        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-black" />
+        <p>
+          <span className="font-semibold text-black">
+            Student Interaction & Mentorship:
+          </span>{" "}
+          Participants will interact with current IIT Hyderabad students,
+          gaining valuable insights, mentorship, and lasting connections.
+        </p>
+      </li>
+
+      <li className="flex gap-3">
+        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-black" />
+        <p>
+          <span className="font-semibold text-black">
+            Grand Award Celebration:
+          </span>{" "}
+          Winners will be felicitated at a grand award ceremony at IIT
+          Hyderabad, with media coverage and recognition on official platforms.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
 </section>
         {/* =====================================================
     PERKS AND PRIZES
@@ -640,7 +713,7 @@ md:text-[clamp(18px,1.6vw,23px)]
                 key={perk.id}
                 className="
           flex
-          h-[395px]
+          h-[355px]
           w-full
           flex-col
           rounded-[22px]
