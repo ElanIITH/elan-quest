@@ -640,7 +640,7 @@ md:text-[clamp(18px,1.6vw,23px)]
                 key={perk.id}
                 className="
           flex
-          h-[385px]
+          h-[395px]
           w-full
           flex-col
           rounded-[22px]

@@ -172,7 +172,7 @@ export default function AboutPage() {
             <p className="pt-3 text-base leading-relaxed text-[#0f2438]/90 md:text-lg">
               For a school student, this means Nexus QUEST isn&apos;t just
               another Olympiad — it&apos;s a direct touchpoint with a
-              nationally top-ranked IIT, its faculty, and its research
+              nationally top-ranked IIT and its research
               culture.
             </p>
           </motion.section>

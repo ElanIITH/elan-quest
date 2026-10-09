@@ -314,11 +314,12 @@ style={{
               DATES
             </h2>
 
-            <div className="ml-[3px] mt-[28px] font-['Nexa_Text'] text-[32px] font-normal text-black">
-              <p>Registrations: August 23, 2026</p>
-              <p>Registrations Close: October 15, 2026</p>
-              <p>Quest Olympiad: 1st week of November(date TBA)</p>
-              <p>Prize Distribution: January 8, 2027</p>
+            <div className="ml-[3px] mt-[28px] font-['Nexa_Text'] text-[32px] font-bold text-black">
+              <p>Registration opens: September 8, 2026</p>
+              <p>Registrations Closes: November 22, 2026</p>
+              <p>Quest Olympiad Round 1: November 28, 2026</p>
+               <p>Quest Olympiad Round 2: (Date To Be Announced)</p>
+              <p>Prize Distribution: (Date To Be Announced)</p>
             </div>
           </section>
 
@@ -353,16 +354,17 @@ style={{
                 mt-5
                 font-['Nexa_Text']
                 text-[14px]
-                font-bold
+                font-normal
                 leading-[1.35]
                 text-black
                 sm:text-[16px]
               "
             >
-              <p>Registrations: August 23, 2026</p>
-              <p>Registrations Close: October 15, 2026</p>
-              <p>Quest Olympiad: 1st week of November(date TBA)</p>
-              <p>Prize Distribution: January 8, 2027</p>
+              <p>Registration opens: September 8, 2026</p>
+              <p>Registrations Closes: November 22, 2026</p>
+              <p>Quest Olympiad Round 1: November 28, 2026</p>
+               <p>Quest Olympiad Round 2: (Date To Be Announced)</p>
+              <p>Prize Distribution: (Date To Be Announced)</p>
             </div>
           </section>
 
