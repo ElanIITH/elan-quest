@@ -319,61 +319,6 @@ export default function ResultsPage() {
       {/* Main Content Area */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pb-20 space-y-16">
         
-        {/* Exam Overview Specifications Table */}
-        <section className="relative bg-transparent">
-          {/* Top Right Floating Medal Asset
-          <div className="absolute -top-10 -right-4 w-20 h-20 sm:w-28 sm:h-28 z-20 pointer-events-none">
-            <Image
-              src="/pics/medal.png" // Ensure this image path matches your public folder
-              alt="Medal"
-              fill
-              className="object-contain"
-            />
-          </div> */}
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-sm sm:text-base leading-relaxed">
-            {tableData.map((row, idx) => (
-              <div key={idx} className="contents">
-                <div className="font-semibold text-[#0F2851] py-1">
-                  {row.label}
-                </div>
-                <div className="text-[#2D3748] py-1 md:pl-4">
-                  {row.value}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Dates Section */}
-        <section className="space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-wide text-[#0F2851]">
-            DATES
-          </h2>
-          <div className="space-y-2 text-sm sm:text-base text-[#111111]">
-            {datesData.map((item, index) => (
-              <p key={index} className="leading-relaxed">
-                <span className="font-bold">{item.label}:</span> {item.value}
-              </p>
-            ))}
-          </div>
-        </section>
-
-        {/* Eligibility Section */}
-        <section className="space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-wide text-[#0F2851]">
-            ELIGIBILITY
-          </h2>
-          <ul className="space-y-3 text-sm sm:text-base text-[#111111]">
-            {eligibilityList.map((text, index) => (
-              <li key={index} className="flex items-start gap-2 leading-relaxed">
-                <span className="text-[#0F2851] font-bold text-lg">•</span>
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
         {/* Process Section */}
         <section className="space-y-4">
           <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-wide text-[#0F2851]">
