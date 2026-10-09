@@ -37,7 +37,7 @@ export default function Navbar({ onRegisterClick }: NavbarProps) {
             />
           </a>
 
-          <a
+          {/* <a
             href="https://elan.org.in/"
             target="_blank"
             rel="noopener noreferrer"
@@ -50,7 +50,7 @@ export default function Navbar({ onRegisterClick }: NavbarProps) {
               height={30}
               className="object-contain"
             />
-          </a>
+          </a> */}
         </div>
       </div>
 

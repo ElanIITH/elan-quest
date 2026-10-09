@@ -107,12 +107,11 @@ export default function Footer() {
 
         {/* RIGHT SIDE: CONTACT, ADDRESS, SOCIALS & COPYRIGHT */}
         <div className="flex flex-col items-end text-right gap-3">
-          <Link
-            href="/contact"
+          <h3
             className="text-2xl font-bold tracking-tight hover:opacity-80 uppercase"
           >
             Contact Us
-          </Link>
+          </h3>
 
           <p className="text-[11px] leading-tight text-[#0F2851]/90 max-w-[280px]">
             Room No. 6, Ground Floor, Sports and

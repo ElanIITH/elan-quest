@@ -4,24 +4,16 @@ import Image from "next/image";
 
 export default function Results() {
   return (
-    <main className="relative min-h-screen w-full overflow-x-hidden bg-[#F0ECCF] text-[#092B55]">
-      {/* =========================================================
-          FULL PAGE BACKGROUND PATTERN
-      ========================================================= */}
-      <div
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-        style={{
-          backgroundImage: "url('/pics/pattern.png')",
-          backgroundSize: "auto",
-          backgroundPosition: "top center",
-          backgroundRepeat: "repeat",
-        }}
-      />
-
-      {/* =========================================================
-          PAGE CONTENT WRAPPER
-      ========================================================= */}
-      <div className="relative z-10">
+<main
+  className="relative w-full overflow-x-hidden bg-[#F0ECCF] text-[#092B55]"
+style={{
+    backgroundImage: "url('/pics/pattern.png')",
+    backgroundSize: "auto",
+    backgroundPosition: "center top", 
+    backgroundRepeat: "repeat",
+  }}
+>
+  <div className="relative z-10">
         {/* =======================================================
             HERO
             DESKTOP: 515px
@@ -77,7 +69,7 @@ export default function Results() {
               md:hidden
             "
           >
-            EXAM DETAILS
+            EXAM <br/> DETAILS
           </h1>
 
           {/* DESKTOP IMAGE */}
@@ -132,7 +124,7 @@ export default function Results() {
         {/* =======================================================
             CONTENT
         ======================================================= */}
-        <div className="relative mx-auto w-full max-w-[1440px]">
+     <div className="relative mx-auto min-h-[1800px] w-full max-w-[1440px]">
           {/* =====================================================
               DESKTOP TABLE
           ===================================================== */}
