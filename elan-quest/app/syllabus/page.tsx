@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   syllabus6,
   syllabus7,
@@ -62,36 +63,122 @@ export default function SyllabusPage() {
       {/* =========================
           PATTERN BACKGROUND
           ========================= */}
-      <div
-        className="absolute inset-0 z-0 pointer-events-none"
-        style={{
-          backgroundImage: "url('/pics/patternfinal.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "top center",
-          backgroundRepeat: "repeat-y",
-        }}
+    <div
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full"
+     style={{
+  backgroundImage: "url('/pics/pattern.png')",
+  backgroundSize: "auto",
+  backgroundPosition: "center -80px",
+  backgroundRepeat: "repeat",
+}}
       />
 
       {/* =========================
           PAGE CONTENT
           ========================= */}
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 py-10 sm:px-10 md:px-[6.5%] md:py-12">
-        {/* Heading */}
-        <h1
+          <section
           className="
-            mb-8
-            text-4xl
-            font-black
-            uppercase
-            tracking-wide
-            text-[#0F2851]
-            sm:text-5xl
-            md:text-[52px]
+            relative
+            h-[220px]
+            w-full
+            overflow-visible
+            sm:h-[280px]
+            md:h-[515px]
           "
         >
-          SYLLABUS
-        </h1>
 
+         <h1
+            className="
+              absolute
+              left-[146px]
+              top-[269px]
+              z-10
+              hidden
+              font-['Nexa_Text']
+              text-[91px]
+              font-black
+              uppercase
+              leading-none
+              text-[#092B55]
+              md:block
+            "
+          >
+       SYLLABUS
+          </h1>
+
+        <h1
+  className="
+    absolute
+    left-3
+    top-[65px]
+    z-10
+    block
+    font-['Nexa_Text']
+    text-[32px]
+    font-black
+    uppercase
+    leading-none
+    text-[#092B55]
+    sm:left-8
+    sm:top-[95px]
+    sm:text-[48px]
+    md:hidden
+  "
+>
+  SYLLABUS
+</h1>
+<div
+  className="
+    absolute
+    right-[10px]
+    top-[15px]
+    z-10
+    block
+    h-[100px]
+    w-[110px]
+    sm:right-[20px]
+    sm:top-[20px]
+    sm:h-[130px]
+    sm:w-[140px]
+    md:hidden
+  "
+>
+  <Image
+    src="/pics/book.png"
+    alt="syllabus"
+    fill
+    priority
+    className="object-contain"
+  />
+</div>
+
+          {/* DESKTOP IMAGE */}
+          <div
+            className="
+              absolute
+              left-[887px]
+              top-[48px]
+              z-10
+              hidden
+              h-[483px]
+              w-[461px]
+              md:block
+            "
+          >
+            <Image
+              src="/pics/book.png"
+              alt="Syllabus"
+              fill
+              priority
+              className="object-contain"
+            />
+          </div>
+
+
+      
+
+        </section>
         {/* Intro copy */}
         <div
           className="
